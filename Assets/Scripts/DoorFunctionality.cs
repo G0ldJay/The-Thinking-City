@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum DoorState { Open, Animating, Closed};
-public class Cube : MonoBehaviour
+public class DoorFunctionality : MonoBehaviour
 {
     public Transform DoorTop;
     public Transform DoorBottom;
@@ -41,7 +41,7 @@ public class Cube : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 5)
+        if (timer > 10)
         {
             int rand = Random.Range(0, 101);
 
