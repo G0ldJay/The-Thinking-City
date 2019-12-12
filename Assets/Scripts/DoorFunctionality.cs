@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum DoorState { Open, Animating, Closed};
+//public enum DoorState { Open, Animating, Closed};
 public class DoorFunctionality : MonoBehaviour
 {
     public Transform DoorTop;
