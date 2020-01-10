@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 2612919144140972827}
   - component: {fileID: 6420429517962615085}
   - component: {fileID: 731126624167388628}
+  - component: {fileID: 2668980011141816914}
   m_Layer: 0
   m_Name: Main Floor Corner 2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2612919144140972827
 Transform:
@@ -80,6 +81,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2668980011141816914
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304264636417298696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7450741763379908841, guid: 223f19ae5d39b27499db7b0ef381d47d, type: 3}
 --- !u!1001 &2036755849920166655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -166,6 +181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Floor Edge 1x1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304264636417298696, guid: 30d8d4d2a2f05184baa9e3fc3ddd8f2d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2612919144140972827, guid: 30d8d4d2a2f05184baa9e3fc3ddd8f2d,
         type: 3}

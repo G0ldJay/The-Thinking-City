@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4948708406031591797}
   - component: {fileID: 4176629799278580547}
   - component: {fileID: 7695200163895472058}
+  - component: {fileID: 1528101634765241205}
   m_Layer: 0
   m_Name: Main Floor Corner 1x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4948708406031591797
 Transform:
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1528101634765241205
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8283810538150320998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7450741763379908841, guid: c51f3867dd4fc594b84c12b0ee33aa5f, type: 3}
