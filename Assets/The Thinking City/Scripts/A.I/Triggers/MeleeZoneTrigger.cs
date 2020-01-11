@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class MeleeZoneTrigger : MonoBehaviour
 {
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider col)
     {
-        AIStateMachine machine = GameManager.instance.GetAIStateMachine(other.GetInstanceID());
-
+        AIStateMachine machine = GameManager.instance.GetAIStateMachine(col.GetInstanceID());
         if (machine)
+        {
             machine.inMeleeRange = true;
+        }
     }
 
-    public void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider col)
     {
-        AIStateMachine machine = GameManager.instance.GetAIStateMachine(other.GetInstanceID());
-
+        AIStateMachine machine = GameManager.instance.GetAIStateMachine(col.GetInstanceID());
         if (machine)
+        {
             machine.inMeleeRange = false;
+        }
     }
 }
