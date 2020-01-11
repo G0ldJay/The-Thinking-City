@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// -----------------------------------------------------------------
+// Class	: AIRobotState_Alerted1
+// Desc		: A Robot state used for alligning with a target
+// -----------------------------------------------------------------
 public class AIRobotState_Alerted1 : AIRobotState
 {
     // Inspector Assigned
     [SerializeField] [Range(1, 60)] float _maxDuration = 10.0f;
     [SerializeField] float _waypointAngleThreshold = 90.0f;
     [SerializeField] float _threatAngleThreshold = 10.0f;
-    [SerializeField] float _directionChangeTime = 1.5f;
+    [SerializeField] float _directionChangeTime = 2.0f;
 
     // Private Fields
     float _timer = 0.0f;
@@ -26,7 +30,7 @@ public class AIRobotState_Alerted1 : AIRobotState
     // Name	:	OnEnterState
     // Desc	:	Called by the State Machine when first transitioned into
     //			this state. It initializes a timer and configures the
-    //			the state machine
+    //			state machine
     // ------------------------------------------------------------------
     public override void OnEnterState()
     {
@@ -65,7 +69,7 @@ public class AIRobotState_Alerted1 : AIRobotState
             GameManager.instance.PlayAISound(4);
         }
 
-        // Do we have a visual threat that is the player. These take priority over audio threats
+        // Check if visual threat is the player. Player takes priority over audio threats
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
         {
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);

@@ -7,6 +7,8 @@ using System.Collections;
 // -----------------------------------------------------------------
 public class AIRobotState_Pursuit1 : AIRobotState
 {
+    [SerializeField] [Range(0.0f, 1.0f)] float _lookAtWeight = 0.7f;
+    [SerializeField] [Range(0.0f, 90.0f)] float _lookAtAngleThreshold = 15.0f;
     [SerializeField] [Range(0, 10)] private float _speed = 1.0f;
     [SerializeField] private float _slerpSpeed = 5.0f;
     [SerializeField] private float _repathDistanceMultiplier = 0.035f;
@@ -19,6 +21,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
     // Private Fields
     private float _timer = 0.0f;
     private float _repathTimer = 0.0f;
+    private float _currentLookAtWeight = 0.0f;
 
     // Mandatory Overrides
     public override AIStateType GetStateType() { return AIStateType.Pursuit; }
@@ -38,6 +41,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
         _robotStateMachine.seeking = 0;
         _robotStateMachine.feeding = false;
         _robotStateMachine.attackType = 0;
+        _currentLookAtWeight = 0.0f;
 
         // Robots will only pursue for so long before breaking off
         _timer = 0.0f;
@@ -202,7 +206,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
                 // Get unique ID of the collider of our target
                 int currentID = _robotStateMachine.targetColliderID;
 
-                // If this is the same light
+                // If this is the same noise
                 if (currentID == _robotStateMachine.AudioThreat.collider.GetInstanceID())
                 {
                     // The position is different - maybe same threat but it has moved so repath periodically
@@ -217,13 +221,19 @@ public class AIRobotState_Pursuit1 : AIRobotState
                         }
                     }
 
+                    //Sets current target to the same noise 
                     _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat);
+
+                    //Continue Pursuit
                     return AIStateType.Pursuit;
                 }
                 else
                 {
+                    //Sets current target to the new noise 
                     _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat);
-                    return AIStateType.Alerted;
+
+                    //Drop into alerted state to allign with new target
+                    return AIStateType.Alerted; 
                 }
             }
         }
@@ -232,5 +242,25 @@ public class AIRobotState_Pursuit1 : AIRobotState
         return AIStateType.Pursuit;
     }
 
+    // -----------------------------------------------------------------------
+    // Name	:	OnAnimatorIKUpdated
+    // Desc	:	Override IK Goals
+    // -----------------------------------------------------------------------
+    //public override void OnAnimatorIKUpdated()
+    //{
+    //    if (_robotStateMachine == null)
+    //        return;
 
+    //    if (Vector3.Angle(_robotStateMachine.transform.forward, _robotStateMachine.targetPosition - _robotStateMachine.transform.position) < _lookAtAngleThreshold)
+    //    {
+    //        _robotStateMachine.animator.SetLookAtPosition(_robotStateMachine.targetPosition + Vector3.up);
+    //        _currentLookAtWeight = Mathf.Lerp(_currentLookAtWeight, _lookAtWeight, Time.deltaTime);
+    //        _robotStateMachine.animator.SetLookAtWeight(_currentLookAtWeight);
+    //    }
+    //    else
+    //    {
+    //        _currentLookAtWeight = Mathf.Lerp(_currentLookAtWeight, 0.0f, Time.deltaTime);
+    //        _robotStateMachine.animator.SetLookAtWeight(_currentLookAtWeight);
+    //    }
+    //}
 }
