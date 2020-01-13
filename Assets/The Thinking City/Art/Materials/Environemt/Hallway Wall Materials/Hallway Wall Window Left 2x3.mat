@@ -38,7 +38,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 6e64ded6c5bea614eaf3e32522cb00e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8c7a84b3fe15b5b47b1f6fc60990f97a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -74,7 +74,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fb2443ce82d81e7418c1b5b0d5b51e76, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7b1f37ec2e6835e49810e202dca7031c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -82,7 +82,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 10fc7ef24a8325e4da95b3d81c6353c9, type: 3}
+        m_Texture: {fileID: 2800000, guid: ebb2a6d488910ec4c8dc203700488339, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -94,11 +94,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 0bf5f55feda16d649a1234e7f771407b, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: 8a5f7e56a5f68944c9fd1bbf149f5e47, type: 3}
+        m_Texture: {fileID: 2800000, guid: a26e0ee26b9ed3a45867fa328ad6a31a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -178,7 +178,7 @@ Material:
     - _EnableGeometricSpecularAA: 0
     - _EnableSpecularOcclusion: 0
     - _EnergyConservingSpecularColor: 1
-    - _Glossiness: 1
+    - _Glossiness: 0
     - _HdrpVersion: 2
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
@@ -195,7 +195,7 @@ Material:
     - _IridescenceThickness: 1
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
-    - _Metallic: 1
+    - _Metallic: 0
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _PPDLodThreshold: 5
@@ -239,7 +239,7 @@ Material:
     - _UVBase: 0
     - _UVDetail: 0
     - _UVEmissive: 0
-    - _UseAoMap: 1
+    - _UseAoMap: 0
     - _UseColorMap: 1
     - _UseEmissiveIntensity: 0
     - _UseEmissiveMap: 0
