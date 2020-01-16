@@ -137,7 +137,7 @@ public class FPSController : MonoBehaviour
     [SerializeField] private float _gravityMultiplier = 2.5f; //Mutiplier for gravities effect on player 
     [SerializeField] private float _runStepLengthen = 0.75f; //The step lengthen while running. Coz when running you take bigger steps
     [SerializeField] private CurveControlledHeadBob _headBob = new CurveControlledHeadBob(); //Instance of CurveControlledHeadBob class 
-    //[SerializeField] private GameObject _flashLight = null; //Flashlight component. NOTE : May or may not use. Currently poorly built for quick testing.
+    [SerializeField] private GameObject _flashLight = null; //Flashlight component. NOTE : May or may not use. Currently poorly built for quick testing.
 
     // Use Standard Assets Mouse Look class for mouse input -> Camera Look Control
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.MouseLook _mouseLook = new UnityStandardAssets.Characters.FirstPerson.MouseLook(); //Instance of MouseLook script for player movement. Standard Unity asset script.
@@ -194,7 +194,7 @@ public class FPSController : MonoBehaviour
         _headBob.RegisterEventCallBack(1.5f, PlayFootStepSound, CurveControlledBobCallBackType.Verticle);
 
         //If flashlight is attached turn off gameobject
-        //if (_flashLight) _flashLight.SetActive(false);
+        if (_flashLight) _flashLight.SetActive(false);
     }
 
     protected void Update()
@@ -208,10 +208,10 @@ public class FPSController : MonoBehaviour
             _mouseLook.LookRotation(transform, _camera.transform);
 
         //If flashlight button is pressed "F"
-        //if (Input.GetButtonDown("Flashlight"))
-        //{
-        //    if (_flashLight) _flashLight.SetActive(!_flashLight.activeSelf); //Either turn it on or off
-        //}
+        if (Input.GetButtonDown("Flashlight"))
+        {
+            if (_flashLight) _flashLight.SetActive(!_flashLight.activeSelf); //Either turn it on or off
+        }
 
         // Process the Jump Button
         // the jump state needs to read here to make sure it is not missed
