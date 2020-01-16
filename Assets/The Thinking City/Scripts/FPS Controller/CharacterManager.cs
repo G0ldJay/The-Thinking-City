@@ -79,7 +79,7 @@ public class CharacterManager : MonoBehaviour
 
             if (statemachine)
             {
-                statemachine.TakeDamage(hit.point, ray.direction * 500.0f, 25, hit.rigidbody, this, 0); //TODO : PHYSICS Change hard coded values
+                statemachine.TakeDamage(hit.point, ray.direction * 1.0f, 25, hit.rigidbody, this, 0); //TODO : PHYSICS Change hard coded values
             }
         }
     }
