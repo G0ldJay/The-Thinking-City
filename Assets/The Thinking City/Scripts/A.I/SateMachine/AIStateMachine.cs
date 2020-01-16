@@ -72,6 +72,7 @@ public abstract class AIStateMachine : MonoBehaviour
     protected bool _isTargetReached = false;                                                        //Detects if we have reached the target
     protected List<Rigidbody> _bodyParts = new List<Rigidbody>();
     protected int _aiBodyPartLayer = -1;
+    protected bool _cinematicEnabled = false;
 
     // Protected Inspector Assigned
     [SerializeField] protected AIStateType _currentStateType = AIStateType.Idle;    //Sets current state type to idle 
@@ -106,7 +107,6 @@ public abstract class AIStateMachine : MonoBehaviour
             return point;                                                                   //Return the new vector 3 position
         }
     }
-
     public float sensorRadius //Gets the radius of the senor trigger
     {
         get
@@ -117,7 +117,6 @@ public abstract class AIStateMachine : MonoBehaviour
             return Mathf.Max(radius, _sensorTrigger.radius * _sensorTrigger.transform.lossyScale.z);                                                                    //Returns the max of either the above result or the z radius
         }
     }
-
     public bool useRootPosition { get { return _rootPositionRefCount > 0; } }   //Returns if root motion should be used or not 
     public bool useRootRotation { get { return _rootRotationRefCount > 0; } }   //Returns if root rotation should be used or not 
     public AITargetType targetType { get { return _target.type; } }             //Returns the target type (e.g Player, Waypoint, etc)
@@ -132,6 +131,7 @@ public abstract class AIStateMachine : MonoBehaviour
                 return -1;                                  //Otherwise return -1
         }
     }
+    public bool cinematicEnabled { get { return _cinematicEnabled; } set { _cinematicEnabled = value; } }
 
     // -----------------------------------------------------------------
     // Name	:	Awake
