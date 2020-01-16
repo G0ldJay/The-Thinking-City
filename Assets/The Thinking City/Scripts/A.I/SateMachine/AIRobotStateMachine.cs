@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum AIBoneControlType { Animated, Ragdoll, RagdollToAnimated }
+
 // --------------------------------------------------------------------------
 // CLASS	:	AIRobotStateMachine
 // DESC		:	State Machine used by our Robot characters
@@ -13,6 +15,11 @@ public class AIRobotStateMachine : AIStateMachine
     [SerializeField] [Range(0.0f, 1.0f)] float _hearing = 1.0f;     //Controls the characters hearing range
     [SerializeField] [Range(0.0f, 1.0f)] float _aggression = 0.5f;     //Controls the A.Is level of aggression
     [SerializeField] [Range(0, 100)] int _health = 100;      //Controls the A.Is health
+    [SerializeField] [Range(0, 100)] int _lowerBodyDamage = 0;
+    [SerializeField] [Range(0, 100)] int _upperBodyDamage = 0;
+    [SerializeField] [Range(0, 100)] int _upperBodyThreshold = 30;
+    [SerializeField] [Range(0, 100)] int _limpThreshold = 30;
+    [SerializeField] [Range(0, 100)] int _crawlThreshold = 90;
     [SerializeField] [Range(0.0f, 1.0f)] float _intelligence = 0.5f;     //Controls the A.Is intelligence
     [SerializeField] [Range(0.0f, 1.0f)] float _satisfaction = 1.0f;     //Satisfaction level of A.I (Testing with a feeding state but can be modified later)
     [SerializeField] float _replenishRate = 0.5f;     //Satisfaction replenish rate
@@ -24,13 +31,14 @@ public class AIRobotStateMachine : AIStateMachine
     private bool _crawling = false;    //If A.I is crawling (for robots with not legs, maybe?)
     private int _attackType = 0;        //Attack animation to use in animation state machine 
     private float _speed = 0.0f;     //Speed of A.I
+    private AIBoneControlType _boneControlType = AIBoneControlType.Animated;
 
     // Hashes
     private int _speedHash = Animator.StringToHash("Speed");     //Gets hash code of speed variable in animator
     private int _seekingHash = Animator.StringToHash("Seeking");   //Gets hash code of seeking variable in animator
     private int _feedingHash = Animator.StringToHash("Feeding");   //Gets hash code of feeding variable in animator
     private int _attackHash = Animator.StringToHash("Attack");    //Gets hash code of attack variable in animator
-
+    private int _crawlingHash = Animator.StringToHash("Crawling");
 
     // Public Properties
     public float replenishRate { get { return _replenishRate; } }                              //Gets replenished value of robot 
@@ -49,6 +57,13 @@ public class AIRobotStateMachine : AIStateMachine
     {
         get { return _speed; }
         set { _speed = value; }
+    }
+    public bool isCrawling { get { return _lowerBodyDamage >= _crawlThreshold; } }
+
+    protected override void Start()
+    {
+        base.Start();
+        UpdateAnimatorDamage();
     }
 
     // ---------------------------------------------------------
@@ -69,6 +84,15 @@ public class AIRobotStateMachine : AIStateMachine
         }
     }
 
+    protected void UpdateAnimatorDamage()
+    {
+        if (_animator != null)
+        {
+            _animator.SetBool(_crawlingHash, isCrawling);
+        }
+
+    }
+
     public override void TakeDamage(Vector3 position, Vector3 force, int damage, Rigidbody bodyPart, CharacterManager characterManager, int hitDirection = 0)
     {
         Debug.Log("OUCH!");
@@ -82,9 +106,28 @@ public class AIRobotStateMachine : AIStateMachine
             sys.Emit(60);
         }
 
-        health -= damage;
-
         float hitStrength = force.magnitude;
+
+        if (_boneControlType == AIBoneControlType.Ragdoll)
+        {
+            if (bodyPart != null)
+            {
+                if(hitStrength>1.0f) bodyPart.AddForce(force, ForceMode.Impulse);
+
+                if (bodyPart.CompareTag("Head")) _health = Mathf.Max(_health - damage, 0);
+                else if (bodyPart.CompareTag("Upper Body")) _upperBodyDamage += damage;
+                else if (bodyPart.CompareTag("Lower Body")) _lowerBodyDamage += damage;
+
+                UpdateAnimatorDamage();
+
+                if (_health > 0)
+                {
+                    //TODO : Reanimation code
+                }
+            }
+        }
+
+        
         bool shouldRagDoll = (hitStrength > 1.0f);
         if (health <= 0) shouldRagDoll = true;
 
