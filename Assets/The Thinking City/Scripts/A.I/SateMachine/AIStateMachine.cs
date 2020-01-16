@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 
 // Public Enums of the AI System
-public enum AIStateType { None, Idle, Alerted, Patrol, Attack, Feeding, Pursuit, Dead } //Enum for the state types the A.I can move between
-public enum AITargetType { None, Waypoint, Visual_Player, Visual_Light, Visual_Food, Audio } //Enums for the current target type 
-public enum AITriggerEventType { Enter, Stay, Exit } //Enums for the targets location relevant to the sensor radius 
+public enum AIStateType         { None, Idle, Alerted, Patrol, Attack, Feeding, Pursuit, Dead }     //Enum for the state types the A.I can move between
+public enum AITargetType        { None, Waypoint, Visual_Player, Visual_Light, Visual_Food, Audio } //Enums for the current target type 
+public enum AITriggerEventType  { Enter, Stay, Exit }                                               //Enums for the targets location relevant to the sensor radius 
 
 // ----------------------------------------------------------------------
 // Class	:	AITarget
@@ -14,17 +14,17 @@ public enum AITriggerEventType { Enter, Stay, Exit } //Enums for the targets loc
 // ----------------------------------------------------------------------
 public struct AITarget
 {
-    private AITargetType _type;     // The type of target
-    private Collider _collider;     // The collider
-    private Vector3 _position;      // Current position in the world
-    private float _distance;        // Distance from player
-    private float _time;            // Time the target was last ping'd
+    private AITargetType    _type;      // The type of target
+    private Collider        _collider;  // The collider
+    private Vector3         _position;  // Current position in the world
+    private float           _distance;  // Distance from player
+    private float           _time;      // Time the target was last ping'd
 
-    public AITargetType type { get { return _type; } }                              //Returns AITargetType 
-    public Collider collider { get { return _collider; } }                          //Returns the collider 
-    public Vector3 position { get { return _position; } }                           //Returns position 
-    public float distance { get { return _distance; } set { _distance = value; } }  //Get and set distance
-    public float time { get { return _time; } }                                     //Returns time
+    public AITargetType type        { get { return _type; } }                                   //Returns AITargetType 
+    public Collider     collider    { get { return _collider; } }                               //Returns the collider 
+    public Vector3      position    { get { return _position; } }                               //Returns position 
+    public float        distance    { get { return _distance; } set { _distance = value; } }    //Get and set distance
+    public float        time        { get { return _time; } }                                   //Returns time
 
     // -----------------------------------------------------------------
     // Name	:	Set
@@ -32,11 +32,11 @@ public struct AITarget
     // -----------------------------------------------------------------
     public void Set(AITargetType t, Collider c, Vector3 p, float d)
     {
-        _type = t; //Type of target 
-        _collider = c; //Collider of target 
-        _position = p; //Position of target 
-        _distance = d; //Distance to target 
-        _time = Time.time; //Time target was set 
+        _type       = t;            //Type of target 
+        _collider   = c;            //Collider of target 
+        _position   = p;            //Position of target 
+        _distance   = d;            //Distance to target 
+        _time       = Time.time;    //Time target was set 
     }
 
     // -----------------------------------------------------------------
@@ -45,11 +45,11 @@ public struct AITarget
     // -----------------------------------------------------------------
     public void Clear()
     {
-        _type = AITargetType.None; //Sets target type to none
-        _collider = null; //Clears collider
-        _position = Vector3.zero; //Sets position to (0,0,0)
-        _time = 0.0f; //Sets time to 0
-        _distance = Mathf.Infinity; //Sets distance to infinity 
+        _type       = AITargetType.None;    //Sets target type to none
+        _collider   = null;                 //Clears collider
+        _position   = Vector3.zero;         //Sets position to (0,0,0)
+        _time       = 0.0f;                 //Sets time to 0
+        _distance   = Mathf.Infinity;       //Sets distance to infinity 
     }
 }
 
@@ -60,38 +60,41 @@ public struct AITarget
 public abstract class AIStateMachine : MonoBehaviour
 {
     // Public
-    public AITarget VisualThreat = new AITarget();  //Set up visual threat 
-    public AITarget AudioThreat = new AITarget();   //Set up audio threat 
+    public AITarget VisualThreat    = new AITarget();   //Set up visual threat 
+    public AITarget AudioThreat     = new AITarget();   //Set up audio threat 
 
     // Protected
-    protected AIState _currentState = null;                                                         //Current state of state machine
-    protected Dictionary<AIStateType, AIState> _states = new Dictionary<AIStateType, AIState>();    //Disctionary of state types and state
-    protected AITarget _target = new AITarget();                                                    //Set up target
-    protected int _rootPositionRefCount = 0;                                                        //Used for determining when to use root motion
-    protected int _rootRotationRefCount = 0;                                                        //Used for determining when to use root rotation
-    protected bool _isTargetReached = false;                                                        //Detects if we have reached the target
-
+    protected AIState                           _currentState           = null;                                     //Current state of state machine
+    protected Dictionary<AIStateType, AIState>  _states                 = new Dictionary<AIStateType, AIState>();   //Disctionary of state types and state
+    protected AITarget                          _target                 = new AITarget();                           //Set up target
+    protected int                               _rootPositionRefCount   = 0;                                        //Used for determining when to use root motion
+    protected int                               _rootRotationRefCount   = 0;                                        //Used for determining when to use root rotation
+    protected bool                              _isTargetReached        = false;                                    //Detects if we have reached the target
+    protected List<Rigidbody>                   _bodyParts              = new List<Rigidbody>();                    //Contains a list of the AI body parts
+    protected int                               _aiBodyPartLayer        = -1;                                       //Value of body part layer
+    
     // Protected Inspector Assigned
-    [SerializeField] protected AIStateType _currentStateType = AIStateType.Idle;    //Sets current state type to idle 
-    [SerializeField] protected SphereCollider _targetTrigger = null;                //Target trigger GameObject (Location to move to, waypoint, player, noise, etc)
-    [SerializeField] protected SphereCollider _sensorTrigger = null;                //Sensor trigger GameObject (Hearing and Sight)
-    [SerializeField] protected AIWaypointNetwork _waypointNetwork = null;           //The AIs waypoint network for patrolling
-    [SerializeField] protected bool _randomPatrol = false;                          //Make it patrol points randomly or in order 
-    [SerializeField] protected int _currentWaypoint = -1;                           //Holds current waypoint
-    [SerializeField] [Range(0, 15)] protected float _stoppingDistance = 1.0f;       //Acceptable margin or error to target (if <=1 meter from target you have arrived)
+    [SerializeField] protected AIStateType          _currentStateType = AIStateType.Idle;   //Sets current state type to idle 
+    [SerializeField] Transform                      _rootBone = null;                       //Holds root bone of AI model
+    [SerializeField] protected SphereCollider       _targetTrigger = null;                  //Target trigger GameObject (Location to move to, waypoint, player, noise, etc)
+    [SerializeField] protected SphereCollider       _sensorTrigger = null;                  //Sensor trigger GameObject (Hearing and Sight)
+    [SerializeField] protected AIWaypointNetwork    _waypointNetwork = null;                //The AIs waypoint network for patrolling
+    [SerializeField] protected bool                 _randomPatrol = false;                  //Make it patrol points randomly or in order 
+    [SerializeField] protected int                  _currentWaypoint = -1;                  //Holds current waypoint
+    [SerializeField] [Range(0, 15)] protected float _stoppingDistance = 1.0f;               //Acceptable margin or error to target (if <=1 meter from target you have arrived)
 
     // Component Cache
-    protected Animator _animator = null;        //Holds AIs animator
-    protected NavMeshAgent _navAgent = null;    //Holds AIs NavAgent
-    protected Collider _collider = null;        //Holds AIs Collider
-    protected Transform _transform = null;      //Holds AIs transform
+    protected Animator      _animator   = null; //Holds AIs animator
+    protected NavMeshAgent  _navAgent   = null; //Holds AIs NavAgent
+    protected Collider      _collider   = null; //Holds AIs Collider
+    protected Transform     _transform  = null; //Holds AIs transform
 
     // Public Properties
-    public bool isTargetReached { get { return _isTargetReached; } }    //Returns if target is reached
-    public bool inMeleeRange { get; set; }                              //Returns if target is in melee range of player
-    public Animator animator { get { return _animator; } }              //Returns the animtor of the AI
-    public NavMeshAgent navAgent { get { return _navAgent; } }          //Returns the NavAgent of the AI
-    public Vector3 sensorPosition                                       //Gets position of the senor trigger
+    public bool             isTargetReached { get { return _isTargetReached; } }    //Returns if target is reached
+    public bool             inMeleeRange    { get; set; }                           //Returns if target is in melee range of player
+    public Animator         animator        { get { return _animator; } }           //Returns the animtor of the AI
+    public NavMeshAgent     navAgent        { get { return _navAgent; } }           //Returns the NavAgent of the AI
+    public Vector3          sensorPosition                                          //Gets position of the senor trigger
     {
         get
         {
@@ -115,11 +118,11 @@ public abstract class AIStateMachine : MonoBehaviour
         }
     }
 
-    public bool useRootPosition { get { return _rootPositionRefCount > 0; } }   //Returns if root motion should be used or not 
-    public bool useRootRotation { get { return _rootRotationRefCount > 0; } }   //Returns if root rotation should be used or not 
-    public AITargetType targetType { get { return _target.type; } }             //Returns the target type (e.g Player, Waypoint, etc)
-    public Vector3 targetPosition { get { return _target.position; } }          //Returns position of its current target 
-    public int targetColliderID                                                 //Returns the ID attached to the targets collider
+    public bool             useRootPosition { get { return _rootPositionRefCount > 0; } }   //Returns if root motion should be used or not 
+    public bool             useRootRotation { get { return _rootRotationRefCount > 0; } }   //Returns if root rotation should be used or not 
+    public AITargetType     targetType      { get { return _target.type; } }                //Returns the target type (e.g Player, Waypoint, etc)
+    public Vector3          targetPosition  { get { return _target.position; } }            //Returns position of its current target 
+    public int              targetColliderID                                                //Returns the ID attached to the targets collider
     {
         get
         {
@@ -137,10 +140,13 @@ public abstract class AIStateMachine : MonoBehaviour
     protected virtual void Awake()
     {
         // Cache all frequently accessed components
-        _transform = transform;                     //Holds reference to Transform of AI
-        _animator = GetComponent<Animator>();       //Holds reference to AIs animator
-        _navAgent = GetComponent<NavMeshAgent>();   //Holds reference to AIs NavMeshAgent
-        _collider = GetComponent<Collider>();       //Holds reference to AIs collider 
+        _transform  = transform;                        //Holds reference to Transform of AI
+        _animator   = GetComponent<Animator>();         //Holds reference to AIs animator
+        _navAgent   = GetComponent<NavMeshAgent>();     //Holds reference to AIs NavMeshAgent
+        _collider   = GetComponent<Collider>();         //Holds reference to AIs collider 
+
+        //Get bodypart layer
+        _aiBodyPartLayer = LayerMask.NameToLayer("AI Body Part");
 
         // Do we have a valid Game Scene Manager
         if (GameManager.instance != null)                                                                               //If the GameManager exist in the scene
@@ -150,6 +156,19 @@ public abstract class AIStateMachine : MonoBehaviour
             if (_sensorTrigger) GameManager.instance.RegisterAIStateMachine(_sensorTrigger.GetInstanceID(), this);      //Registers AI sensor trigger in dictionary if there is one
         }
 
+        if(_rootBone!=null)
+        {
+            Rigidbody[] bodies = _rootBone.GetComponentsInChildren<Rigidbody>();
+
+            foreach(Rigidbody bodyPart in bodies)
+            {
+                if(bodyPart!=null && bodyPart.gameObject.layer == _aiBodyPartLayer)
+                {
+                    _bodyParts.Add(bodyPart);
+                    GameManager.instance.RegisterAIStateMachine(bodyPart.GetInstanceID(), this);
+                }
+            }
+        }
     }
 
     // -----------------------------------------------------------------
@@ -167,7 +186,6 @@ public abstract class AIStateMachine : MonoBehaviour
                 script.parentStateMachine = this;                       //Assign its parent state machine to this one
             }
         }
-
 
         // Fetch all states on this game object
         AIState[] states = GetComponents<AIState>();
@@ -489,5 +507,10 @@ public abstract class AIStateMachine : MonoBehaviour
     {
         _rootPositionRefCount += rootPosition;
         _rootRotationRefCount += rootRotation;
+    }
+
+    public virtual void TakeDamage(Vector3 position, Vector3 force, int damage, Rigidbody bodyPart, CharacterManager characterManager, int hitDirection = 0)
+    {
+
     }
 }
