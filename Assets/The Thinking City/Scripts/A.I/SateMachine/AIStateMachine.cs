@@ -70,9 +70,12 @@ public abstract class AIStateMachine : MonoBehaviour
     protected int _rootPositionRefCount = 0;                                                        //Used for determining when to use root motion
     protected int _rootRotationRefCount = 0;                                                        //Used for determining when to use root rotation
     protected bool _isTargetReached = false;                                                        //Detects if we have reached the target
+    protected List<Rigidbody> _bodyParts = new List<Rigidbody>();
+    protected int _aiBodyPartLayer = -1;
 
     // Protected Inspector Assigned
     [SerializeField] protected AIStateType _currentStateType = AIStateType.Idle;    //Sets current state type to idle 
+    [SerializeField] Transform _rootBone = null;
     [SerializeField] protected SphereCollider _targetTrigger = null;                //Target trigger GameObject (Location to move to, waypoint, player, noise, etc)
     [SerializeField] protected SphereCollider _sensorTrigger = null;                //Sensor trigger GameObject (Hearing and Sight)
     [SerializeField] protected AIWaypointNetwork _waypointNetwork = null;           //The AIs waypoint network for patrolling
@@ -142,6 +145,8 @@ public abstract class AIStateMachine : MonoBehaviour
         _navAgent = GetComponent<NavMeshAgent>();   //Holds reference to AIs NavMeshAgent
         _collider = GetComponent<Collider>();       //Holds reference to AIs collider 
 
+        _aiBodyPartLayer = LayerMask.NameToLayer("AI Body Part");
+
         // Do we have a valid Game Scene Manager
         if (GameManager.instance != null)                                                                               //If the GameManager exist in the scene
         {
@@ -150,6 +155,19 @@ public abstract class AIStateMachine : MonoBehaviour
             if (_sensorTrigger) GameManager.instance.RegisterAIStateMachine(_sensorTrigger.GetInstanceID(), this);      //Registers AI sensor trigger in dictionary if there is one
         }
 
+        if (_rootBone != null)
+        {
+            Rigidbody[] bodies = _rootBone.GetComponentsInChildren<Rigidbody>();
+
+            foreach (Rigidbody bodyPart in bodies)
+            {
+                if (bodyPart != null && bodyPart.gameObject.layer == _aiBodyPartLayer)
+                {
+                    _bodyParts.Add(bodyPart);
+                    GameManager.instance.RegisterAIStateMachine(bodyPart.GetInstanceID(), this);
+                }
+            }
+        }
     }
 
     // -----------------------------------------------------------------
@@ -232,7 +250,7 @@ public abstract class AIStateMachine : MonoBehaviour
             Transform newWaypoint = _waypointNetwork.Waypoints[_currentWaypoint];       //Get its transform
 
             // This is our new target position
-            SetTarget(AITargetType.Waypoint,null,newWaypoint.position,Vector3.Distance(newWaypoint.position, transform.position));  //Set it up as the next target 
+            SetTarget(AITargetType.Waypoint, null, newWaypoint.position, Vector3.Distance(newWaypoint.position, transform.position));  //Set it up as the next target 
 
             return newWaypoint.position;    //Return its position
         }
@@ -489,5 +507,10 @@ public abstract class AIStateMachine : MonoBehaviour
     {
         _rootPositionRefCount += rootPosition;
         _rootRotationRefCount += rootRotation;
+    }
+
+    public virtual void TakeDamage(Vector3 position, Vector3 force, int damage, Rigidbody bodyPart, CharacterManager characterManager, int hitDirection = 0)
+    {
+
     }
 }
