@@ -24,9 +24,13 @@ public class DoorFunctionality : MonoBehaviour
     public float Duration = 0.0f;
     public AnimationCurve JumpCurve = new AnimationCurve();
 
+    private AudioSource audio = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+
         mtransform = DoorTop;
         closedPos = DoorTop.position;
         openPos = closedPos + (mtransform.up * SlidingDistance);
@@ -55,6 +59,8 @@ public class DoorFunctionality : MonoBehaviour
 
     IEnumerator AnimateDoor(DoorState currentState)
     {
+        audio.Play();
+
         doorState = DoorState.Animating;
         float time = 0.0f;
 
