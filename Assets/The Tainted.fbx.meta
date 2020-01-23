@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 41a92070b1a41b34facee5a0c2451820
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: mixamorig:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: The Tainted(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HandJoint
+      parentName: The Tainted(Clone)
+      position: {x: -0.6739124, y: 0.050805297, z: -0.00000019732397}
+      rotation: {x: -0.70377374, y: 0.068575636, z: -0.06857573, w: 0.7037736}
+      scale: {x: 99.99999, y: 100.000015, z: 100.00001}
+    - name: BodyBase
+      parentName: The Tainted(Clone)
+      position: {x: 7.940934e-23, y: -0.0000014603138, z: -0.00000020861626}
+      rotation: {x: -0.7071068, y: -1.1347158e-22, z: -9.124523e-23, w: 0.7071067}
+      scale: {x: 100, y: 99.999985, z: 100}
+    - name: Torso_Shielding
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Head
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000044703437, y: 3.8173301, z: 0.12773202}
+      rotation: {x: -0.7071068, y: -0.0000000135651135, z: -0.000000013565285, w: 0.7071067}
+      scale: {x: 99.99998, y: 99.99998, z: 99.999985}
+    - name: Bicep
+      parentName: The Tainted(Clone)
+      position: {x: -0.7985682, y: 0.19941364, z: 0.012100225}
+      rotation: {x: -0.70233005, y: 0.0926381, z: -0.09136897, w: 0.69985884}
+      scale: {x: 100.00008, y: 100.00002, z: 100.00006}
+    - name: Calf_R
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000018626451, y: -0.00000022351742, z: 0.0000001937151}
+      rotation: {x: -0.7071068, y: 0.000000004609812, z: -0.000000019756333, w: 0.7071067}
+      scale: {x: 100.000015, y: 100.00002, z: 100.000015}
+    - name: Kneecap_R
+      parentName: The Tainted(Clone)
+      position: {x: -0.00000008940697, y: -0.00000026940302, z: 0.000000052154064}
+      rotation: {x: -0.7071068, y: 0.000000019413683, z: 0.000000009904562, w: 0.7071067}
+      scale: {x: 99.99996, y: 100, z: 99.999985}
+    - name: Thigh_R
+      parentName: The Tainted(Clone)
+      position: {x: -0.00000008940697, y: -0.00000026940302, z: 0.000000052154064}
+      rotation: {x: -0.7071068, y: 0.000000019413683, z: 0.000000009904562, w: 0.7071067}
+      scale: {x: 99.99996, y: 100, z: 99.999985}
+    - name: Calf_L
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000018626451, y: -0.00000031711534, z: 0.00000036507845}
+      rotation: {x: -0.7071068, y: -0.0000000046098134, z: 0.000000012841616, w: 0.7071067}
+      scale: {x: 100, y: 100.00002, z: 100.00004}
+    - name: FootBase_L
+      parentName: Calf_L
+      position: {x: 4.4703455e-10, y: 0.0000000035762766, z: 0.0000000035762775}
+      rotation: {x: 0.00000004842876, y: 0.0000000018626476, z: 0.000000022351742,
+        w: 1}
+      scale: {x: 1, y: 0.99999976, z: 0.99999976}
+    - name: LegJoint_L
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000059604645, y: -0.04915039, z: 0.049300183}
+      rotation: {x: -0.7071068, y: -0.0000000061460828, z: 0.0000000046362207, w: 0.7071067}
+      scale: {x: 99.99998, y: 100, z: 99.999985}
+    - name: Plane
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: HeadProjector
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Chest_Light
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: LightConnector
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: SidePlate
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: ArmJoint
+      parentName: The Tainted(Clone)
+      position: {x: -0.13748051, y: -0.21679036, z: 0.019159371}
+      rotation: {x: -0.70686483, y: -0.00024828117, z: -0.00026498665, w: 0.7073486}
+      scale: {x: 100.00009, y: 100.00002, z: 100.000046}
+    - name: Forearm
+      parentName: The Tainted(Clone)
+      position: {x: -0.7662258, y: 0.17215729, z: 0.00026616454}
+      rotation: {x: -0.7012699, y: 0.08766043, z: -0.08675894, w: 0.702146}
+      scale: {x: 100.00006, y: 100.000046, z: 100.00001}
+    - name: ArmJointDeco
+      parentName: The Tainted(Clone)
+      position: {x: -0.7985682, y: 0.19941364, z: 0.012100225}
+      rotation: {x: -0.70233005, y: 0.0926381, z: -0.09136897, w: 0.69985884}
+      scale: {x: 100.00008, y: 100.00002, z: 100.00006}
+    - name: ForearmShielding
+      parentName: The Tainted(Clone)
+      position: {x: -0.7662258, y: 0.17215729, z: 0.00026616454}
+      rotation: {x: -0.7012699, y: 0.08766043, z: -0.08675894, w: 0.702146}
+      scale: {x: 100.00006, y: 100.000046, z: 100.00001}
+    - name: FootBase_R
+      parentName: The Tainted(Clone)
+      position: {x: 0.000000008381903, y: 0.00000011920929, z: 0.00000010617077}
+      rotation: {x: -0.7071067, y: 0.000000023707631, z: -0.000000068488625, w: 0.7071068}
+      scale: {x: 99.99999, y: 100.000015, z: 99.99993}
+    - name: Toes_R
+      parentName: The Tainted(Clone)
+      position: {x: 0.000000009546056, y: 0.00000007398691, z: 0.00000006426126}
+      rotation: {x: -0.7071068, y: 0.00000008294036, z: -0.00000007305403, w: 0.7071067}
+      scale: {x: 99.999985, y: 100.00002, z: 99.99993}
+    - name: FootJoint_R
+      parentName: The Tainted(Clone)
+      position: {x: 0.000000009546056, y: 0.00000007398691, z: 0.00000006426126}
+      rotation: {x: -0.7071068, y: 0.00000008294036, z: -0.00000007305403, w: 0.7071067}
+      scale: {x: 99.999985, y: 100.00002, z: 99.99993}
+    - name: Ankle_R
+      parentName: The Tainted(Clone)
+      position: {x: 0.000000008381903, y: 0.00000011920929, z: 0.00000010617077}
+      rotation: {x: -0.7071067, y: 0.000000023707631, z: -0.000000068488625, w: 0.7071068}
+      scale: {x: 99.99999, y: 100.000015, z: 99.99993}
+    - name: Palm
+      parentName: The Tainted(Clone)
+      position: {x: -0.6739124, y: 0.050805297, z: -0.00000019732397}
+      rotation: {x: -0.70377374, y: 0.068575636, z: -0.06857573, w: 0.7037736}
+      scale: {x: 99.99999, y: 100.000015, z: 100.00001}
+    - name: HandShield
+      parentName: The Tainted(Clone)
+      position: {x: -0.7662258, y: 0.17215729, z: 0.00026616454}
+      rotation: {x: -0.7012699, y: 0.08766043, z: -0.08675894, w: 0.702146}
+      scale: {x: 100.00006, y: 100.000046, z: 100.00001}
+    - name: ShoulderBellow_L
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Cube.000
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000044703484, y: 0.000000091438125, z: 0.00000032782555}
+      rotation: {x: -0.7071068, y: 0.000000004122656, z: -0.0000000105833315, w: 0.7071067}
+      scale: {x: 100, y: 100.00004, z: 100}
+    - name: TorsoTentacle1
+      parentName: The Tainted(Clone)
+      position: {x: 2.646978e-22, y: -0.0000014603138, z: -0.00000020861626}
+      rotation: {x: -0.7071068, y: -1.1347158e-22, z: -9.124523e-23, w: 0.7071067}
+      scale: {x: 100, y: 99.999985, z: 100}
+    - name: TorsoTentacle2
+      parentName: The Tainted(Clone)
+      position: {x: 7.940934e-23, y: -0.0000014603138, z: -0.00000020861626}
+      rotation: {x: -0.7071068, y: -1.1347158e-22, z: -9.124523e-23, w: 0.7071067}
+      scale: {x: 100, y: 99.999985, z: 100}
+    - name: TorsoTentacle3
+      parentName: The Tainted(Clone)
+      position: {x: 7.940934e-23, y: -0.0000014603138, z: -0.00000020861626}
+      rotation: {x: -0.7071068, y: -1.1347158e-22, z: -9.124523e-23, w: 0.7071067}
+      scale: {x: 100, y: 99.999985, z: 100}
+    - name: TorsoFill
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: PistonTentacle_R
+      parentName: The Tainted(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: LegConnector_R
+      parentName: The Tainted(Clone)
+      position: {x: -0.00000013411045, y: -0.00000034746654, z: 0.00000016391277}
+      rotation: {x: -0.7071068, y: -0.000000028106957, z: -0.000000012460635, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 99.99999}
+    - name: LegConnector_L
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000029802322, y: -0.000000463454, z: 0.00000047683716}
+      rotation: {x: -0.7071068, y: 0.000000020705086, z: -0.000000026437224, w: 0.7071067}
+      scale: {x: 99.999985, y: 99.99999, z: 100.000015}
+    - name: TentacleFoot_L
+      parentName: The Tainted(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Knee_L
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000018626451, y: -0.00000031711534, z: 0.00000036507845}
+      rotation: {x: -0.7071068, y: -0.0000000046098134, z: 0.000000012841616, w: 0.7071067}
+      scale: {x: 100, y: 100.00002, z: 100.00004}
+    - name: KneeMinor
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000044703484, y: 0.000000091438125, z: 0.00000032782555}
+      rotation: {x: -0.7071068, y: 0.000000004122656, z: -0.0000000105833315, w: 0.7071067}
+      scale: {x: 100, y: 100.00004, z: 100}
+    - name: KneeMajor
+      parentName: The Tainted(Clone)
+      position: {x: -0.000000044703484, y: 0.000000091438125, z: 0.00000032782555}
+      rotation: {x: -0.7071068, y: 0.000000004122656, z: -0.0000000105833315, w: 0.7071067}
+      scale: {x: 100, y: 100.00004, z: 100}
+    - name: DanglyTentacle
+      parentName: The Tainted(Clone)
+      position: {x: 3.5527137e-15, y: -0.0000014603138, z: -0.00000020861626}
+      rotation: {x: -0.7071068, y: -1.1347158e-22, z: -9.124523e-23, w: 0.7071067}
+      scale: {x: 100, y: 99.999985, z: 100}
+    - name: ShoulderTentacle
+      parentName: The Tainted(Clone)
+      position: {x: -6.8251313e-13, y: -0.00000042468338, z: 0.0000001266653}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: NeckTentacle3
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.0000013858082, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: NeckTentacle1
+      parentName: The Tainted(Clone)
+      position: {x: -9.098869e-13, y: -0.0000009052458, z: 0.000000096862976}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: NeckTentacle2
+      parentName: The Tainted(Clone)
+      position: {x: -0.0000000372537, y: -0.0000009089711, z: 0.00000012666513}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: IndexFinger
+      parentName: The Tainted(Clone)
+      position: {x: -0.56983674, y: -0.09862566, z: -0.0000000132512294}
+      rotation: {x: -0.70553905, y: 0.04706026, z: -0.047060244, w: 0.70553905}
+      scale: {x: 100.00001, y: 100, z: 100.00001}
+    - name: MiddleFinger
+      parentName: The Tainted(Clone)
+      position: {x: -0.569837, y: -0.09862563, z: -0.000000057954715}
+      rotation: {x: -0.70553905, y: 0.04706026, z: -0.047060244, w: 0.70553905}
+      scale: {x: 100.00001, y: 100, z: 100.00001}
+    - name: ThatFinger
+      parentName: The Tainted(Clone)
+      position: {x: -0.5698372, y: -0.098625965, z: -0.000000028152382}
+      rotation: {x: -0.70553905, y: 0.04706026, z: -0.047060244, w: 0.70553905}
+      scale: {x: 100.00001, y: 100, z: 100.00001}
+    - name: Pinky
+      parentName: The Tainted(Clone)
+      position: {x: -0.56983745, y: -0.09862593, z: 0.000000016551105}
+      rotation: {x: -0.70553905, y: 0.04706026, z: -0.047060244, w: 0.70553905}
+      scale: {x: 100.00001, y: 100, z: 100.00001}
+    - name: Thumb
+      parentName: The Tainted(Clone)
+      position: {x: -0.569837, y: -0.09862563, z: -0.000000015113871}
+      rotation: {x: -0.70553905, y: 0.04706026, z: -0.047060244, w: 0.70553905}
+      scale: {x: 100.00001, y: 100, z: 100.00001}
+    - name: ForearmTentacle1
+      parentName: The Tainted(Clone)
+      position: {x: -0.7662258, y: 0.17215729, z: 0.00026616454}
+      rotation: {x: -0.7012699, y: 0.08766043, z: -0.08675894, w: 0.702146}
+      scale: {x: 100.00006, y: 100.000046, z: 100.00001}
+    - name: ForearmTentacle2
+      parentName: The Tainted(Clone)
+      position: {x: -0.76622564, y: 0.17215717, z: 0.0002661515}
+      rotation: {x: -0.7012699, y: 0.08766043, z: -0.08675894, w: 0.702146}
+      scale: {x: 100.00006, y: 100.000046, z: 100.00001}
+    - name: AssTentacle
+      parentName: The Tainted(Clone)
+      position: {x: 0.00000010430813, y: -0.0000009834766, z: -0.00000008940697}
+      rotation: {x: -0.7071068, y: -1.1347158e-22, z: -9.124523e-23, w: 0.7071067}
+      scale: {x: 100, y: 99.999985, z: 100}
+    - name: BicepTentacle
+      parentName: The Tainted(Clone)
+      position: {x: -0.7985683, y: 0.19941352, z: 0.012100225}
+      rotation: {x: -0.70233005, y: 0.0926381, z: -0.09136897, w: 0.69985884}
+      scale: {x: 100.00008, y: 100.00002, z: 100.00006}
+    - name: BackTentacle
+      parentName: The Tainted(Clone)
+      position: {x: -7.9619997e-13, y: -0.00000090152054, z: 0.000000067060654}
+      rotation: {x: -0.7071068, y: -4.2957738e-13, z: -2.461906e-13, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Tentacle
+      parentName: The Tainted(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: LegJoint_L.001
+      parentName: The Tainted(Clone)
+      position: {x: -0.00000011920929, y: -0.04915039, z: 0.049300455}
+      rotation: {x: -0.7071068, y: 0.000000008616667, z: -0.0000000105833315, w: 0.7071067}
+      scale: {x: 100, y: 100.00004, z: 100}
+    - name: Cylinder
+      parentName: The Tainted(Clone)
+      position: {x: -0.2263302, y: 1.573811, z: -0.03947034}
+      rotation: {x: -0.44257778, y: 0.4406218, z: 0.5858889, w: 0.5164412}
+      scale: {x: 99.99998, y: 100, z: 100.000046}
+    - name: Cylinder.001
+      parentName: The Tainted(Clone)
+      position: {x: -0.19091871, y: 1.0288966, z: -0.16279462}
+      rotation: {x: 0.7809543, y: 0.016055979, z: 0.027673557, w: 0.6237682}
+      scale: {x: 100.00006, y: 100, z: 128.75125}
+    - name: ShoulderBellow_R.001
+      parentName: The Tainted(Clone)
+      position: {x: -0.0023594312, y: 0.0008004224, z: 0.0061806994}
+      rotation: {x: -0.7081381, y: -0.00022400368, z: -0.00072175806, w: 0.7060736}
+      scale: {x: 100.0001, y: 100.00004, z: 100.000015}
+    - name: ShoulderBellow_R.000
+      parentName: The Tainted(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mixamorig:Hips
+      parentName: The Tainted(Clone)
+      position: {x: 0.00046046064, y: 2.6476462, z: 0.000585625}
+      rotation: {x: 0.0013481538, y: 0.000094368734, z: -0.0028988526, w: 0.99999493}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightUpLeg
+      parentName: mixamorig:Hips
+      position: {x: 0.13500072, y: -0.08760895, z: 0.06423955}
+      rotation: {x: 0.027330814, y: 0.116745055, z: 0.9906155, w: -0.06560962}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightLeg
+      parentName: mixamorig:RightUpLeg
+      position: {x: 0.0000000127074395, y: 1.2142372, z: -0.000000026558382}
+      rotation: {x: -0.3339305, y: -0.14353916, z: -0.04419192, w: 0.9305558}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightFoot
+      parentName: mixamorig:RightLeg
+      position: {x: -0.000000009031091, y: 1.2287532, z: -0.000000013935186}
+      rotation: {x: 0.67691296, y: 0.09417716, z: -0.100024655, w: 0.72312826}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightToeBase
+      parentName: mixamorig:RightFoot
+      position: {x: -8.339148e-10, y: 0.37052816, z: -5.4698496e-10}
+      rotation: {x: 0.24705333, y: 0.040686544, z: -0.0103830695, w: 0.96809167}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightToe_End
+      parentName: mixamorig:RightToeBase
+      position: {x: 3.4752215e-10, y: 0.15353912, z: 4.6174183e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftUpLeg
+      parentName: mixamorig:Hips
+      position: {x: -0.1350007, y: -0.08760895, z: -0.061328992}
+      rotation: {x: -0.0354853, y: 0.10816702, z: 0.9923008, w: 0.048783027}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftLeg
+      parentName: mixamorig:LeftUpLeg
+      position: {x: -0.000000004299414, y: 1.272202, z: -0.000000007492556}
+      rotation: {x: -0.3415091, y: 0.12203605, z: 0.041180607, w: 0.9310118}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftFoot
+      parentName: mixamorig:LeftLeg
+      position: {x: -0.00000001168969, y: 1.2307693, z: 0.000000011366935}
+      rotation: {x: 0.73166555, y: -0.089356475, z: 0.10190359, w: 0.66805446}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftToeBase
+      parentName: mixamorig:LeftFoot
+      position: {x: 9.0345675e-10, y: 0.47983333, z: -0.0000000062058825}
+      rotation: {x: 0.18836002, y: 0.0025661618, z: 0.013378451, w: 0.9820056}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftToe_End
+      parentName: mixamorig:LeftToeBase
+      position: {x: 4.701448e-12, y: 0.18414336, z: -5.1424642e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine
+      parentName: mixamorig:Hips
+      position: {x: -0, y: 0.15735778, z: 0.0017865467}
+      rotation: {x: 0.0043282397, y: -0.0000779107, z: 0.002899342, w: 0.99998647}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine1
+      parentName: mixamorig:Spine
+      position: {x: -0, y: 0.1835958, z: 1.119929e-11}
+      rotation: {x: 2.3811486e-26, y: -3.4885503e-14, z: 6.825611e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine2
+      parentName: mixamorig:Spine1
+      position: {x: -0, y: 0.2098237, z: -1.2854002e-11}
+      rotation: {x: -0, y: 1.009742e-28, z: 1.1044053e-29, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftShoulder
+      parentName: mixamorig:Spine2
+      position: {x: -0.14115815, y: 0.19829771, z: 0.007689406}
+      rotation: {x: 0.5344022, y: -0.46930924, z: 0.50194144, w: 0.4921565}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftArm
+      parentName: mixamorig:LeftShoulder
+      position: {x: 5.413979e-10, y: 0.26874268, z: 0.0000000049150506}
+      rotation: {x: -0.030498538, y: -0.07491106, z: 0.08694993, w: 0.9929239}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftForeArm
+      parentName: mixamorig:LeftArm
+      position: {x: -6.368466e-11, y: 0.929763, z: 0.000000022921267}
+      rotation: {x: -0.00000028082914, y: -0.004969606, z: 0.00000028765757, w: 0.99998766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftHand
+      parentName: mixamorig:LeftForeArm
+      position: {x: 0.0000000010931459, y: 0.7632867, z: 0.0000000058961924}
+      rotation: {x: 0.0000003635026, y: 0.15660405, z: -0.000000062289985, w: 0.9876615}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftHandIndex1
+      parentName: mixamorig:LeftHand
+      position: {x: -1.0987385e-10, y: 0.07036767, z: -6.9689376e-10}
+      rotation: {x: -0.0000000064494534, y: 0.9988264, z: 0.00000013300178, w: 0.04843457}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftHandIndex2
+      parentName: mixamorig:LeftHandIndex1
+      position: {x: 1.7538868e-10, y: 0.15126453, z: 0.0000000030817588}
+      rotation: {x: -0.011506906, y: 0.000000101074065, z: -0.010023448, w: 0.9998836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftHandIndex3
+      parentName: mixamorig:LeftHandIndex2
+      position: {x: -0.0045670853, y: 0.22773731, z: 0.005242861}
+      rotation: {x: -0.0062435954, y: 0.0002501951, z: -0.01630575, w: 0.99984753}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftHandIndex4
+      parentName: mixamorig:LeftHandIndex3
+      position: {x: -0.011882621, y: 0.22530626, z: 0.008006557}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightShoulder
+      parentName: mixamorig:Spine2
+      position: {x: 0.14115816, y: 0.19813286, z: -0.006830274}
+      rotation: {x: -0.50290287, y: -0.4916129, z: 0.5340745, w: -0.46922278}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightArm
+      parentName: mixamorig:RightShoulder
+      position: {x: 1.8146305e-10, y: 0.2687427, z: -0.0000000010677661}
+      rotation: {x: -0.031627182, y: -0.060640164, z: 0.085603654, w: 0.99397916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightForeArm
+      parentName: mixamorig:RightArm
+      position: {x: 0.000000006075411, y: 0.9289664, z: 0.00000005093906}
+      rotation: {x: 0.00000024929824, y: -0.0026586773, z: 0.00000016700805, w: 0.9999965}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightHand
+      parentName: mixamorig:RightForeArm
+      position: {x: 1.3557266e-10, y: 0.76329255, z: 1.1291575e-10}
+      rotation: {x: 0.0000005526942, y: -0.0031559807, z: -0.00000021641544, w: 0.99999505}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightHandIndex1
+      parentName: mixamorig:RightHand
+      position: {x: 7.979134e-10, y: 0.37414393, z: 0.0000000038158627}
+      rotation: {x: -0.00000048407753, y: -0.007407942, z: -0.00000026100005, w: 0.9999726}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightHandIndex2
+      parentName: mixamorig:RightHandIndex1
+      position: {x: -7.010637e-11, y: 0.06418555, z: -0.000000002327674}
+      rotation: {x: 0.08828359, y: -0.00000008849307, z: -0.016246289, w: 0.9959629}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightHandIndex3
+      parentName: mixamorig:RightHandIndex2
+      position: {x: -0.003073492, y: 0.09342921, z: -0.016699363}
+      rotation: {x: -0.0058189956, y: -0.0034143594, z: -0.018032422, w: 0.9998146}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightHandIndex4
+      parentName: mixamorig:RightHandIndex3
+      position: {x: -0.006345975, y: 0.090482645, z: -0.015085197}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Neck
+      parentName: mixamorig:Spine2
+      position: {x: -0, y: 0.2360519, z: -0.0000000038048964}
+      rotation: {x: -0.0056764255, y: 4.392287e-14, z: 2.2712804e-13, w: 0.9999839}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Head
+      parentName: mixamorig:Neck
+      position: {x: -0, y: 0.072578125, z: 0.026293792}
+      rotation: {x: 0, y: 0, z: 5.0487095e-29, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:HeadTop_End
+      parentName: mixamorig:Head
+      position: {x: -0, y: 0.044899598, z: 0.016266365}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
