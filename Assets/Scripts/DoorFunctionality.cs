@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //public enum DoorState { Open, Animating, Closed};
-[ExecuteInEditMode]
+
 public class DoorFunctionality : MonoBehaviour
 {
     public Transform DoorTop;
     public Transform DoorBottom;
 
+    private Transform startTransform = null;
+    private Transform startTransform2 = null;
     private Transform mtransform = null;
     private Transform mtransform2 = null;
 
@@ -30,6 +32,9 @@ public class DoorFunctionality : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startTransform = DoorTop;
+        startTransform2 = DoorBottom;
+
         audio = GetComponent<AudioSource>();
 
         mtransform = DoorTop;
