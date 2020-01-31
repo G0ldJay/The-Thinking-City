@@ -36,6 +36,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-4336761667186592018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637159275252703776
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2978582330084689667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,14 +104,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5680206969543010159}
-  - {fileID: -5662226645441918812}
+  - {fileID: -4336761667186592018}
   EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5662226645441918812}
+  - {fileID: -4336761667186592018}
   StringsBanks:
   - {fileID: 5680206969543010159}
-  stringsBankWriteTime: 637159308177134765
+  stringsBankWriteTime: 637159275252703776
   cacheVersion: 3
 --- !u!114 &5680206969543010159
 MonoBehaviour:
@@ -109,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: TheThinkingCityFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637159308177134765
+  lastModified: 637159275252703776
   LoadResult: 0
   FileSizes:
   - Name: Desktop
