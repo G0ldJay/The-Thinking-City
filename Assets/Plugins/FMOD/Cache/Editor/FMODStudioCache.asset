@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7150904045365838411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637161935983894295
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6579252861408926936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637159308177134765
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6158295423600710950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +107,7 @@ MonoBehaviour:
   lastModified: 637161733501204906
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2978582330084689667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,16 +176,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5680206969543010159}
-  - {fileID: 4703936759250917682}
-  - {fileID: -2997287427459740582}
+  - {fileID: -7150904045365838411}
+  - {fileID: -6579252861408926936}
   EditorEvents:
   - {fileID: 8392529291730229908}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2997287427459740582}
+  - {fileID: -6579252861408926936}
   StringsBanks:
   - {fileID: 5680206969543010159}
-  stringsBankWriteTime: 637161733501284690
+  stringsBankWriteTime: 637161935983904150
   cacheVersion: 3
 --- !u!114 &4703936759250917682
 MonoBehaviour:
@@ -168,7 +204,7 @@ MonoBehaviour:
   lastModified: 637161733529797292
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5680206969543010159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: TheThinkingCityFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637161733501284690
+  lastModified: 637161935983904150
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -222,7 +258,7 @@ MonoBehaviour:
   Path: event:/Ambience
   guid: b1f40847775fe64a93e37cbe7d0b3f06
   Banks:
-  - {fileID: 4703936759250917682}
+  - {fileID: -7150904045365838411}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
