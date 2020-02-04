@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4906553169074688590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4574047992127800126}
+  m_Layer: 0
+  m_Name: Klaxon Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4574047992127800126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906553169074688590}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 9.195087e-16, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3498370619871374265}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
+--- !u!1001 &8499982745450119331
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4574047992127800126}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00000006866252
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3322676e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000000004632625
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7052496
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.05121339
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.051213063
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7052499
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 8.307
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8dc8802edca938c4aaa494dd6ca0015f, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c0d5acbbe8affec45b02df2427a52f78, type: 2}
+    - target: {fileID: -927199367670048503, guid: 4efab7369eae21044a1d5a7388fb361d,
+        type: 3}
+      propertyPath: m_Name
+      value: Klaxon Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4efab7369eae21044a1d5a7388fb361d, type: 3}
+--- !u!4 &3498370619871374265 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4efab7369eae21044a1d5a7388fb361d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8499982745450119331}
+  m_PrefabAsset: {fileID: 0}
