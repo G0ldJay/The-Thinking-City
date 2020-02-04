@@ -233,7 +233,7 @@ MonoBehaviour:
   lastModified: 637164370675557172
   LoadResult: 0
   FileSizes: []
-  Exists: 0
+  Exists: 1
 --- !u!114 &-2997287427459740582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,19 +338,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5680206969543010159}
-  - {fileID: 8941290597848995053}
-  - {fileID: 7153389003967281547}
-  - {fileID: 1967899823866358685}
+  - {fileID: 7221980401051561526}
+  - {fileID: 1886094349401009610}
+  - {fileID: -3116753753058174277}
   EditorEvents:
   - {fileID: 8392529291730229908}
   - {fileID: 2479641057656647735}
   - {fileID: 1977079458871863595}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1967899823866358685}
+  - {fileID: -3116753753058174277}
   StringsBanks:
   - {fileID: 5680206969543010159}
-  stringsBankWriteTime: 637164371891180197
+  stringsBankWriteTime: 637164370675607037
   cacheVersion: 3
 --- !u!114 &301623941107201735
 MonoBehaviour:
@@ -405,24 +405,6 @@ MonoBehaviour:
   lastModified: 637164370675796533
   LoadResult: 0
   FileSizes: []
-  Exists: 0
---- !u!114 &1967899823866358685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: TheThinkingCityFMOD/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637159275252703776
-  LoadResult: 0
-  FileSizes: []
   Exists: 1
 --- !u!114 &1977079458871863595
 MonoBehaviour:
@@ -439,7 +421,7 @@ MonoBehaviour:
   Path: event:/Steam
   guid: 4958e771fbff5844b1c588c019f5b0f6
   Banks:
-  - {fileID: 7153389003967281547}
+  - {fileID: 1886094349401009610}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -480,7 +462,7 @@ MonoBehaviour:
   Path: event:/ConsoleHum
   guid: 09a6981b6836f94783a220cedbe6e2a5
   Banks:
-  - {fileID: 7153389003967281547}
+  - {fileID: 1886094349401009610}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -538,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: TheThinkingCityFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637164371891180197
+  lastModified: 637164370675607037
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -616,24 +598,6 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &7153389003967281547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Environment Effects.bank
-  m_EditorClassIdentifier: 
-  Path: TheThinkingCityFMOD/Build/Desktop/Environment Effects.bank
-  SubDir: 
-  lastModified: 637164371891170130
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
 --- !u!114 &7221980401051561526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,7 +615,7 @@ MonoBehaviour:
   lastModified: 637164370675447461
   LoadResult: 0
   FileSizes: []
-  Exists: 0
+  Exists: 1
 --- !u!114 &7456310495390799394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,7 +667,7 @@ MonoBehaviour:
   Path: event:/Ambience
   guid: b1f40847775fe64a93e37cbe7d0b3f06
   Banks:
-  - {fileID: 8941290597848995053}
+  - {fileID: 7221980401051561526}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -711,21 +675,3 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 122070
---- !u!114 &8941290597848995053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
-  m_EditorClassIdentifier: 
-  Path: TheThinkingCityFMOD/Build/Desktop/Ambience.bank
-  SubDir: 
-  lastModified: 637164371891090610
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
