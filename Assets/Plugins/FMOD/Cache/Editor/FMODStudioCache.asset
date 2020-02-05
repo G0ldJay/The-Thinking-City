@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8800930859804643019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637159308177134765
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7962052383157665137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,7 +53,7 @@ MonoBehaviour:
   lastModified: 637165222466970670
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7150904045365838411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,8 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/TrishTurnOnTheLights
   guid: 1b98dd3fe3fa7a419ceb61376c8d70c9
-  Banks:
-  - {fileID: -7708797582773992485}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -130,7 +147,7 @@ MonoBehaviour:
   lastModified: 637164440279236244
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6158295423600710950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +201,7 @@ MonoBehaviour:
   lastModified: 637164375057184783
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5662226645441918812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +256,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4467258479074699147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player Sound Effects.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Player Sound Effects.bank
+  SubDir: 
+  lastModified: 637165296432163494
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4336761667186592018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,8 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Footsteps
   guid: c8bd2e3c4b39c146ac683fdcec581e32
-  Banks:
-  - {fileID: -6172022718041278064}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -352,6 +386,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 630
+--- !u!114 &-3130483612834693306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TrishCardDirection
+  m_EditorClassIdentifier: 
+  Path: event:/TrishCardDirection
+  guid: 0d922c9e6de7db4cad2d590f45ba5778
+  Banks:
+  - {fileID: -794253658271298672}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12000
 --- !u!114 &-3119923062497153259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,6 +499,65 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2677752913586076624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps
+  guid: c8bd2e3c4b39c146ac683fdcec581e32
+  Banks:
+  - {fileID: -4467258479074699147}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 630
+--- !u!114 &-2631005319624263595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637159308177134765
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2460438977570669141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637165296430757152
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2006035324909987521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,8 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/TrishCardDirection
   guid: 0d922c9e6de7db4cad2d590f45ba5778
-  Banks:
-  - {fileID: -7708797582773992485}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -501,6 +616,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 12000
+--- !u!114 &-1381589877948627378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment Effects.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Environment Effects.bank
+  SubDir: 
+  lastModified: 637165296432153515
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1224045281472170201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +652,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-794253658271298672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Trish.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Trish.bank
+  SubDir: 
+  lastModified: 637165296432193410
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-589905340172837850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,8 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/TrishThatIsNotMeantTo
   guid: 1eef26ae71ef7b40b0e3646209d55a94
-  Banks:
-  - {fileID: -7708797582773992485}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -560,6 +710,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-348053067520073408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TrishCardPower
+  m_EditorClassIdentifier: 
+  Path: event:/TrishCardPower
+  guid: e740d4b3be134d44a6c775cd083aeb91
+  Banks:
+  - {fileID: -794253658271298672}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9000
 --- !u!114 &-229886343613007936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,7 +768,7 @@ MonoBehaviour:
   lastModified: 637164375057254598
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,29 +783,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5680206969543010159}
-  - {fileID: -5763161458770094952}
-  - {fileID: -15420572495179914}
-  - {fileID: 4959965283484393302}
-  - {fileID: -6172022718041278064}
-  - {fileID: -7708797582773992485}
+  - {fileID: -2460438977570669141}
+  - {fileID: -1381589877948627378}
+  - {fileID: -2631005319624263595}
+  - {fileID: -4467258479074699147}
+  - {fileID: -794253658271298672}
   EditorEvents:
   - {fileID: 8392529291730229908}
-  - {fileID: 2479641057656647735}
-  - {fileID: 1977079458871863595}
-  - {fileID: -3169901681930157926}
-  - {fileID: -1599632967849866216}
-  - {fileID: -6335708706925493364}
-  - {fileID: -589905340172837850}
-  - {fileID: 3997765809912902023}
-  - {fileID: 8245603577193331517}
-  - {fileID: 884900093531317984}
+  - {fileID: 5982653569465620584}
+  - {fileID: 57721468630439230}
+  - {fileID: -2677752913586076624}
+  - {fileID: -3130483612834693306}
+  - {fileID: 3372024006069906570}
+  - {fileID: 3200448016025705833}
+  - {fileID: 3992740080153326040}
+  - {fileID: 2805858217760091096}
+  - {fileID: -348053067520073408}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4959965283484393302}
+  - {fileID: -2631005319624263595}
   StringsBanks:
   - {fileID: 5680206969543010159}
-  stringsBankWriteTime: 637165222466920765
+  stringsBankWriteTime: 637165296432163494
   cacheVersion: 3
+--- !u!114 &57721468630439230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Steam
+  m_EditorClassIdentifier: 
+  Path: event:/Steam
+  guid: 4958e771fbff5844b1c588c019f5b0f6
+  Banks:
+  - {fileID: -1381589877948627378}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9
+  Length: 68899
 --- !u!114 &301623941107201735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,8 +861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/TrishCardPower
   guid: e740d4b3be134d44a6c775cd083aeb91
-  Banks:
-  - {fileID: -7708797582773992485}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -742,8 +937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Steam
   guid: 4958e771fbff5844b1c588c019f5b0f6
-  Banks:
-  - {fileID: -15420572495179914}
+  Banks: []
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -805,8 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/ConsoleHum
   guid: 09a6981b6836f94783a220cedbe6e2a5
-  Banks:
-  - {fileID: -15420572495179914}
+  Banks: []
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -814,6 +1007,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28270
+--- !u!114 &2805858217760091096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TrishYouCanHide
+  m_EditorClassIdentifier: 
+  Path: event:/TrishYouCanHide
+  guid: cabf1faea4220a46a3cf8dcbb421c8f9
+  Banks:
+  - {fileID: -794253658271298672}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6892
 --- !u!114 &2864381792153213338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,6 +1048,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3200448016025705833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TrishThatIsNotMeantTo
+  m_EditorClassIdentifier: 
+  Path: event:/TrishThatIsNotMeantTo
+  guid: 1eef26ae71ef7b40b0e3646209d55a94
+  Banks:
+  - {fileID: -794253658271298672}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9931
 --- !u!114 &3215793149092475098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,6 +1089,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3372024006069906570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TrishTurnOnTheLights
+  m_EditorClassIdentifier: 
+  Path: event:/TrishTurnOnTheLights
+  guid: 1b98dd3fe3fa7a419ceb61376c8d70c9
+  Banks:
+  - {fileID: -794253658271298672}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 10823
 --- !u!114 &3961298465501435935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,7 +1130,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &3997765809912902023
+--- !u!114 &3992740080153326040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -883,7 +1145,29 @@ MonoBehaviour:
   Path: event:/TrishYouMadeIt
   guid: 6800d01e200b7a4984fc0b90f380b577
   Banks:
-  - {fileID: -7708797582773992485}
+  - {fileID: -794253658271298672}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9485
+--- !u!114 &3997765809912902023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TrishYouMadeIt
+  m_EditorClassIdentifier: 
+  Path: event:/TrishYouMadeIt
+  guid: 6800d01e200b7a4984fc0b90f380b577
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -944,7 +1228,7 @@ MonoBehaviour:
   lastModified: 637159258261470298
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5680206969543010159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,12 +1243,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: TheThinkingCityFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637165222466920765
+  lastModified: 637165296432163494
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1354
   Exists: 1
+--- !u!114 &5831322618035358258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637161935983894295
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5982653569465620584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ConsoleHum
+  m_EditorClassIdentifier: 
+  Path: event:/ConsoleHum
+  guid: 09a6981b6836f94783a220cedbe6e2a5
+  Banks:
+  - {fileID: -1381589877948627378}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28270
 --- !u!114 &6218771636884453439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,8 +1484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/TrishYouCanHide
   guid: cabf1faea4220a46a3cf8dcbb421c8f9
-  Banks:
-  - {fileID: -7708797582773992485}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1183,7 +1507,7 @@ MonoBehaviour:
   Path: event:/Ambience
   guid: b1f40847775fe64a93e37cbe7d0b3f06
   Banks:
-  - {fileID: -5763161458770094952}
+  - {fileID: -2460438977570669141}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
