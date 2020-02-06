@@ -81,6 +81,7 @@ public abstract class AIStateMachine : MonoBehaviour
     [SerializeField] protected AIBoneAlignmentType      _rootBoneAlignment  = AIBoneAlignmentType.ZAxis;    //Sets alignment of the root bone
     [SerializeField] protected SphereCollider           _targetTrigger      = null;                         //Holds the sphere collider for the target trigger
     [SerializeField] protected SphereCollider           _sensorTrigger      = null;                         //Holds the sphere collider for the sensor trigger
+    [SerializeField] protected SphereCollider           _powerUpTrigger     = null;
     [SerializeField] protected AIWaypointNetwork        _waypointNetwork    = null;                         //Holds the waypoints for the AI to patrol around
     [SerializeField] protected bool                     _randomPatrol       = false;                        //Sets if patrol should pick random points in list
     [SerializeField] protected int                      _currentWaypoint    = -1;                           //Holds current waypoint
@@ -164,6 +165,7 @@ public abstract class AIStateMachine : MonoBehaviour
             // Register State Machines with Scene Database
             if (_collider) GameManager.instance.RegisterAIStateMachine(_collider.GetInstanceID(), this);
             if (_sensorTrigger) GameManager.instance.RegisterAIStateMachine(_sensorTrigger.GetInstanceID(), this);
+            if (_powerUpTrigger) GameManager.instance.RegisterAIStateMachine(_powerUpTrigger.GetInstanceID(), this);
         }
 
         if (_rootBone != null)
@@ -191,6 +193,16 @@ public abstract class AIStateMachine : MonoBehaviour
         if (_sensorTrigger != null)
         {
             AISensor script = _sensorTrigger.GetComponent<AISensor>();
+
+            if (script != null)
+            {
+                script.parentStateMachine = this;
+            }
+        }
+
+        if (_powerUpTrigger != null)
+        {
+            AIPowerUpSensor script = _powerUpTrigger.GetComponent<AIPowerUpSensor>();
 
             if (script != null)
             {
@@ -528,6 +540,11 @@ public abstract class AIStateMachine : MonoBehaviour
 
 
     public virtual void TakeDamage(Vector3 position, Vector3 force, int damage, Rigidbody bodyPart, CharacterManager characterManager, int hitDirection = 0)
+    {
+
+    }
+
+    public virtual void PowerUp(Collider col)
     {
 
     }

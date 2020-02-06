@@ -62,45 +62,49 @@ public class AIRobotState_Idle1 : AIRobotState
 		if (_robotStateMachine == null)
 			return AIStateType.Idle;
 
-		//Is the player visible
-		if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player) 
-		{
-            _robotStateMachine.SetTarget (_robotStateMachine.VisualThreat);
-			return AIStateType.Pursuit;
-		}
+        if (_robotStateMachine.poweredUp)
+        {
 
-		//Is the threat a flashlight
-		if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light) 
-		{
-            _robotStateMachine.SetTarget (_robotStateMachine.VisualThreat);
-			return AIStateType.Alerted;
-		}
+            //Is the player visible
+            if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
+            {
+                _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
+                return AIStateType.Pursuit;
+            }
 
-		//Is the threat an audio emitter
-		if (_robotStateMachine.AudioThreat.type == AITargetType.Audio) 
-		{
-            _robotStateMachine.SetTarget (_robotStateMachine.AudioThreat);
-			return AIStateType.Alerted;
-		}
+            //Is the threat a flashlight
+            if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light)
+            {
+                _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
+                return AIStateType.Alerted;
+            }
 
-		//Is the threat food
-		if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Food) 
-		{
-            _robotStateMachine.SetTarget (_robotStateMachine.VisualThreat);
-			return AIStateType.Pursuit;
-		}
+            //Is the threat an audio emitter
+            if (_robotStateMachine.AudioThreat.type == AITargetType.Audio)
+            {
+                _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat);
+                return AIStateType.Alerted;
+            }
 
-		//Update the idle timer
-		_timer += Time.deltaTime;
+            //Is the threat food
+            if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Food)
+            {
+                _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
+                return AIStateType.Pursuit;
+            }
 
-		//Patrol if idle time has been exceeded
-		if (_timer > _idleTime) 
-		{
-            _robotStateMachine.navAgent.SetDestination(_robotStateMachine.GetWaypointPosition(false));
-            _robotStateMachine.navAgent.isStopped = false;
-			return AIStateType.Alerted;
-		}
+            //Update the idle timer
+            _timer += Time.deltaTime;
 
+            //Patrol if idle time has been exceeded
+            if (_timer > _idleTime)
+            {
+                _robotStateMachine.navAgent.SetDestination(_robotStateMachine.GetWaypointPosition(false));
+                _robotStateMachine.navAgent.isStopped = false;
+                return AIStateType.Alerted;
+            }
+
+        }
 		// No state change required
 		return AIStateType.Idle;
 	}
