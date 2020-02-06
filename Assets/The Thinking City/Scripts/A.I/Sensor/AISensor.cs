@@ -10,8 +10,9 @@ using System.Collections;
 public class AISensor : MonoBehaviour 
 {
 	// Private
-	private AIStateMachine	_parentStateMachine	=	null; //Holds the AI State Machine
-	public AIStateMachine parentStateMachine{ set{ _parentStateMachine = value; }} //Sets the A.I State Machine 
+	private AIStateMachine	    _parentStateMachine	=	null;                               //Holds the AI State Machine
+
+	public AIStateMachine       parentStateMachine  { set{ _parentStateMachine = value; }}  //Sets the A.I State Machine 
 
 	void OnTriggerEnter( Collider col ) //When something enters the trigger 
 	{

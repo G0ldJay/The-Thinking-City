@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &2026023485597202775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239502902565811832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.000000005122274}
 --- !u!1 &7037989499645488011
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,13 +22,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2906849224719122795}
-  - component: {fileID: -1387233702290406988}
   m_Layer: 0
   m_Name: Central Floor Panel 2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2906849224719122795
 Transform:
@@ -32,20 +44,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &-1387233702290406988
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037989499645488011}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1001 &2717579063559155569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,8 +116,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main_Floor_Centre
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 751d5e81b2b2b194c98f605144084f60,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 751d5e81b2b2b194c98f605144084f60, type: 3}
+--- !u!1 &6239502902565811832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 751d5e81b2b2b194c98f605144084f60,
+    type: 3}
+  m_PrefabInstance: {fileID: 2717579063559155569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6975076418499822699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 751d5e81b2b2b194c98f605144084f60,

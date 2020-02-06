@@ -4422,8 +4422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8735404637343021177}
-  - component: {fileID: 1706978598926537987}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GSA_Tainted_v02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4439,7 +4438,7 @@ Transform:
   m_GameObject: {fileID: 5719921053979347562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.672, y: 0.0118299415, z: 8.138}
-  m_LocalScale: {x: 0.48587587, y: 0.48587587, z: 0.48587587}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5857997566786279652}
   - {fileID: 1955710578667719251}
@@ -4454,25 +4453,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1706978598926537987
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719921053979347562}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e54c546de52fab748bc0036effaccafd, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5854296934399449631
 GameObject:
   m_ObjectHideFlags: 0
