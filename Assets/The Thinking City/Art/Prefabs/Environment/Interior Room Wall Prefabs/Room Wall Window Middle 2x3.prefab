@@ -28,9 +28,90 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3574863396606356044}
+  - {fileID: 7893789045283345517}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2951805672953642871
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7601679993261956229}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25091
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00020027
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000037624832
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071072
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000027940257
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071064
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d341df1ca91795545b766914ec6e726c, type: 2}
+    - target: {fileID: -927199367670048503, guid: a0985e1e4461c9541a3cc898752019e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Interior_Ext
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0985e1e4461c9541a3cc898752019e5, type: 3}
+--- !u!4 &7893789045283345517 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0985e1e4461c9541a3cc898752019e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2951805672953642871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8423635241160999254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,11 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7601679993261956229}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 36051c705f63cf94eaa17ddb8642c1e3,
-        type: 3}
-      propertyPath: m_Name
-      value: Room Wall Window Mid 2x3
-      objectReference: {fileID: 0}
     - target: {fileID: -6146601578844146945, guid: 36051c705f63cf94eaa17ddb8642c1e3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -113,6 +189,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9fa90a6a9f97ba2448be5bf5b0ddd9e4, type: 2}
+    - target: {fileID: -927199367670048503, guid: 36051c705f63cf94eaa17ddb8642c1e3,
+        type: 3}
+      propertyPath: m_Name
+      value: Room Wall Window Mid 2x3
+      objectReference: {fileID: 0}
     - target: {fileID: -678655025697594940, guid: 36051c705f63cf94eaa17ddb8642c1e3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
