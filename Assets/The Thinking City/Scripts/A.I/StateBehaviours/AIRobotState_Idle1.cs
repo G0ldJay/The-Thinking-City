@@ -62,8 +62,8 @@ public class AIRobotState_Idle1 : AIRobotState
 		if (_robotStateMachine == null)
 			return AIStateType.Idle;
 
-        if (_robotStateMachine.poweredUp)
-        {
+        //if (_robotStateMachine.poweredUp)
+        //{
 
             //Is the player visible
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
@@ -104,7 +104,7 @@ public class AIRobotState_Idle1 : AIRobotState
                 return AIStateType.Alerted;
             }
 
-        }
+        //}
 		// No state change required
 		return AIStateType.Idle;
 	}

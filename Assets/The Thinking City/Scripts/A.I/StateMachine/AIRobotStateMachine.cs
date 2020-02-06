@@ -50,7 +50,7 @@ public class AIRobotStateMachine : AIStateMachine
     private bool    _crawling   = false;
     private int     _attackType = 0;
     private float   _speed      = 0.0f;
-    bool    _poweredUp  = false;
+    //bool    _poweredUp  = false;
 
     // Ragdoll Stuff
     private AIBoneControlType       _boneControlType        = AIBoneControlType.Animated;
@@ -76,7 +76,7 @@ public class AIRobotStateMachine : AIStateMachine
     private int _reanimateFromFrontHash     = Animator.StringToHash("ReanimateFromFront");
 
     // Public Properties
-    public bool     poweredUp       { get { return _poweredUp; } }
+    //public bool     poweredUp       { get { return _poweredUp; } }
     public float    replenishRate   { get { return _replenishRate; } }
     public float    fov             { get { return _fov; } }
     public float    hearing         { get { return _hearing; } }
@@ -148,21 +148,21 @@ public class AIRobotStateMachine : AIStateMachine
         }
     }
 
-    public override void PowerUp(Collider col)
-    {
-        if(col != null)
-        {
-            if (col.gameObject.CompareTag("Player"))
-            {
-                if (!_poweredUp)
-                {
-                    _poweredUp = true;
-                    _powerUpTrigger.enabled = false;
-                    _animator.SetTrigger("Power Up");
-                }
-            }
-        }
-    }
+    //public override void PowerUp(Collider col)
+    //{
+    //    if(col != null)
+    //    {
+    //        if (col.gameObject.CompareTag("Player"))
+    //        {
+    //            if (!_poweredUp)
+    //            {
+    //                _poweredUp = true;
+    //                _powerUpTrigger.enabled = false;
+    //                _animator.SetTrigger("Power Up");
+    //            }
+    //        }
+    //    }
+    //}
 
     // -------------------------------------------------------------------
     // Name	:	TakeDamage
