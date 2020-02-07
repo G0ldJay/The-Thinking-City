@@ -6,7 +6,7 @@ public class AIDamageTrigger : MonoBehaviour
     // Inspector Variables
     [SerializeField] string _parameter                  = "";
     [SerializeField] int    _bloodParticlesBurstAmount  = 10;
-    [SerializeField] float  _damageAmount               = 0.1f;
+    [SerializeField] float  _damageAmount               = 25.0f;
 
     // Private Variables
     AIStateMachine  _stateMachine   = null;
