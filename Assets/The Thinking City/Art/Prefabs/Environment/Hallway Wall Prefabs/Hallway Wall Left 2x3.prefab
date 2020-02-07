@@ -1,7 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &4261501967503408695
-MeshCollider:
+--- !u!65 &2340488241891699827
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10,12 +10,11 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 3557879054105070054, guid: dfcf2387624558c4988e57b5c3609956, type: 3}
---- !u!64 &6585107379958275811
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 0.7506155, y: 2.8, z: 0.2000001}
+  m_Center: {x: 0.12469225, y: -0.08, z: 0.099999994}
+--- !u!65 &1747382234960520244
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -24,12 +23,11 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 5060444177187149915, guid: dfcf2387624558c4988e57b5c3609956, type: 3}
---- !u!64 &494648973775720160
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 2.000001, z: 1.915123}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &4159869889768032088
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -38,12 +36,11 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -8298940227465870776, guid: dfcf2387624558c4988e57b5c3609956, type: 3}
---- !u!64 &5724319689442527564
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.6853974, z: 0.60000014}
+  m_Center: {x: 0, y: 0.5764945, z: 0.30000007}
+--- !u!65 &6467525041976611393
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -52,10 +49,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -2232952877369940510, guid: dfcf2387624558c4988e57b5c3609956, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 2.0000005, z: 0.4000001}
+  m_Center: {x: 0, y: 0, z: 0.20000005}
 --- !u!1 &6150900373450071716
 GameObject:
   m_ObjectHideFlags: 0

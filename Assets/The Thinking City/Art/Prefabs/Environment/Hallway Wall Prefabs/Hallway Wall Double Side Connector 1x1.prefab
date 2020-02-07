@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &855738734013016517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171513642879885069}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.75077415, y: 1.7339574, z: 0.20000008}
+  m_Center: {x: 0.12461294, y: -0.5444953, z: 0.09999998}
 --- !u!1 &459069551916330360
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,50 +44,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &8193450420135139231
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7892025960891627070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -2232952877369940510, guid: bcb6f4b51ed9acd44a712caa57c8267f, type: 3}
---- !u!64 &6607256534468313149
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171513642879885069}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4733244715438518452, guid: bcb6f4b51ed9acd44a712caa57c8267f, type: 3}
---- !u!64 &7125745857480170806
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5974205128798960349}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 3557879054105070054, guid: bcb6f4b51ed9acd44a712caa57c8267f, type: 3}
---- !u!64 &6102644038714727912
-MeshCollider:
+--- !u!65 &7587061430520760705
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -83,12 +54,24 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -5395582760244232606, guid: bcb6f4b51ed9acd44a712caa57c8267f, type: 3}
---- !u!64 &8773964635384707322
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 1, z: 1.915123}
+  m_Center: {x: 0.25, y: 0.5, z: 1.3574075}
+--- !u!65 &3126712205759626080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974205128798960349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7506155, y: 1.7337925, z: 0.2000001}
+  m_Center: {x: 0.12469225, y: -0.54441285, z: 0.099999994}
+--- !u!65 &5056712726274563056
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,10 +80,22 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 7875615444233757513, guid: bcb6f4b51ed9acd44a712caa57c8267f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.68539745, z: 0.60000014}
+  m_Center: {x: 0.49999985, y: 0.076494485, z: 0.30000007}
+--- !u!65 &7038818259443123423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892025960891627070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.0000002, z: 0.4000001}
+  m_Center: {x: 0, y: 0.5000001, z: 0.20000005}
 --- !u!1001 &5946130061998860700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,11 +103,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3460357206589661035}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: bcb6f4b51ed9acd44a712caa57c8267f,
-        type: 3}
-      propertyPath: m_Name
-      value: Hallway Wall Double Side Connector 1x3
-      objectReference: {fileID: 0}
     - target: {fileID: -6552642759350823264, guid: bcb6f4b51ed9acd44a712caa57c8267f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -178,6 +168,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6f534f01bbbbcca4685b1aa6c57ddc4f, type: 2}
+    - target: {fileID: -927199367670048503, guid: bcb6f4b51ed9acd44a712caa57c8267f,
+        type: 3}
+      propertyPath: m_Name
+      value: Hallway Wall Double Side Connector 1x3
+      objectReference: {fileID: 0}
     - target: {fileID: 3619277901226107913, guid: bcb6f4b51ed9acd44a712caa57c8267f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

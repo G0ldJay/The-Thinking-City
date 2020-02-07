@@ -1,35 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &4707458985319492101
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300955975831081871}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 5060444177187149915, guid: e5d915c3a6680f34bacb979029384f05, type: 3}
---- !u!64 &5376668124198795637
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3093383796024599254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -2232952877369940510, guid: e5d915c3a6680f34bacb979029384f05, type: 3}
---- !u!64 &8194280267466297869
-MeshCollider:
+--- !u!65 &2160856107238156378
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -38,12 +10,11 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -8298940227465870776, guid: e5d915c3a6680f34bacb979029384f05, type: 3}
---- !u!64 &5832842151740105522
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 0.68539745, z: 0.60000014}
+  m_Center: {x: 0.49999985, y: 0.076494485, z: 0.30000007}
+--- !u!65 &7583073220829794351
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -52,10 +23,35 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 3557879054105070054, guid: e5d915c3a6680f34bacb979029384f05, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.7506155, y: 1.7337925, z: 0.2000001}
+  m_Center: {x: 0.12469225, y: -0.54441285, z: 0.099999994}
+--- !u!65 &2269421424386254533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300955975831081871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 1.0000008, z: 1.915123}
+  m_Center: {x: 0.000001259613, y: 0.5, z: -0.00000005960466}
+--- !u!65 &5038643215314443185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093383796024599254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.0000002, z: 0.4000001}
+  m_Center: {x: 0, y: 0.5000001, z: 0.20000005}
 --- !u!1 &6701389713246484717
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,11 +90,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7735855574504803070}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: e5d915c3a6680f34bacb979029384f05,
+    - target: {fileID: -6552642759350823264, guid: e5d915c3a6680f34bacb979029384f05,
         type: 3}
-      propertyPath: m_Name
-      value: Hallway Wall Left Connector 1x3
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 05be660dac29c8c4ab616dbbc92f42f9, type: 2}
     - target: {fileID: -4216859302048453862, guid: e5d915c3a6680f34bacb979029384f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -154,22 +150,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6552642759350823264, guid: e5d915c3a6680f34bacb979029384f05,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 05be660dac29c8c4ab616dbbc92f42f9, type: 2}
     - target: {fileID: -2520922206945994363, guid: e5d915c3a6680f34bacb979029384f05,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 05be660dac29c8c4ab616dbbc92f42f9, type: 2}
-    - target: {fileID: 8405317065323677370, guid: e5d915c3a6680f34bacb979029384f05,
+    - target: {fileID: -927199367670048503, guid: e5d915c3a6680f34bacb979029384f05,
+        type: 3}
+      propertyPath: m_Name
+      value: Hallway Wall Left Connector 1x3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796965159598972112, guid: e5d915c3a6680f34bacb979029384f05,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 05be660dac29c8c4ab616dbbc92f42f9, type: 2}
-    - target: {fileID: 7796965159598972112, guid: e5d915c3a6680f34bacb979029384f05,
+    - target: {fileID: 8405317065323677370, guid: e5d915c3a6680f34bacb979029384f05,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

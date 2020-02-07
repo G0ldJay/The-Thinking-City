@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &5733440881285921597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39010191967179536}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.75077415, y: 1.7339574, z: 0.20000008}
+  m_Center: {x: 0.12461294, y: -0.5444953, z: 0.09999998}
 --- !u!1 &1030960387828411023
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,36 +64,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &8572325150016824585
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6516305738765388666}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 5060444177187149915, guid: 79918d8f2bfffad45bb020352da68602, type: 3}
---- !u!64 &5696792729164375749
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8029314383227451939}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -2232952877369940510, guid: 79918d8f2bfffad45bb020352da68602, type: 3}
---- !u!64 &3045941211546365192
-MeshCollider:
+--- !u!65 &2913144698705825347
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,24 +74,35 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -114699674525647331, guid: 79918d8f2bfffad45bb020352da68602, type: 3}
---- !u!64 &7448765363264974401
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 0.68539745, z: 0.6}
+  m_Center: {x: -0.49999994, y: 0.076494485, z: 0.2999999}
+--- !u!65 &4163011577755785735
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39010191967179536}
+  m_GameObject: {fileID: 6516305738765388666}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4733244715438518452, guid: 79918d8f2bfffad45bb020352da68602, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 1.0000002, z: 1.915123}
+  m_Center: {x: 0.000001259613, y: -0.5000001, z: -0.00000005960466}
+--- !u!65 &4641464500918780093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029314383227451939}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.0000002, z: 0.4000001}
+  m_Center: {x: 0, y: 0.5000001, z: 0.20000005}
 --- !u!1001 &5795891817095980417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,11 +110,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4041396662782138524}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 79918d8f2bfffad45bb020352da68602,
-        type: 3}
-      propertyPath: m_Name
-      value: Hallway Wall Right Connector 1x3
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 79918d8f2bfffad45bb020352da68602,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -174,12 +165,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8405317065323677370, guid: 79918d8f2bfffad45bb020352da68602,
+    - target: {fileID: -1951538297860722993, guid: 79918d8f2bfffad45bb020352da68602,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 794d4b54d455b674cad67055e96e136d, type: 2}
-    - target: {fileID: -1951538297860722993, guid: 79918d8f2bfffad45bb020352da68602,
+    - target: {fileID: -927199367670048503, guid: 79918d8f2bfffad45bb020352da68602,
+        type: 3}
+      propertyPath: m_Name
+      value: Hallway Wall Right Connector 1x3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619277901226107913, guid: 79918d8f2bfffad45bb020352da68602,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -189,7 +185,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 794d4b54d455b674cad67055e96e136d, type: 2}
-    - target: {fileID: 3619277901226107913, guid: 79918d8f2bfffad45bb020352da68602,
+    - target: {fileID: 8405317065323677370, guid: 79918d8f2bfffad45bb020352da68602,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
