@@ -1,7 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &3950166512774314386
-MeshCollider:
+--- !u!65 &6748232087959424472
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10,12 +10,11 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -114699674525647331, guid: b62f73ab78caffa42946fbc7f9d117bc, type: 3}
---- !u!64 &5316411315235546901
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 0.3462484, y: 1.4000005, z: 0.60000026}
+  m_Center: {x: 0.00012420863, y: 4.656613e-10, z: 0.30000013}
+--- !u!65 &8670140430065964210
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -24,10 +23,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4143267299020566393, guid: d30ffab2bf06f8541877506c45244f63, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.3460232, y: 1.4000003, z: 1.6520004}
+  m_Center: {x: -0.000112615526, y: 0.000000007450581, z: 0.67400014}
 --- !u!1 &8858006583347445053
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,16 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8858006583886552435}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: d30ffab2bf06f8541877506c45244f63,
-        type: 3}
-      propertyPath: m_Name
-      value: Door_Upper
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: d30ffab2bf06f8541877506c45244f63,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d30ffab2bf06f8541877506c45244f63,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,6 +187,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2c0b07e1538a4945bb49115c01e9881, type: 2}
+    - target: {fileID: -927199367670048503, guid: d30ffab2bf06f8541877506c45244f63,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Upper
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d30ffab2bf06f8541877506c45244f63,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d30ffab2bf06f8541877506c45244f63, type: 3}
 --- !u!1 &705969033330814541 stripped
@@ -220,16 +218,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8858006584079879179}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b62f73ab78caffa42946fbc7f9d117bc,
-        type: 3}
-      propertyPath: m_Name
-      value: Door_Lower
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: b62f73ab78caffa42946fbc7f9d117bc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b62f73ab78caffa42946fbc7f9d117bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -290,6 +278,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2c0b07e1538a4945bb49115c01e9881, type: 2}
+    - target: {fileID: -927199367670048503, guid: b62f73ab78caffa42946fbc7f9d117bc,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Lower
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b62f73ab78caffa42946fbc7f9d117bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b62f73ab78caffa42946fbc7f9d117bc, type: 3}
 --- !u!1 &705969033105792591 stripped
