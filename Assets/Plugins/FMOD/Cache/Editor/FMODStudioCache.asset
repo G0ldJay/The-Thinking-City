@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: event:/RobotMeatStep
   guid: 3b6a673dd058b2419f2ca66969f429bd
   Banks:
-  - {fileID: -2829634476184904763}
+  - {fileID: 2263163186483925683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -221,6 +221,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6926970287755177271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment Effects.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Environment Effects.bank
+  SubDir: 
+  lastModified: 637167940812311962
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6867195177940146357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +256,7 @@ MonoBehaviour:
   lastModified: 637167933567264512
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6803452735454939523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +275,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6766699596073217928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player Sound Effects.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Player Sound Effects.bank
+  SubDir: 
+  lastModified: 637167940813059960
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6682297411656590561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +531,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4700555253800878711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637167940812411698
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4632956996232703386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,6 +837,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-3679463037062499292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Trish.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Trish.bank
+  SubDir: 
+  lastModified: 637167940814196918
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-3543044601797117023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,7 +910,7 @@ MonoBehaviour:
   Path: event:/TrishCardDirection
   guid: 0d922c9e6de7db4cad2d590f45ba5778
   Banks:
-  - {fileID: -2103614929434466273}
+  - {fileID: -3679463037062499292}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -953,7 +1025,7 @@ MonoBehaviour:
   lastModified: 637167933567464004
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2677752913586076624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,7 +1041,7 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: c8bd2e3c4b39c146ac683fdcec581e32
   Banks:
-  - {fileID: -6867195177940146357}
+  - {fileID: -6766699596073217928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1084,7 +1156,7 @@ MonoBehaviour:
   lastModified: 637167933567693378
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2043550821146452523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,7 +1358,7 @@ MonoBehaviour:
   lastModified: 637167933567075016
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1381589877948627378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1414,7 +1486,7 @@ MonoBehaviour:
   Path: event:/TrishCardPower
   guid: e740d4b3be134d44a6c775cd083aeb91
   Banks:
-  - {fileID: -2103614929434466273}
+  - {fileID: -3679463037062499292}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1472,12 +1544,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5680206969543010159}
-  - {fileID: 8484976477338134053}
-  - {fileID: 7141022164366891256}
-  - {fileID: -1414463838798595816}
-  - {fileID: -6867195177940146357}
-  - {fileID: -2829634476184904763}
-  - {fileID: -2103614929434466273}
+  - {fileID: 5784448181494212865}
+  - {fileID: -6926970287755177271}
+  - {fileID: -4700555253800878711}
+  - {fileID: -6766699596073217928}
+  - {fileID: 2263163186483925683}
+  - {fileID: -3679463037062499292}
   EditorEvents:
   - {fileID: 8392529291730229908}
   - {fileID: 5982653569465620584}
@@ -1493,10 +1565,10 @@ MonoBehaviour:
   - {fileID: 3283779225015641624}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1414463838798595816}
+  - {fileID: -4700555253800878711}
   StringsBanks:
   - {fileID: 5680206969543010159}
-  stringsBankWriteTime: 637167933567094972
+  stringsBankWriteTime: 637167940812481505
   cacheVersion: 3
 --- !u!114 &57721468630439230
 MonoBehaviour:
@@ -1513,7 +1585,7 @@ MonoBehaviour:
   Path: event:/Steam
   guid: 4958e771fbff5844b1c588c019f5b0f6
   Banks:
-  - {fileID: 7141022164366891256}
+  - {fileID: -6926970287755177271}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1749,6 +1821,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 630
+--- !u!114 &2263163186483925683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/RobotFootsteps.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/RobotFootsteps.bank
+  SubDir: 
+  lastModified: 637167940813548655
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2293609055348709689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,7 +1966,7 @@ MonoBehaviour:
   Path: event:/TrishYouCanHide
   guid: cabf1faea4220a46a3cf8dcbb421c8f9
   Banks:
-  - {fileID: -2103614929434466273}
+  - {fileID: -3679463037062499292}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1917,7 +2007,7 @@ MonoBehaviour:
   Path: event:/TrishThatIsNotMeantTo
   guid: 1eef26ae71ef7b40b0e3646209d55a94
   Banks:
-  - {fileID: -2103614929434466273}
+  - {fileID: -3679463037062499292}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1958,14 +2048,14 @@ MonoBehaviour:
   Path: event:/RobotMetalStep
   guid: 61d35275ad3dcb44ae79005e09b5eccd
   Banks:
-  - {fileID: -2829634476184904763}
+  - {fileID: 2263163186483925683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 440
+  Length: 570
 --- !u!114 &3372024006069906570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1981,7 +2071,7 @@ MonoBehaviour:
   Path: event:/TrishTurnOnTheLights
   guid: 1b98dd3fe3fa7a419ceb61376c8d70c9
   Banks:
-  - {fileID: -2103614929434466273}
+  - {fileID: -3679463037062499292}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2040,7 +2130,7 @@ MonoBehaviour:
   Path: event:/TrishYouMadeIt
   guid: 6800d01e200b7a4984fc0b90f380b577
   Banks:
-  - {fileID: -2103614929434466273}
+  - {fileID: -3679463037062499292}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2174,11 +2264,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: TheThinkingCityFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637167933567094972
+  lastModified: 637167940812481505
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1492
+  Exists: 1
+--- !u!114 &5784448181494212865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: TheThinkingCityFMOD/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637167940811813292
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &5831322618035358258
 MonoBehaviour:
@@ -2213,7 +2321,7 @@ MonoBehaviour:
   Path: event:/ConsoleHum
   guid: 09a6981b6836f94783a220cedbe6e2a5
   Banks:
-  - {fileID: 7141022164366891256}
+  - {fileID: -6926970287755177271}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -2404,7 +2512,7 @@ MonoBehaviour:
   lastModified: 637167933567005306
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &7221980401051561526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2586,7 +2694,7 @@ MonoBehaviour:
   Path: event:/Ambience
   guid: b1f40847775fe64a93e37cbe7d0b3f06
   Banks:
-  - {fileID: 8484976477338134053}
+  - {fileID: 5784448181494212865}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2611,7 +2719,7 @@ MonoBehaviour:
   lastModified: 637167933566770744
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8533357608280090556
 MonoBehaviour:
   m_ObjectHideFlags: 0
