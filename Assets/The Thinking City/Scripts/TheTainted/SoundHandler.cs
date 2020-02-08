@@ -24,4 +24,19 @@ public class SoundHandler : MonoBehaviour {
         FMODUnity.RuntimeManager.PlayOneShot("event:/RobotMetalStep", MetalFootTransform.transform.position);;
     }
 
+    public void MeatFootTurn()
+    {
+        //play sound at left foot transform
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/RobotMeatStepTurn", MeatFootTransform.transform.position);
+    }
+
+    //Play Steel foot sound from foot audio source
+    public void MetalFootTurn()
+    {
+        //play sound at right foot transform
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/RobotMetalStepTurn", MetalFootTransform.transform.position); ;
+    }
+
 }
