@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+
+
 
 public class SoundHandler : MonoBehaviour {
 
@@ -10,13 +13,18 @@ public class SoundHandler : MonoBehaviour {
     //Play Meaty foot sound from foot audio source
     public void MeatFoot() {
         //play sound at left foot transform
-        Debug.Log("PLAY MEATY FOOT SOUND");
+
+        //Debug.Log("PLAY MEATY FOOT SOUND");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/RobotMeatStep", MeatFootTransform.transform.position);
     }
 
     //Play Steel foot sound from foot audio source
     public void MetalFoot() {
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/RobotMetalStep", MetalFootTransform.transform.position);
+
         //play sound at right foot transform
-        Debug.Log("PLAY METAL FOOT SOUND");
+        //Debug.Log("PLAY METAL FOOT SOUND");
     }
 
 }
