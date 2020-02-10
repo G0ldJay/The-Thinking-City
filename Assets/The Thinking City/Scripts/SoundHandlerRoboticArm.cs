@@ -2,22 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundHandlerRobotArm : MonoBehaviour
-{
-
+public class SoundHandlerRoboticArm : MonoBehaviour {
     FMOD.Studio.EventInstance soundEvent;
-    
 
-
-    public void PlayServos()
-    {
+    public void PlayServos() {
         soundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/RobotArmServo");
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
-        
+
     }
 
-    public void StopServos()
-    {
+    public void StopServos() {
         soundEvent.release();
     }
 

@@ -35,9 +35,11 @@ public class JoystickController : MonoBehaviour {
         if(rot != 0) {
             if (transformAdjustment == TransformAdj.translate) {
                 targetObject.transform.localPosition += new Vector3(objectMoveSpeed * rot, 0, 0);
+                targetObject.GetComponent<SoundHandlerRoboticArm>().PlayServos();
             }
             else if (transformAdjustment == TransformAdj.rotate) {
                 targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot);
+                targetObject.GetComponent<SoundHandlerRoboticArm>().PlayServos();
             }
         }
     }
