@@ -6,8 +6,9 @@ public class SoundHandlerRoboticArm : MonoBehaviour {
     FMOD.Studio.EventInstance soundEvent;
 
     public void PlayServos() {
-        soundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/RobotArmServo");
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        //soundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/RobotArmServo");
+        //FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.PlayOneShot("event:/RobotArmServo", GetComponent<Transform>().position);
 
     }
 
