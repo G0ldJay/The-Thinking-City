@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class JoystickController : MonoBehaviour {
     public GameObject targetObject;
+    public GameObject soundSourceObject;
     public CircularDrive cd;
     public float objectMoveSpeed = 1;
     public enum RotAxis {
@@ -29,7 +30,7 @@ public class JoystickController : MonoBehaviour {
         minRot = cd.minAngle;
         minRange = -1;
         maxRange =  1;
-        SHRA = targetObject.GetComponent<SoundHandlerRoboticArm>();
+        SHRA = soundSourceObject.GetComponent<SoundHandlerRoboticArm>();
     }
 
     void Update() {
@@ -46,14 +47,20 @@ public class JoystickController : MonoBehaviour {
             else if (transformAdjustment == TransformAdj.rotate) {
                 targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot);
             }
+
+            //SHRA.PlayServos();
+
             // play sound effect if moving
             if (!isPlayingSound) {
                 SHRA.PlayServos();
                 isPlayingSound = true;
             }
         }
-        else {
+        else
+        {
             isPlayingSound = false;
+            SHRA.StopServos();
+            Debug.Log("I am still");
         }
     }
 
