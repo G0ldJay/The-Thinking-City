@@ -27,8 +27,7 @@ public class SoundHandlerRoboticArm : MonoBehaviour {
         isPlayingSound = false;
     }
 
-    public void PlayArmCrash()
-    {
+    public void PlayArmCrash() {
         FMODUnity.RuntimeManager.PlayOneShot("event:/ArmCrash", GetComponent<Transform>().position);
     }
 

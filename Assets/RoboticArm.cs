@@ -32,5 +32,20 @@ public class RoboticArm : MonoBehaviour {
         }
     }
 
+    public void CrashRoboticArm() {
+        StartCoroutine(Crash());
+       
+    }
+
+    IEnumerator Crash() {
+        //call FMOD sound
+        gameObject.GetComponent<SoundHandlerRoboticArm>().PlayArmCrash();
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+        //turn on ragdoll
+        TurnOnRagdoll(true);
+        //stop all movement
+        StopAllMovement();
+    }
 
 }
