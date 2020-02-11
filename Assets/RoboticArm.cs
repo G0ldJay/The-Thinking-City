@@ -5,30 +5,28 @@ using UnityEngine;
 //ref video https://youtu.be/OJFS4Z0tT9A
 
 public class RoboticArm : MonoBehaviour {
-    public Animator animator;
-    public List<Collider> ragdollParts;
+    private Collider    mainCollider;
+    private Collider[]  allColliders;
+    private Rigidbody[] rigRigidbodies;
 
     private void Awake() {
-        SetRagdollParts();
+        mainCollider = GetComponent<Collider>();
+        allColliders = gameObject.GetComponentsInChildren<Collider>(true);
+        rigRigidbodies = gameObject.GetComponentsInChildren<Rigidbody>();
+        TurnOnRagdoll(false);
     }
 
-    private void SetRagdollParts() {
-        Collider[] colliders = this.gameObject.GetComponentsInChildren<Collider>(); 
-
-        foreach(Collider c in colliders) {
-            if(c.gameObject != this.gameObject) {
-                c.isTrigger = true;
-                ragdollParts.Add(c);
-            }
+    public void TurnOnRagdoll(bool isRagdoll) {
+        foreach (var c in allColliders) {
+            c.enabled = isRagdoll;
         }
-    }
-
-    public void TurnOnRagdoll() {
-        animator.enabled = false;
-
-        foreach (Collider c in ragdollParts) {
-            c.isTrigger = false;
-            c.attachedRigidbody.velocity = Vector3.zero;
+        mainCollider.enabled = !isRagdoll;
+        foreach (Rigidbody rb in rigRigidbodies){
+            rb.isKinematic = !isRagdoll;
         }
+        GetComponent<Rigidbody>().useGravity = !isRagdoll;
+        GetComponent<Animator>().enabled = !isRagdoll;
     }
+
+
 }

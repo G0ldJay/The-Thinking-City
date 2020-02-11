@@ -20,12 +20,16 @@ public class JoystickController : MonoBehaviour {
     };
     public TransformAdj transformAdjustment = TransformAdj.translate;
     private float maxRot, minRot, maxRange, minRange;
+    private bool isPlayingSound = false;
+    private SoundHandlerRoboticArm SHRA;
+    public float X_Max, X_Min;
 
     private void Start() {
         maxRot = cd.maxAngle;
         minRot = cd.minAngle;
         minRange = -1;
         maxRange =  1;
+        SHRA = targetObject.GetComponent<SoundHandlerRoboticArm>();
     }
 
     void Update() {
@@ -35,13 +39,32 @@ public class JoystickController : MonoBehaviour {
         if(rot != 0) {
             if (transformAdjustment == TransformAdj.translate) {
                 targetObject.transform.localPosition += new Vector3(objectMoveSpeed * rot, 0, 0);
-                targetObject.GetComponent<SoundHandlerRoboticArm>().PlayServos();
+                //if(!CheckValidMovement()) {
+                //    targetObject.transform.localPosition -= new Vector3(objectMoveSpeed * rot, 0, 0);
+                //}
             }
             else if (transformAdjustment == TransformAdj.rotate) {
                 targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot);
-                targetObject.GetComponent<SoundHandlerRoboticArm>().PlayServos();
+            }
+            // play sound effect if moving
+            if (!isPlayingSound) {
+                SHRA.PlayServos();
+                isPlayingSound = true;
             }
         }
+        else {
+            isPlayingSound = false;
+        }
+    }
+
+    //check pos in bounds, if over a certain limit, return false to cancel movement.
+    private bool CheckValidMovement() {
+        Vector3 pos = targetObject.transform.position;
+        //check x axis position
+
+        //check y axis position
+
+        return false;
     }
 
     private float GetNormalisedRotMagnitude() {
