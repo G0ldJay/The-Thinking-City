@@ -34,7 +34,6 @@ public class RoboticArm : MonoBehaviour {
 
     public void CrashRoboticArm() {
         StartCoroutine(Crash());
-       
     }
 
     IEnumerator Crash() {
