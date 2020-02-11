@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//ref video https://youtu.be/OJFS4Z0tT9A
-
 public class RoboticArm : MonoBehaviour {
     private Collider    mainCollider;
     private Collider[]  allColliders;
@@ -21,11 +19,17 @@ public class RoboticArm : MonoBehaviour {
             c.enabled = isRagdoll;
         }
         mainCollider.enabled = !isRagdoll;
-        foreach (Rigidbody rb in rigRigidbodies){
+        foreach (Rigidbody rb in rigRigidbodies) {
             rb.isKinematic = !isRagdoll;
         }
-        GetComponent<Rigidbody>().useGravity = !isRagdoll;
         GetComponent<Animator>().enabled = !isRagdoll;
+    }
+
+    public void StopAllMovement() {
+        JoystickController[] jsList = FindObjectsOfType<JoystickController>();
+        foreach (var js in jsList) {
+            js.dropped = true;
+        }
     }
 
 
