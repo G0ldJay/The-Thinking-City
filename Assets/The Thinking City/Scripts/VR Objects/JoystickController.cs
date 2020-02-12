@@ -21,9 +21,9 @@ public class JoystickController : MonoBehaviour {
     };
     public TransformAdj transformAdjustment = TransformAdj.translate;
     private float maxRot, minRot, maxRange, minRange;
-    private bool isPlayingSound = false;
     private SoundHandlerRoboticArm SHRA;
-    public float X_Max, X_Min;
+    public Vector3 targetOriginalPosition;
+    public bool dropped;
 
     private void Start() {
         maxRot = cd.maxAngle;
@@ -31,36 +31,27 @@ public class JoystickController : MonoBehaviour {
         minRange = -1;
         maxRange =  1;
         SHRA = soundSourceObject.GetComponent<SoundHandlerRoboticArm>();
+        targetOriginalPosition = targetObject.transform.position;
     }
 
     void Update() {
         float rot = GetNormalisedRotMagnitude();
-        Debug.Log(gameObject.name + ", " + rot);
-
-        if(rot != 0) {
+        //Debug.Log(this.dropped);
+        if(rot != 0 && !this.dropped) {
             if (transformAdjustment == TransformAdj.translate) {
-                targetObject.transform.localPosition += new Vector3(objectMoveSpeed * rot, 0, 0);
-                //if(!CheckValidMovement()) {
-                //    targetObject.transform.localPosition -= new Vector3(objectMoveSpeed * rot, 0, 0);
-                //}
+                targetObject.transform.Translate(objectMoveSpeed * rot * Time.deltaTime, 0, 0);
+                if(!CheckValidMovement()) {
+                    targetObject.transform.Translate(-objectMoveSpeed * rot * Time.deltaTime, 0, 0);
+                }
             }
             else if (transformAdjustment == TransformAdj.rotate) {
-                targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot);
+                targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot * Time.deltaTime);
             }
-
-            //SHRA.PlayServos();
-
             // play sound effect if moving
-            if (!isPlayingSound) {
-                SHRA.PlayServos();
-                isPlayingSound = true;
-            }
+            SHRA.PlayServos();
         }
-        else
-        {
-            isPlayingSound = false;
+        else {
             SHRA.StopServos();
-            Debug.Log("I am still");
         }
     }
 
@@ -68,10 +59,13 @@ public class JoystickController : MonoBehaviour {
     private bool CheckValidMovement() {
         Vector3 pos = targetObject.transform.position;
         //check x axis position
-
-        //check y axis position
-
-        return false;
+        if (pos.x > targetOriginalPosition.x + 5 || pos.x < targetOriginalPosition.x - 5) {
+            return false;
+        }
+        else if(pos.z > targetOriginalPosition.z + 5 || pos.z < targetOriginalPosition.z - 5) {
+            return false;
+        }
+        return true;
     }
 
     private float GetNormalisedRotMagnitude() {

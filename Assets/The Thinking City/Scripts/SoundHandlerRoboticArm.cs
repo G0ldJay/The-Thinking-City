@@ -3,20 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundHandlerRoboticArm : MonoBehaviour {
-    FMOD.Studio.EventInstance soundEvent;
+    bool isPlayingSound = false;
+    
+    FMOD.Studio.EventInstance servoInstance;
 
     public void PlayServos() {
-        soundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/RobotArmServo");
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
-        soundEvent.start();
+        if (isPlayingSound) return;
+
+        servoInstance = FMODUnity.RuntimeManager.CreateInstance("event:/RobotArmServo");
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(servoInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        servoInstance.start();
+        isPlayingSound = true;
         // FMODUnity.RuntimeManager.PlayOneShot("event:/RobotArmServo", GetComponent<Transform>().position);
 
     }
 
     public void StopServos() {
-        soundEvent.release();
+        if (!isPlayingSound) return;
+
+        servoInstance.release();
         FMOD.Studio.STOP_MODE stop = FMOD.Studio.STOP_MODE.IMMEDIATE;
-        soundEvent.stop(stop);
+        servoInstance.stop(stop);
+        isPlayingSound = false;
+    }
+
+    public void PlayArmCrash() {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/ArmCrash", GetComponent<Transform>().position);
     }
 
 }
