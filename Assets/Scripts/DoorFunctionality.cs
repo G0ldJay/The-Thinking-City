@@ -87,6 +87,7 @@ public class DoorFunctionality : MonoBehaviour
         }
 
         audio.Play();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/DoorActivate", GetComponent<Transform>().position);
 
         doorState = DoorState.Animating;
         float time = 0.0f;
