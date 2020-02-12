@@ -14,6 +14,10 @@ public class DoorFunctionality : MonoBehaviour
     private Transform mtransform = null;
     private Transform mtransform2 = null;
 
+    [SerializeField] private Material _doorLightClosed = null;
+    [SerializeField] private Material _doorLightOpen = null;
+    [SerializeField] private GameObject _doorlight = null;
+
     private DoorState doorState = DoorState.Closed;
     private Vector3 openPos = Vector3.zero;
     private Vector3 closedPos = Vector3.zero;
@@ -65,6 +69,23 @@ public class DoorFunctionality : MonoBehaviour
 
     IEnumerator AnimateDoor(DoorState currentState)
     {
+        if(currentState == DoorState.Closed)
+        {
+            _doorlight.GetComponent<MeshRenderer>().material = _doorLightClosed;
+        }
+        else
+        {
+            _doorlight.GetComponent<MeshRenderer>().material = _doorLightOpen;
+            yield return new WaitForSeconds(0.1f);
+            _doorlight.GetComponent<MeshRenderer>().material = _doorLightClosed;
+            yield return new WaitForSeconds(0.1f);
+            _doorlight.GetComponent<MeshRenderer>().material = _doorLightOpen;
+            yield return new WaitForSeconds(0.1f);
+            _doorlight.GetComponent<MeshRenderer>().material = _doorLightClosed;
+            yield return new WaitForSeconds(0.1f);
+            _doorlight.GetComponent<MeshRenderer>().material = _doorLightOpen;
+        }
+
         audio.Play();
 
         doorState = DoorState.Animating;
