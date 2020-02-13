@@ -73,6 +73,7 @@ public class AIRobotState_Alerted1 : AIRobotState
         // Do we have a visual threat that is the player. These take priority over audio threats
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
         {
+            //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
             return AIStateType.Pursuit;
         }
