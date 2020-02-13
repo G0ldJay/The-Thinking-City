@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{7981a8b8-a335-408a-86a6-4e88858ee261}">
 		<property name="name">
-			<value>Screech</value>
+			<value>ScreechVoiceLine</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{1593320e-0d58-41a9-adec-8ffb8c7725be}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{37bcb62e-f21e-4b7c-acf8-41edfe799291}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{ec1afac7-e599-4ddb-88dc-d55df6a4495a}">
