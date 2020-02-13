@@ -48,6 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorTop: {fileID: 8858006583886552435}
   DoorBottom: {fileID: 8858006584079879179}
+  _doorLightClosed: {fileID: 2100000, guid: d51798a2a9d3908468cac7affef85bab, type: 2}
+  _doorLightOpen: {fileID: 2100000, guid: 258664117bcf47944bf1738e2b291d17, type: 2}
+  _doorlight: {fileID: 2087284904604083569}
   SlidingDistance: 2
   Duration: 3
   JumpCurve:
@@ -211,6 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8858006584079879179}
+  - component: {fileID: 6169569633262325693}
   m_Layer: 0
   m_Name: Door Bottom Half
   m_TagString: Untagged
@@ -233,6 +237,22 @@ Transform:
   m_Father: {fileID: 8858006583347445055}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!208 &6169569633262325693
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858006584079879176}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.14, y: 0.315, z: 0.7}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: -0.24, y: -0.3, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1948152951952538714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -465,6 +485,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 2f853e04af3ef0e409dad4acd150085a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d51798a2a9d3908468cac7affef85bab, type: 2}
     - target: {fileID: -927199367670048503, guid: 2f853e04af3ef0e409dad4acd150085a,
         type: 3}
       propertyPath: m_Name
@@ -472,6 +497,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f853e04af3ef0e409dad4acd150085a, type: 3}
+--- !u!1 &2087284904604083569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 2f853e04af3ef0e409dad4acd150085a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8058746891287493752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3075078211355334498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2f853e04af3ef0e409dad4acd150085a,

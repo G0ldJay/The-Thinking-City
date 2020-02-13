@@ -1374,8 +1374,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2364524729193038798}
-  - component: {fileID: 5645958635075481268}
-  - component: {fileID: 6693320903551077384}
   m_Layer: 0
   m_Name: GSA_Tainted_v06-Prefab
   m_TagString: Untagged
@@ -1407,39 +1405,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5645958635075481268
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624431047254700509}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c0b4e989a32ec9f459648721f6734d48, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6693320903551077384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624431047254700509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627b3e7b5fc5ab648b380bf98139b764, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MeatFootTransform: {fileID: 7691641885975198306}
-  MetalFootTransform: {fileID: 7141935045832015622}
 --- !u!1 &1659621704985485719
 GameObject:
   m_ObjectHideFlags: 0

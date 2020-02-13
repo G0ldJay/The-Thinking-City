@@ -167,10 +167,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 2f853e04af3ef0e409dad4acd150085a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d51798a2a9d3908468cac7affef85bab, type: 2}
     - target: {fileID: -927199367670048503, guid: 2f853e04af3ef0e409dad4acd150085a,
         type: 3}
       propertyPath: m_Name
       value: Door Light
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2f853e04af3ef0e409dad4acd150085a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f853e04af3ef0e409dad4acd150085a, type: 3}
@@ -252,6 +262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Lower
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2c82654d15e40944cb15f43eb7b2bda2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c82654d15e40944cb15f43eb7b2bda2, type: 3}
 --- !u!4 &8140968228688682012 stripped
@@ -331,6 +346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_Upper
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c2e9fb1797bd2849b98d0502560a660,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2e9fb1797bd2849b98d0502560a660, type: 3}

@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Private
-    public List<AudioSource> AIAudio = new List<AudioSource>(); //REMOVE at a later date
+    //public List<AudioSource> AIAudio = new List<AudioSource>(); //REMOVE at a later date
 
     private Dictionary<int, AIStateMachine> _stateMachines = new Dictionary<int, AIStateMachine>();
     private Dictionary<int, PlayerInfo> _playerInfos = new Dictionary<int, PlayerInfo>();
@@ -83,8 +83,8 @@ public class GameManager : MonoBehaviour
         return null;
     }
 
-    public void PlayAISound(int audio)
-    {
-        AIAudio[audio].Play();
-    }
+    //public void PlayAISound(int audio)
+    //{
+    //    AIAudio[audio].Play();
+    //}
 }
