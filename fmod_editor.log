@@ -2,24 +2,128 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20007 (107206), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
-[LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000022141CB9318 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001DB288A0F38 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : TrishTurnOnTheLights (000001DB212C6988)
+[LOG] SoundI::release                          :     TrishTurnOnTheLights (000001DB28ED1188)
+[LOG] SoundI::release                          :     TrishTurnOnTheLights (000001DB26D4C668)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 964512
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 5504
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006D8B09F18C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDDF888630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDDF888600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDDF888700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDDF8887C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DD48D5D008
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='door_open_01', format=2, channels=2, frequency=48000, lengthbytes=50816, lengthpcm=215636, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001DB212C6988 : node = 000001DEF979EE60
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DB28ED0438.  list count = 0
+[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001DB20C0F5A8 : node = 000001DEF979E320
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DB28ED0438.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DB212C6988
+[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 964512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DEF979EF70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DB212C6988
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DB20C0F5A8
+[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 964512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DEF979E430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DB20C0F5A8
+[LOG] SoundI::getSubSound                      : sound 000001DB212C6988.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000001DB20C0F5A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : consoleHum (000001DD41375338)
+[LOG] SoundI::release                          :     consoleHum (000001DB28ED1CE8)
+[LOG] SoundI::release                          :     consoleHum (000001DB26D4CED8)
+[LOG] SoundI::release                          : consoleHum (000001DD41375188)
+[LOG] SoundI::release                          :     consoleHum (000001DB28ED0488)
+[LOG] SoundI::release                          :     consoleHum (000001DB26D4D088)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : steamLoop (000001DB212C6B38)
+[LOG] SoundI::release                          :     steamLoop (000001DB28ECD708)
+[LOG] SoundI::release                          :     steamLoop (000001DB26D4C308)
+[LOG] SoundI::release                          : steamLoop (000001DD413754E8)
+[LOG] SoundI::release                          :     steamLoop (000001DB28ED1E88)
+[LOG] SoundI::release                          :     steamLoop (000001DB26D4CB78)
+[LOG] SoundI::release                          : consoleHum (000001DB20C0F5A8)
+[LOG] SoundI::release                          :     consoleHum (000001DB28ED0E48)
+[LOG] SoundI::release                          :     consoleHum (000001DD45AD3BD8)
+[LOG] SoundI::release                          : consoleHum (000001DB212C6988)
+[LOG] SoundI::release                          :     consoleHum (000001DB28ED0CA8)
+[LOG] SoundI::release                          :     consoleHum (000001DD45AD3A28)
+[LOG] SoundI::release                          : ambience (000001DB212C67D8)
+[LOG] SoundI::release                          :     ambience (000001DB28ED0FE8)
+[LOG] SoundI::release                          :     ambience (000001DB26D4C818)
+[LOG] SoundI::release                          :  (000001DB2A793B68)
+[LOG] SoundI::release                          :     door_open_01 (000001DB28ED5768)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.

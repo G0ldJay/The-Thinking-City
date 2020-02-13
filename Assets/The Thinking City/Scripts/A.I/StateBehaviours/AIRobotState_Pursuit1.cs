@@ -83,6 +83,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
                 case AITargetType.Audio:            //If we have reached the audio source
                 case AITargetType.Visual_Light:     //If we have reached the light source
                     _stateMachine.ClearTarget();    //Clear the threat
+                    //EOGHAN PLAY ROBOT SEARCHING SOUND
                     return AIStateType.Alerted;     //Become alert and scan for targets
 
                 case AITargetType.Visual_Food:

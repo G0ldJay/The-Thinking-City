@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &498278876704679167
 Transform:
@@ -108,7 +108,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4351759558556852452
 Transform:
@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 563792240509354172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.9595413, y: 5.003857e-17, z: -2.2535372}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3444012498939649673}
   m_Father: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &288620037338430214
 Transform:
@@ -235,7 +235,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3444012498939649673
 Transform:
@@ -304,7 +304,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1631044115541697480
 Transform:
@@ -393,15 +393,14 @@ GameObject:
   - component: {fileID: 6785842484843207400}
   - component: {fileID: 2252303542848113651}
   - component: {fileID: 5967614539159490474}
-  - component: {fileID: 2692155042537013277}
-  - component: {fileID: 2692155042537013250}
-  - component: {fileID: 5196322971310991888}
+  - component: {fileID: 443770565209673869}
+  - component: {fileID: 614251933559421385}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5742457276471504601
 Transform:
@@ -480,7 +479,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -211007548206913942, guid: 69a81f276f0f1e749aeb0fcbb0be7146, type: 3}
---- !u!114 &2692155042537013277
+--- !u!114 &443770565209673869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -499,7 +498,7 @@ MonoBehaviour:
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 0
+  useHandObjectAttachmentPoint: 1
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -528,11 +527,11 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 0
-  highlightOnHover: 0
+  handFollowTransform: 1
+  highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
---- !u!114 &2692155042537013250
+--- !u!114 &614251933559421385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -552,18 +551,7 @@ MonoBehaviour:
   frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
   onFrozenDistanceThreshold:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1842199597642640533}
-        m_MethodName: OnMinAngle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   minAngle: -45
   freezeOnMin: 0
   onMinAngle:
@@ -573,18 +561,7 @@ MonoBehaviour:
   freezeOnMax: 0
   onMaxAngle:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1842199597642640533}
-        m_MethodName: OnMaxAngle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   forceStart: 0
   startAngle: 0
   rotateGameObject: 1
@@ -592,35 +569,6 @@ MonoBehaviour:
   dbgPathLimit: 50
   debugText: {fileID: 0}
   outAngle: 0
---- !u!114 &5196322971310991888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2692155042537013251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poseEditorExpanded: 1
-  blendEditorExpanded: 1
-  poseNames:
-  - LeverPose (MAIN)
-  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
-    type: 3}
-  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
-    type: 3}
-  skeletonMainPose: {fileID: 11400000, guid: 21c0025e059578d4db96a1dab04f9e05, type: 2}
-  skeletonAdditionalPoses: []
-  showLeftPreview: 0
-  showRightPreview: 0
-  previewLeftInstance: {fileID: 0}
-  previewRightInstance: {fileID: 0}
-  previewPoseSelection: 0
-  blendingBehaviours: []
-  scale: 1
 --- !u!1 &5196322972124108010
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +586,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5196322972124108005
 Transform:
@@ -729,7 +677,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5196322973090998059
 Transform:
@@ -763,7 +711,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4605107985576171532
 Transform:
@@ -857,7 +805,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4725491568356366281
 Transform:

@@ -65,12 +65,14 @@ public class AIRobotState_Patrol1 : AIRobotState
         //Do we have a visual threat that is the player
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
         {
+            //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
             return AIStateType.Pursuit;
         }
 
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light)
         {
+            //EOGHAN : PLAY SOUND WHEN ROBOT SEARCHES
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
             return AIStateType.Alerted;
         }
@@ -78,6 +80,7 @@ public class AIRobotState_Patrol1 : AIRobotState
         //Sound is the third highest priority
         if (_robotStateMachine.AudioThreat.type == AITargetType.Audio)
         {
+            //EOGHAN : PLAY SOUND WHEN ROBOT SEARCHES
             _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat);
             return AIStateType.Alerted;
         }

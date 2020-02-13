@@ -68,20 +68,23 @@ public class AIRobotState_Idle1 : AIRobotState
             //Is the player visible
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
             {
-                _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
+            //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
+            _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
                 return AIStateType.Pursuit;
             }
 
             //Is the threat a flashlight
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light)
             {
-                _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
+            //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
+            _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
                 return AIStateType.Alerted;
             }
 
             //Is the threat an audio emitter
             if (_robotStateMachine.AudioThreat.type == AITargetType.Audio)
             {
+            //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
                 _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat);
                 return AIStateType.Alerted;
             }
