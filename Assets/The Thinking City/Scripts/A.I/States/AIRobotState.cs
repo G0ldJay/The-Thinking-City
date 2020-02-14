@@ -21,8 +21,8 @@ public abstract class AIRobotState : AIState
 	void Awake()
 	{
 		// Get a mask for line of sight testing with the player.
-		_playerLayerMask = LayerMask.GetMask ("Player", "AI Body Part", "Default");
-		_visualLayerMask = LayerMask.GetMask ("Player", "AI Body Part", "Visual Aggravator", "Default");
+		_playerLayerMask = LayerMask.GetMask ("Player", "AI Body Part")+1;
+		_visualLayerMask = LayerMask.GetMask ("Player", "AI Body Part", "Visual Aggravator")+1;
 
         // Get the layer index of the AI Body Part layer
         _bodyPartLayer 	= LayerMask.NameToLayer ("AI Body Part");
