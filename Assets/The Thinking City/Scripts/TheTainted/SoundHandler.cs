@@ -39,9 +39,7 @@ public class SoundHandler : MonoBehaviour {
         FMODUnity.RuntimeManager.PlayOneShot("event:/RobotMetalStepTurn", MetalFootTransform.transform.position); ;
     }
 
-    public void Screech()
-    {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Screech", MetalFootTransform.transform.position);
-    }
+    
+
 
 }

@@ -66,6 +66,7 @@ public class AIRobotState_Patrol1 : AIRobotState
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
         {
             //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDetected", gameObject.GetComponent<Transform>().position);
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
             return AIStateType.Pursuit;
         }
@@ -73,6 +74,7 @@ public class AIRobotState_Patrol1 : AIRobotState
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light)
         {
             //EOGHAN : PLAY SOUND WHEN ROBOT SEARCHES
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ScreechVoiceLine", gameObject.GetComponent<Transform>().position);
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
             return AIStateType.Alerted;
         }
@@ -81,6 +83,7 @@ public class AIRobotState_Patrol1 : AIRobotState
         if (_robotStateMachine.AudioThreat.type == AITargetType.Audio)
         {
             //EOGHAN : PLAY SOUND WHEN ROBOT SEARCHES
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ScreechVoiceLine", gameObject.GetComponent<Transform>().position);
             _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat);
             return AIStateType.Alerted;
         }

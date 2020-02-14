@@ -31,6 +31,8 @@ public class AIRobotState_Attack1 : AIRobotState
         _robotStateMachine.attackType       = Random.Range(0, 101);
         _robotStateMachine.speed            = _speed;
         _currentLookAtWeight                = 0.0f;
+
+
     }
 
     public override void OnExitState()
