@@ -74,7 +74,7 @@ public class AIRobotState_Alerted1 : AIRobotState
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
         {
             //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
-            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDetected", gameObject.GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDetected", gameObject);
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
             return AIStateType.Pursuit;
         }
