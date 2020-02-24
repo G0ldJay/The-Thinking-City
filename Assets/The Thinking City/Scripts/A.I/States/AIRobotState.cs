@@ -63,7 +63,7 @@ public abstract class AIRobotState : AIState
 			//What is the type of the current visual threat we have stored
 			AITargetType curType = _robotStateMachine.VisualThreat.type;
 
-			//Is the collider that has entered our sensor a player
+			//If the collider that has entered our sensor is a player
 			if (other.CompareTag ("Player")) 
             {
 				//Get distance from the sensor origin to the collider
@@ -80,21 +80,21 @@ public abstract class AIRobotState : AIState
                         _robotStateMachine.VisualThreat.Set (AITargetType.Visual_Player, other, other.transform.position, distance);
 					}
 				}
-			} 
-			else 
-			if (other.CompareTag ("Flash Light") && curType != AITargetType.Visual_Player) 
+			}
+            //If the collider that has entered our sensor is a flash light & we don't have a player in view
+            else if (other.CompareTag ("Flash Light") && curType != AITargetType.Visual_Player) 
 			{
 				BoxCollider flashLightTrigger   = (BoxCollider)other;
 				float distanceToThreat          = Vector3.Distance (_robotStateMachine.sensorPosition, flashLightTrigger.transform.position);
 				float zSize                     = flashLightTrigger.size.z * flashLightTrigger.transform.lossyScale.z;
 				float aggrFactor                = distanceToThreat / zSize;
 
-				if (aggrFactor <= _robotStateMachine.sight && aggrFactor <= _robotStateMachine.intelligence) 
+				if (aggrFactor <= _robotStateMachine.sight && aggrFactor <= _robotStateMachine.intelligence) //If you're light is close enough that its sight and intelligence is higher than your distance
 				{
-                    _robotStateMachine.VisualThreat.Set ( AITargetType.Visual_Light, other, other.transform.position, distanceToThreat);
+                    _robotStateMachine.VisualThreat.Set ( AITargetType.Visual_Light, other, other.transform.position, distanceToThreat); //Set new targget to be this
 				}
 			}
-			else if (other.CompareTag ("AI Sound Emitter")) 
+			else if (other.CompareTag ("AI Sound Emitter")) //If an alarming sound has come into sensor radius
 			{
 				SphereCollider  soundTrigger = (SphereCollider) other;
 				if (soundTrigger==null) return;
@@ -127,6 +127,7 @@ public abstract class AIRobotState : AIState
                     _robotStateMachine.AudioThreat.Set ( AITargetType.Audio, other, soundPos, distanceToThreat );
 				}
 			}
+            //If "food/charging station" has come into view and we have no other threats in view and the satisfaction level is low 
 			else if (other.CompareTag ("AI Food") && curType != AITargetType.Visual_Player && curType != AITargetType.Visual_Light && _robotStateMachine.satisfaction <=0.9f && _robotStateMachine.AudioThreat.type == AITargetType.None   )
 			{	
 				//How far away is the threat from us

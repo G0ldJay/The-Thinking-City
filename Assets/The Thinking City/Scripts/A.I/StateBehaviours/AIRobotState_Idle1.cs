@@ -58,7 +58,7 @@ public class AIRobotState_Idle1 : AIRobotState
 	// -------------------------------------------------------------------
 	public override AIStateType OnUpdate()
 	{
-		//No state machine then bail
+		//No state machine then return
 		if (_robotStateMachine == null)
 			return AIStateType.Idle;
 
@@ -69,34 +69,34 @@ public class AIRobotState_Idle1 : AIRobotState
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
             {
             //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDetected", gameObject);
-            _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
-                return AIStateType.Pursuit;
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDetected", gameObject); //Play sound
+            _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat); //Set new target
+                return AIStateType.Pursuit; //Enter new state 
             }
 
             //Is the threat a flashlight
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light)
             {
             //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject);
-            _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
-                return AIStateType.Alerted;
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
+            _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat); //Set new target 
+                return AIStateType.Alerted; //Enter new state 
             }
 
             //Is the threat an audio emitter
             if (_robotStateMachine.AudioThreat.type == AITargetType.Audio)
             {
             //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject);
-            _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat);
-                return AIStateType.Alerted;
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
+            _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat); //Set new target 
+                return AIStateType.Alerted; //Enter new state 
             }
 
             //Is the threat food
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Food)
             {
-                _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
-                return AIStateType.Pursuit;
+                _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat); //Set new target 
+                return AIStateType.Pursuit; //Enter new state
             }
 
             //Update the idle timer
@@ -105,9 +105,9 @@ public class AIRobotState_Idle1 : AIRobotState
             //Patrol if idle time has been exceeded
             if (_timer > _idleTime)
             {
-                _robotStateMachine.navAgent.SetDestination(_robotStateMachine.GetWaypointPosition(false));
-                _robotStateMachine.navAgent.isStopped = false;
-                return AIStateType.Alerted;
+                _robotStateMachine.navAgent.SetDestination(_robotStateMachine.GetWaypointPosition(false)); //Set waypint as destination
+                _robotStateMachine.navAgent.isStopped = false; //Turn on navAgent 
+                return AIStateType.Alerted; //Enter new state
             }
 
         //}
