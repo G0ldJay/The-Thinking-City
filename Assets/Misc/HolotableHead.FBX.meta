@@ -1,12 +1,17 @@
 fileFormatVersion: 2
-guid: 36332537594fb1149aed54a3ba614cdb
+guid: 232d63de880d58946ab9d4b5a34fda95
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: d2de0e33ec857f540a609f9b319e1fd9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -92,7 +97,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
