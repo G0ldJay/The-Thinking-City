@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &4900341071782926774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493990755347849701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.80345845, y: 0.7976545, z: 2.207248}
+  m_Center: {x: 0.000000014901161, y: 0.0375368, z: 0.81109816}
 --- !u!1 &7826996803006320731
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +141,12 @@ PrefabInstance:
 --- !u!4 &5132752169821088430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1b17261aec6f1f04f9e5df287b4dbdf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 162558576170402228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4493990755347849701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4331436867522224209, guid: 1b17261aec6f1f04f9e5df287b4dbdf5,
     type: 3}
   m_PrefabInstance: {fileID: 162558576170402228}
   m_PrefabAsset: {fileID: 0}
