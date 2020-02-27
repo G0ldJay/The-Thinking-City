@@ -25,13 +25,18 @@ public class HolotableObjectViewer : MonoBehaviour {
 
         int children = obj.transform.childCount;
         Debug.Log("children: " + children);
-        if(children == 0) {
-            obj = parentObj;
+        if (children == 0) {
+            // place object in an empty
+            GameObject newParent = Instantiate(new GameObject("ParentEmpty"), transform);
+            obj.transform.parent = newParent.transform;
+
+            RemoveAllComponents(1, newParent);
+            AddHologramShader(1, newParent);
         }
-
-        RemoveAllComponents(children, obj);
-
-        AddHologramShader(children, obj);
+        else {
+            RemoveAllComponents(children, obj);
+            AddHologramShader(children, obj);
+        }
     }
 
     void DestroyChildren() {
@@ -56,7 +61,9 @@ public class HolotableObjectViewer : MonoBehaviour {
             GameObject childObj = obj.transform.GetChild(i).gameObject;
             // add mesh renderer with blue hologram material
             //childObj.AddComponent<UnityEngine.MeshRenderer>();
-            childObj.GetComponent<MeshRenderer>().material = hologram;
+            Material[] mats = childObj.GetComponent<MeshRenderer>().materials;
+            mats[0] = hologram;
+            childObj.GetComponent<MeshRenderer>().materials = mats;
             childObj.AddComponent<HolotableObject>();
         }
     }
