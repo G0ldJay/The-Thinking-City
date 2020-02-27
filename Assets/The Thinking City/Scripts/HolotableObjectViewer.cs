@@ -16,17 +16,22 @@ public class HolotableObjectViewer : MonoBehaviour {
         DestroyChildren();
 
         //create obj with hologram shader & rotation anim
-        GameObject obj = Instantiate(newObj, transform.position, Quaternion.identity);
+        GameObject parentObj = Instantiate(newObj, transform.position, Quaternion.identity);
+        currentObj = parentObj;
+        //since we're using prefabs we need to get the child object
+        GameObject obj = parentObj.transform.GetChild(0).gameObject;
         obj.transform.parent = transform;
-        currentObj = obj;
 
-        //apply shader
-        RemoveAllComponents(obj);
 
-        obj.AddComponent<UnityEngine.MeshRenderer>();
-        obj.GetComponent<MeshRenderer>().material = hologram;
+        int children = obj.transform.childCount;
+        Debug.Log("children: " + children);
+        if(children == 0) {
+            obj = parentObj;
+        }
 
-        obj.AddComponent<HolotableObject>();
+        RemoveAllComponents(children, obj);
+
+        AddHologramShader(children, obj);
     }
 
     void DestroyChildren() {
@@ -35,11 +40,24 @@ public class HolotableObjectViewer : MonoBehaviour {
         }
     }
 
-    void RemoveAllComponents(GameObject obj) {
-        foreach (var comp in obj.GetComponents<Component>()) {
-            if (!(comp is Transform) && !(comp is MeshFilter) && !(comp is MeshRenderer)) {
-                Destroy(comp);
+    void RemoveAllComponents(int children, GameObject obj) {
+        for (int i = 0; i < children; i++) {
+            GameObject childObj = obj.transform.GetChild(i).gameObject;
+            foreach (var comp in childObj.GetComponents<Component>()) {
+                if (!(comp is Transform) && !(comp is MeshFilter) && !(comp is MeshRenderer)) {
+                    Destroy(comp);
+                }
             }
+        }
+    }
+
+    void AddHologramShader(int children, GameObject obj) {
+        for (int i = 0; i < children; i++) {
+            GameObject childObj = obj.transform.GetChild(i).gameObject;
+            // add mesh renderer with blue hologram material
+            //childObj.AddComponent<UnityEngine.MeshRenderer>();
+            childObj.GetComponent<MeshRenderer>().material = hologram;
+            childObj.AddComponent<HolotableObject>();
         }
     }
 }
