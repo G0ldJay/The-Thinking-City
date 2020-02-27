@@ -86,7 +86,7 @@ public class DoorFunctionality : MonoBehaviour
             _doorlight.GetComponent<MeshRenderer>().material = _doorLightOpen;
         }
 
-        audio.Play();
+        //audio.Play();
         FMODUnity.RuntimeManager.PlayOneShot("event:/DoorActivate", GetComponent<Transform>().position);
 
         doorState = DoorState.Animating;

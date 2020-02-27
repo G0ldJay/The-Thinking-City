@@ -20,8 +20,16 @@ public class CorePowerUpQuest : MonoBehaviour
     [SerializeField] private BoxCollider _redCardSlot      = null;
     [SerializeField] private BoxCollider _blueCardSlot     = null;
 
-    [SerializeField] private GameObject _coreReactorEffect = null;
-    [SerializeField] private GameObject _coreKlaxon = null;
+    [SerializeField] private GameObject _coreReactorEffect  = null;
+    [SerializeField] private GameObject _coreKlaxon         = null;
+
+    [SerializeField] private BoxCollider _securityRoomShutterTrigger    = null;
+    [SerializeField] private GameObject _securityRoomShutters           = null;
+
+    [SerializeField] private float _shutterUpMoveDistance = 1.5f;
+    [SerializeField] private float Duration = 2.0f;
+
+    public AnimationCurve JumpCurve = new AnimationCurve();
 
     private MeshRenderer _greenPowerUnitMaterial    = null;
     private MeshRenderer _redPowerUnitMaterial      = null;
@@ -31,6 +39,9 @@ public class CorePowerUpQuest : MonoBehaviour
     private bool _redCardOnline     = false;
     private bool _blueCardOnline    = false;
     private bool _coreOnline        = false;
+
+    private Vector3 _shutterStartPosition = Vector3.zero;
+    private Vector3 _shutterEndPosition = Vector3.zero;
 
     public bool coreOnline { get { return _coreOnline; } }
 
@@ -80,6 +91,19 @@ public class CorePowerUpQuest : MonoBehaviour
                 script.corePowerUpScript = this;
             }
         }
+
+        if (_securityRoomShutterTrigger != null)
+        {
+            ShutterTrigger script = _securityRoomShutterTrigger.GetComponent<ShutterTrigger>();
+
+            if (script != null)
+            {
+                script.corePowerUpScript = this;
+            }
+        }
+
+        _shutterStartPosition = _securityRoomShutters.transform.position;
+        _shutterEndPosition = _shutterStartPosition + new Vector3(0, _shutterUpMoveDistance,0);
     }
 
     // Update is called once per frame
@@ -90,6 +114,11 @@ public class CorePowerUpQuest : MonoBehaviour
             _coreOnline = true;
             _coreReactorEffect.SetActive(true);
         }
+
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    StartCoroutine(AnimateShutters());
+        //}
     }
 
     public void OnTriggerEvent(GameObject slot, Collider other)
@@ -116,6 +145,24 @@ public class CorePowerUpQuest : MonoBehaviour
             _staticGreenCard.SetActive(true);
             _greenPowerUnitMaterial.material = _greenPowerUnitOnMaterial;
             _greenCardOnline = true;
+        }
+    }
+
+    public void ShutterRelease()
+    {
+        StartCoroutine(AnimateShutters());
+    }
+
+    IEnumerator AnimateShutters()
+    {
+        float time = 0.0f;
+
+        while (time <= Duration)
+        {
+            float t = time / Duration;
+            _securityRoomShutters.transform.position = Vector3.Lerp(_shutterStartPosition, _shutterEndPosition, JumpCurve.Evaluate(t));
+            time += Time.deltaTime;
+            yield return null;
         }
     }
 }
