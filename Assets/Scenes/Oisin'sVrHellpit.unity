@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 27922749}
   - component: {fileID: 27922751}
   - component: {fileID: 27922750}
+  - component: {fileID: 27922752}
   m_Layer: 0
   m_Name: Btn9_Control
   m_TagString: Untagged
@@ -270,8 +271,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 27922752}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -338,6 +339,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &27922752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27922748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 6006507371056861907, guid: c3b331118e57e4648ba5ec97edaaae95, type: 3}
 --- !u!1001 &30007539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -870,6 +884,7 @@ GameObject:
   - component: {fileID: 64910830}
   - component: {fileID: 64910832}
   - component: {fileID: 64910831}
+  - component: {fileID: 64910833}
   m_Layer: 0
   m_Name: Btn7_Control
   m_TagString: Untagged
@@ -915,8 +930,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 64910833}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -983,6 +998,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &64910833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64910829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 3570497905394810495, guid: 5e3a2400bc192484183c39be398d200c, type: 3}
 --- !u!1 &73791241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1201,7 @@ GameObject:
   - component: {fileID: 103295418}
   - component: {fileID: 103295420}
   - component: {fileID: 103295419}
+  - component: {fileID: 103295421}
   m_Layer: 0
   m_Name: Btn6_Control
   m_TagString: Untagged
@@ -1218,8 +1247,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 103295421}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1286,6 +1315,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &103295421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103295417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 787387697943606838, guid: 451c620fc3c3a5f49bcc94625244af2d, type: 3}
 --- !u!1 &119709561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1369,7 @@ GameObject:
   - component: {fileID: 139362469}
   - component: {fileID: 139362471}
   - component: {fileID: 139362470}
+  - component: {fileID: 139362472}
   m_Layer: 0
   m_Name: Btn10_Control
   m_TagString: Untagged
@@ -1372,8 +1415,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 139362472}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1440,6 +1483,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &139362472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139362468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 5906496992479864474, guid: 199e170620649e74b9ea3b0c55e1f253, type: 3}
 --- !u!1 &156293485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1898,7 @@ GameObject:
   - component: {fileID: 314315915}
   - component: {fileID: 314315917}
   - component: {fileID: 314315916}
+  - component: {fileID: 314315918}
   m_Layer: 0
   m_Name: Btn5_Control
   m_TagString: Untagged
@@ -1887,8 +1944,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 314315918}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1955,6 +2012,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &314315918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314315914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1981017600231651963, guid: 6303183f1cbf9444a8a1e8a7189b1b2f, type: 3}
 --- !u!4 &324115040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011773337888, guid: 390115dc286a84d4b82719333a0ff570,
@@ -1972,6 +2042,7 @@ GameObject:
   - component: {fileID: 334877420}
   - component: {fileID: 334877422}
   - component: {fileID: 334877421}
+  - component: {fileID: 334877423}
   m_Layer: 0
   m_Name: Btn4_Control
   m_TagString: Untagged
@@ -2017,9 +2088,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8436022572601471265, guid: 5234be8d1a1790a45ad67e762c1a5083,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 334877423}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2086,6 +2156,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &334877423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334877419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 5882365583861324046, guid: daaf85f947c9ceb4d88474683b4b1fc0, type: 3}
 --- !u!1 &353634434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403803921}
   - component: {fileID: 403803922}
+  - component: {fileID: 403803923}
   m_Layer: 0
   m_Name: object_spawn_point
   m_TagString: Untagged
@@ -2405,6 +2489,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hologram: {fileID: 2100000, guid: d2de0e33ec857f540a609f9b319e1fd9, type: 2}
+--- !u!114 &403803923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403803920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9015e2efe0727e4eb0d51d54b2bed9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objs:
+  - {fileID: 437606189}
+  - {fileID: 1440933734}
+  - {fileID: 423919382}
+  - {fileID: 334877423}
+  - {fileID: 314315918}
+  - {fileID: 103295421}
+  - {fileID: 64910833}
+  - {fileID: 1828220463}
+  - {fileID: 27922752}
 --- !u!1 &408168700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,6 +2756,7 @@ GameObject:
   - component: {fileID: 423919379}
   - component: {fileID: 423919381}
   - component: {fileID: 423919380}
+  - component: {fileID: 423919382}
   m_Layer: 0
   m_Name: Btn3_Control
   m_TagString: Untagged
@@ -2695,9 +2802,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 6924131542556418129, guid: 981ac75bdc968a34fad2c23f7e7e486b,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 423919382}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2764,6 +2870,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &423919382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423919378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 713388039867146839, guid: e9abb33ce1569c347b0a32373c07d6ad, type: 3}
 --- !u!1 &437606185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,6 +2894,7 @@ GameObject:
   - component: {fileID: 437606186}
   - component: {fileID: 437606188}
   - component: {fileID: 437606187}
+  - component: {fileID: 437606189}
   m_Layer: 0
   m_Name: Btn1_Control
   m_TagString: Untagged
@@ -2821,9 +2941,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7823345611015627211, guid: bd4fa57e3efbbdd4fa1a000cf103c5ae,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 437606189}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2890,6 +3009,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &437606189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437606185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 964182741615229841, guid: 58e5b420d2d9b6b40858b543eefc9f18, type: 3}
 --- !u!1 &473984220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3768,7 +3900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4662,7 +4794,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &936567105
 GameObject:
@@ -6551,7 +6683,7 @@ Transform:
   - {fileID: 1258633113}
   - {fileID: 2117884406}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1133272704
 GameObject:
@@ -7869,6 +8001,7 @@ GameObject:
   - component: {fileID: 1440933731}
   - component: {fileID: 1440933733}
   - component: {fileID: 1440933732}
+  - component: {fileID: 1440933734}
   m_Layer: 0
   m_Name: Btn2_Control
   m_TagString: Untagged
@@ -7914,9 +8047,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 6972793549818483429, guid: 054e76acb127a714aaed570866f24214,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 1440933734}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7983,6 +8115,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &1440933734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440933730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 6972793549818483429, guid: 054e76acb127a714aaed570866f24214, type: 3}
 --- !u!1 &1470747477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 759532806820797116, guid: b0a0eed8720ea9141be6f452788fa26f,
@@ -10119,6 +10264,7 @@ GameObject:
   - component: {fileID: 1828220460}
   - component: {fileID: 1828220462}
   - component: {fileID: 1828220461}
+  - component: {fileID: 1828220463}
   m_Layer: 0
   m_Name: Btn8_Control
   m_TagString: Untagged
@@ -10164,8 +10310,8 @@ MonoBehaviour:
         m_MethodName: LoadHoloObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 1828220463}
+          m_ObjectArgumentAssemblyTypeName: HoloObjHolder, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10232,6 +10378,19 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &1828220463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828220459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffe9c9220b37e46a8ac195897611bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 8040772802759545993, guid: fbf2ba54a39e40a419c06baf7da99825, type: 3}
 --- !u!1001 &1834095896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10277,7 +10436,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 70723713a7bdb4e4aafd6830ac2751a0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 70723713a7bdb4e4aafd6830ac2751a0,
         type: 3}
@@ -10741,7 +10900,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1892459811
 PrefabInstance:
@@ -11213,7 +11372,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a40524183d81d8149aa61f249f2fbf08,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a40524183d81d8149aa61f249f2fbf08,
         type: 3}
@@ -11618,7 +11777,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1dc6aaf0e5cb7fa44a00d0bbe06d27d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dc6aaf0e5cb7fa44a00d0bbe06d27d3,
         type: 3}
@@ -12968,7 +13127,7 @@ Transform:
   - {fileID: 5714671081467386192}
   - {fileID: 403803921}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3276651569802113505
 MeshFilter:
@@ -13504,9 +13663,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8416745640449686774}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.55, z: 0}
-  m_LocalScale: {x: 0.75719327, y: 1.4123515, z: 0.009999999}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.766, z: 0}
+  m_LocalScale: {x: 1.0375, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3061045112912897910}
   m_RootOrder: 1
@@ -13631,7 +13790,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.3811705
+  m_Intensity: 1.9401172
   m_Range: 0.85
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -14021,7 +14180,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 8
+  m_Intensity: 10
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -14032,8 +14191,8 @@ MonoBehaviour:
   m_AffectDiffuse: 1
   m_AffectSpecular: 1
   m_NonLightmappedOnly: 0
-  m_ShapeWidth: 0.7571933
-  m_ShapeHeight: 1.4123516
+  m_ShapeWidth: 0.9392443
+  m_ShapeHeight: 1.7468016
   m_AspectRatio: 1
   m_ShapeRadius: 0
   m_SoftnessScale: 1
