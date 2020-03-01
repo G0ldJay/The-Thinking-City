@@ -11,7 +11,7 @@ public class HologramEye : MonoBehaviour {
         cons.weight = 1;
         cons.rotationOffset = new Vector3(-90, 0, 0);
 
-        constraintSource.sourceTransform = FindObjectOfType<Valve.VR.InteractionSystem.Player>().gameObject.transform;
+        constraintSource.sourceTransform = FindObjectOfType<Valve.VR.InteractionSystem.Player>().hmdTransforms[0];
         constraintSource.weight = 1;
 
         cons.AddSource(constraintSource);
