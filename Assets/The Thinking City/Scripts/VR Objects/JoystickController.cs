@@ -36,7 +36,7 @@ public class JoystickController : MonoBehaviour {
 
     void Update() {
         float rot = GetNormalisedRotMagnitude();
-        //Debug.Log(this.dropped);
+        Debug.Log(rot);
         if(rot != 0 && !this.dropped) {
             if (transformAdjustment == TransformAdj.translate) {
                 targetObject.transform.Translate(objectMoveSpeed * rot * Time.deltaTime, 0, 0);
@@ -45,7 +45,7 @@ public class JoystickController : MonoBehaviour {
                 }
             }
             else if (transformAdjustment == TransformAdj.rotate) {
-                targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot * Time.deltaTime);
+                targetObject.transform.localEulerAngles += new Vector3(0, objectMoveSpeed * rot * Time.deltaTime, 0);
             }
             // play sound effect if moving
             SHRA.PlayServos();

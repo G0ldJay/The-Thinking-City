@@ -75,7 +75,11 @@ namespace Valve.VR.InteractionSystem
 		[Tooltip( "The output angle value of the drive in degrees, unlimited will increase or decrease without bound, take the 360 modulus to find number of rotations" )]
 		public float outAngle;
 
-		private Quaternion start;
+        [Tooltip("When the player lets go, allow the object to return to its original rotaion? - Added by Oisin Murphy")]
+        public bool returnOriginalRot;
+
+
+        private Quaternion start;
 
 		private Vector3 worldPlaneNormal = new Vector3( 1.0f, 0.0f, 0.0f );
 		private Vector3 localPlaneNormal = new Vector3( 1.0f, 0.0f, 0.0f );
@@ -275,6 +279,12 @@ namespace Valve.VR.InteractionSystem
 
                 driving = false;
                 grabbedWithType = GrabTypes.None;
+                if (returnOriginalRot) {
+                    gameObject.transform.rotation = start;
+                    outAngle = 0.0f;
+                    ComputeAngle( hand );
+                    UpdateAll();
+                }
             }
 
             if ( driving && isGrabEnding == false && hand.hoveringInteractable == this.interactable )
