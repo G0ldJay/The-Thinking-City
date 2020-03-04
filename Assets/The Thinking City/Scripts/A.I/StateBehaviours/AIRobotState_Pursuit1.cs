@@ -42,6 +42,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
         _robotStateMachine.seeking          = 0;
         _robotStateMachine.feeding          = false;
         _robotStateMachine.attackType       = 0;
+        _robotStateMachine.investigating    = 0;
 
         //Robots will only pursue for so long before breaking off
         _timer = 0.0f;

@@ -30,6 +30,7 @@ public class AIRobotState_Attack1 : AIRobotState
         _robotStateMachine.feeding          = false;
         _robotStateMachine.attackType       = Random.Range(0, 101);
         _robotStateMachine.speed            = _speed;
+        _robotStateMachine.investigating    = 0;
         _currentLookAtWeight                = 0.0f;
 
 

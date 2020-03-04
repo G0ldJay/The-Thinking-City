@@ -11,8 +11,9 @@ public class AIRobotState_Idle1 : AIRobotState
 	[SerializeField] Vector2 _idleTimeRange = new Vector2(10.0f, 60.0f);
 
 	//Private
-	float _idleTime	= 0.0f;
-	float _timer	= 0.0f;
+	float   _idleTime   = 0.0f;
+	float   _timer	    = 0.0f;
+    bool    _powered    = false;
 
 	// ------------------------------------------------------------------
 	// Name	:	GetStateType
@@ -48,6 +49,7 @@ public class AIRobotState_Idle1 : AIRobotState
         _robotStateMachine.seeking          = 0;
         _robotStateMachine.feeding          = false;
         _robotStateMachine.attackType       = 0;
+        _robotStateMachine.investigating    = 0;
 
         _robotStateMachine.ClearTarget();
 	}
@@ -62,8 +64,14 @@ public class AIRobotState_Idle1 : AIRobotState
 		if (_robotStateMachine == null)
 			return AIStateType.Idle;
 
-        //if (_robotStateMachine.poweredUp)
-        //{
+        if (_robotStateMachine.isPoweredUp)
+        {
+            if (!_powered)
+            {
+                _powered = true;
+                _robotStateMachine.ToggleRobotHead();
+                _robotStateMachine.animator.SetTrigger("Power Up");
+            }
 
             //Is the player visible
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
@@ -110,7 +118,7 @@ public class AIRobotState_Idle1 : AIRobotState
                 return AIStateType.Alerted; //Enter new state
             }
 
-        //}
+        }
 		// No state change required
 		return AIStateType.Idle;
 	}

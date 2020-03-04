@@ -17,6 +17,7 @@ public class AIPowerUpSensor : MonoBehaviour
     void OnTriggerEnter(Collider col) //When something enters the trigger 
     {
         if (_parentStateMachine != null) //If there is a state machine
+            col.gameObject.SetActive(false);
             _parentStateMachine.PowerUp(col); //Set enum to enter as something has entered the sensor, pass in collider of what enetered 
     }
 }

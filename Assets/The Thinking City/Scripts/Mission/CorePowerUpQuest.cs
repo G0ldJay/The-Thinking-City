@@ -27,7 +27,7 @@ public class CorePowerUpQuest : MonoBehaviour
     [SerializeField] private GameObject _securityRoomShutters           = null;
 
     [SerializeField] private float _shutterUpMoveDistance = 1.5f;
-    [SerializeField] private float Duration = 2.0f;
+    [SerializeField] private float _shutterDuration = 2.0f;
 
     public AnimationCurve JumpCurve = new AnimationCurve();
 
@@ -103,7 +103,7 @@ public class CorePowerUpQuest : MonoBehaviour
         }
 
         _shutterStartPosition = _securityRoomShutters.transform.position;
-        _shutterEndPosition = _shutterStartPosition + new Vector3(0, _shutterUpMoveDistance,0);
+        _shutterEndPosition = _shutterStartPosition + new Vector3(0, _shutterUpMoveDistance, 0);
     }
 
     // Update is called once per frame
@@ -157,9 +157,9 @@ public class CorePowerUpQuest : MonoBehaviour
     {
         float time = 0.0f;
 
-        while (time <= Duration)
+        while (time <= _shutterDuration)
         {
-            float t = time / Duration;
+            float t = time / _shutterDuration;
             _securityRoomShutters.transform.position = Vector3.Lerp(_shutterStartPosition, _shutterEndPosition, JumpCurve.Evaluate(t));
             time += Time.deltaTime;
             yield return null;

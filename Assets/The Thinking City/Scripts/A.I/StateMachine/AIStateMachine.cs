@@ -77,24 +77,26 @@ public abstract class AIStateMachine : MonoBehaviour
 
     // Protected Inspector Assigned
     [SerializeField] protected AIStateType              _currentStateType   = AIStateType.Idle;             //Holds the currrent state
+    [SerializeField] protected GameObject               _robotHead          = null;
     [SerializeField] protected Transform                _rootBone           = null;                         //Holds the root bone of the model
     [SerializeField] protected AIBoneAlignmentType      _rootBoneAlignment  = AIBoneAlignmentType.ZAxis;    //Sets alignment of the root bone
     [SerializeField] protected SphereCollider           _targetTrigger      = null;                         //Holds the sphere collider for the target trigger
     [SerializeField] protected SphereCollider           _sensorTrigger      = null;                         //Holds the sphere collider for the sensor trigger
-    //[SerializeField] protected SphereCollider           _powerUpTrigger     = null;
+    [SerializeField] protected BoxCollider              _powerUpTrigger     = null;
     [SerializeField] protected AIWaypointNetwork        _waypointNetwork    = null;                         //Holds the waypoints for the AI to patrol around
     [SerializeField] protected bool                     _randomPatrol       = false;                        //Sets if patrol should pick random points in list
     [SerializeField] protected int                      _currentWaypoint    = -1;                           //Holds current waypoint
     [SerializeField] [Range(0, 15)] protected float     _stoppingDistance   = 1.0f;                         //Sets the stopping distance for the AI
-
 
     // Component Cache
     protected Animator      _animator   = null;     //Holds the animator for the AI
     protected NavMeshAgent  _navAgent   = null;     //Holds the navmeshagent for the AI
     protected Collider      _collider   = null;     //Holds the AIs collider 
     protected Transform     _transform  = null;     //Holds the AIs transform 
+    private bool            _poweredUp  = false; 
 
     // Public Properties
+    public bool                     isPoweredUp         { get { return _poweredUp; } }
     public bool                     isTargetReached     { get { return _isTargetReached; } }    //Returns if the AI has reached a target or not 
     public bool                     inMeleeRange        { get; set; }                           //Returns if the target is in melee range or not
     public Animator                 animator            { get { return _animator; } }           //Returns the AIs animator
@@ -165,7 +167,7 @@ public abstract class AIStateMachine : MonoBehaviour
             // Register State Machines with Scene Database
             if (_collider) GameManager.instance.RegisterAIStateMachine(_collider.GetInstanceID(), this);
             if (_sensorTrigger) GameManager.instance.RegisterAIStateMachine(_sensorTrigger.GetInstanceID(), this);
-            //if (_powerUpTrigger) GameManager.instance.RegisterAIStateMachine(_powerUpTrigger.GetInstanceID(), this);
+            if (_powerUpTrigger) GameManager.instance.RegisterAIStateMachine(_powerUpTrigger.GetInstanceID(), this);
         }
 
         if (_rootBone != null)
@@ -200,15 +202,15 @@ public abstract class AIStateMachine : MonoBehaviour
             }
         }
 
-        //if (_powerUpTrigger != null)
-        //{
-        //    AIPowerUpSensor script = _powerUpTrigger.GetComponent<AIPowerUpSensor>();
+        if (_powerUpTrigger != null)
+        {
+            AIPowerUpSensor script = _powerUpTrigger.GetComponent<AIPowerUpSensor>();
 
-        //    if (script != null)
-        //    {
-        //        script.parentStateMachine = this;
-        //    }
-        //}
+            if (script != null)
+            {
+                script.parentStateMachine = this;
+            }
+        }
 
         // Fetch all states on this game object
         AIState[] states = GetComponents<AIState>();
@@ -248,6 +250,8 @@ public abstract class AIStateMachine : MonoBehaviour
                 script.stateMachine = this;
             }
         }
+
+        _robotHead.SetActive(false);
     }
 
 
@@ -546,6 +550,28 @@ public abstract class AIStateMachine : MonoBehaviour
 
     public virtual void PowerUp(Collider col)
     {
+        if (col.CompareTag("Power Up Robot Trigger"))
+        {
+            _powerUpTrigger.enabled = false;
+            _poweredUp = true;
+        }
+    }
 
+    public void ToggleRobotHead()
+    {
+        StartCoroutine(AnimateHead());
+    }
+
+    IEnumerator AnimateHead()
+    {
+        _robotHead.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        _robotHead.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        _robotHead.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        _robotHead.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        _robotHead.gameObject.SetActive(true);
     }
 }

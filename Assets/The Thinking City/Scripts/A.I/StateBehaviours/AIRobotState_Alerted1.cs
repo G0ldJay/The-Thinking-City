@@ -42,11 +42,12 @@ public class AIRobotState_Alerted1 : AIRobotState
             return;
 
         // Configure State Machine
-        _robotStateMachine.NavAgentControl (true, false);
-        _robotStateMachine.speed           = 0;
-        _robotStateMachine.seeking         = 0;
-        _robotStateMachine.feeding         = false;
-        _robotStateMachine.attackType      = 0;
+        _robotStateMachine.NavAgentControl  (true, false);
+        _robotStateMachine.speed            = 0;
+        _robotStateMachine.seeking          = 0;
+        _robotStateMachine.feeding          = false;
+        _robotStateMachine.attackType       = 0;
+        _robotStateMachine.investigating    = 0;
 
         _timer = _maxDuration;
         _directionChangeTimer = 0.0f;
@@ -130,6 +131,7 @@ public class AIRobotState_Alerted1 : AIRobotState
 
             if (_directionChangeTimer > _directionChangeTime)
             {
+                _robotStateMachine.investigating = 0;
                 _robotStateMachine.seeking = (int)Mathf.Sign(angle);
                 _directionChangeTimer = 0.0f;
             }
@@ -138,7 +140,8 @@ public class AIRobotState_Alerted1 : AIRobotState
         {
             if (_directionChangeTimer > _directionChangeTime)
             {
-                _robotStateMachine.seeking = (int)Mathf.Sign(Random.Range(-1.0f, 1.0f));
+                _robotStateMachine.investigating = 1;
+                //_robotStateMachine.seeking = (int)Mathf.Sign(Random.Range(-1.0f, 1.0f));
                 _directionChangeTimer = 0.0f;
             }
         }

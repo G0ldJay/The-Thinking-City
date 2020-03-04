@@ -45,11 +45,12 @@ public class AIRobotStateMachine : AIStateMachine
 
 
     // Private
-    private int     _seeking    = 0;
-    private bool    _feeding    = false;
-    private bool    _crawling   = false;
-    private int     _attackType = 0;
-    private float   _speed      = 0.0f;
+    private int     _seeking        = 0;
+    private bool    _feeding        = false;
+    private bool    _crawling       = false;
+    private int     _attackType     = 0;
+    private float   _speed          = 0.0f;
+    private int     _investigating  = 0;
     //bool    _poweredUp  = false;
 
     // Ragdoll Stuff
@@ -65,6 +66,7 @@ public class AIRobotStateMachine : AIStateMachine
     // Hashes
     private int _speedHash                  = Animator.StringToHash("Speed");
     private int _seekingHash                = Animator.StringToHash("Seeking");
+    private int _investigatingHash          = Animator.StringToHash("Investigating");
     private int _feedingHash                = Animator.StringToHash("Feeding");
     private int _attackHash                 = Animator.StringToHash("Attack");
     private int _crawlingHash               = Animator.StringToHash("Crawling");
@@ -89,6 +91,7 @@ public class AIRobotStateMachine : AIStateMachine
     public int      attackType      { get { return _attackType; } set { _attackType = value; } }
     public bool     feeding         { get { return _feeding; } set { _feeding = value; } }
     public int      seeking         { get { return _seeking; } set { _seeking = value; } }
+    public int      investigating   { get { return _investigating; } set { _investigating = value; } }
     public float    speed
     {
         get { return _speed; }
@@ -133,6 +136,7 @@ public class AIRobotStateMachine : AIStateMachine
             _animator.SetBool(_feedingHash, _feeding);
             _animator.SetInteger(_seekingHash, _seeking);
             _animator.SetInteger(_attackHash, _attackType);
+            _animator.SetInteger(_investigatingHash, _investigating);
         }
 
         _satisfaction = Mathf.Max(0, _satisfaction - ((_depletionRate * Time.deltaTime) / 100.0f) * Mathf.Pow(_speed, 3.0f));

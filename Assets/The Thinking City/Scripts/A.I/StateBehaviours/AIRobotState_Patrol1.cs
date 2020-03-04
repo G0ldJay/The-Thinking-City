@@ -42,6 +42,7 @@ public class AIRobotState_Patrol1 : AIRobotState
         _robotStateMachine.seeking          = 0;
         _robotStateMachine.feeding          = false;
         _robotStateMachine.attackType       = 0;
+        _robotStateMachine.investigating    = 0;
 
         //Set Destination
         _robotStateMachine.navAgent.SetDestination(_robotStateMachine.GetWaypointPosition(false));
