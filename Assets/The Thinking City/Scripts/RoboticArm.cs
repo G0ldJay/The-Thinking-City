@@ -6,6 +6,7 @@ public class RoboticArm : MonoBehaviour {
     private Collider    mainCollider;
     private Collider[]  allColliders;
     private Rigidbody[] rigRigidbodies;
+    private bool crashed = false;
 
     private void Awake() {
         mainCollider = GetComponent<Collider>();
@@ -33,7 +34,9 @@ public class RoboticArm : MonoBehaviour {
     }
 
     public void CrashRoboticArm() {
-        StartCoroutine(Crash());
+        if (!crashed) {
+            StartCoroutine(Crash());
+        }
     }
 
     IEnumerator Crash() {
@@ -45,6 +48,7 @@ public class RoboticArm : MonoBehaviour {
         TurnOnRagdoll(true);
         //stop all movement
         StopAllMovement();
+        crashed = true;
     }
 
 }

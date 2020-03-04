@@ -587,8 +587,6 @@ GameObject:
   - component: {fileID: 3687453438758367095}
   - component: {fileID: 3687453438758367090}
   - component: {fileID: 3687453438758367091}
-  - component: {fileID: 3687453438758367092}
-  - component: {fileID: 3687453438758367093}
   - component: {fileID: 3687453438758367094}
   m_Layer: 0
   m_Name: Stick_Deform_Rot
@@ -703,67 +701,7 @@ MonoBehaviour:
   dbgPathLimit: 50
   debugText: {fileID: 0}
   outAngle: 0
---- !u!114 &3687453438758367092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3687453438758367048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f379e0ebc4edfb42826116c95c676c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3687453438758367093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3687453438758367048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43bbbb8249ea1b142892d818ab47ab9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axisOfRotation_1: 0
-  axisOfRotation_2: 2
-  childCollider: {fileID: 0}
-  linearMapping: {fileID: 0}
-  hoverLock: 0
-  limited: 0
-  frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
-  onFrozenDistanceThreshold:
-    m_PersistentCalls:
-      m_Calls: []
-  minAngle: -45
-  freezeOnMin: 0
-  onMinAngle:
-    m_PersistentCalls:
-      m_Calls: []
-  maxAngle: 45
-  freezeOnMax: 0
-  onMaxAngle:
-    m_PersistentCalls:
-      m_Calls: []
-  minAngle_2: -45
-  freezeOnMin_2: 0
-  onMinAngle_2:
-    m_PersistentCalls:
-      m_Calls: []
-  maxAngle_2: 45
-  freezeOnMax_2: 0
-  onMaxAngle_2:
-    m_PersistentCalls:
-      m_Calls: []
-  forceStart: 0
-  startAngle: 0
-  rotateGameObject: 1
-  debugPath: 0
-  dbgPathLimit: 50
-  debugText: {fileID: 0}
-  outAngle: 0
+  returnOriginalRot: 1
 --- !u!114 &3687453438758367094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,11 +717,11 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   soundSourceObject: {fileID: 0}
   cd: {fileID: 3687453438758367091}
-  objectMoveSpeed: 0.35
+  objectMoveSpeed: 20
   axisOfRotation: 0
   transformAdjustment: 1
-  X_Max: 0
-  X_Min: 0
+  targetOriginalPosition: {x: 0, y: 0, z: 0}
+  dropped: 0
 --- !u!1 &3687453438839008777
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,8 +795,6 @@ GameObject:
   - component: {fileID: 3687453438943715988}
   - component: {fileID: 3687453438943715986}
   - component: {fileID: 3687453438943715987}
-  - component: {fileID: 3687453438943715984}
-  - component: {fileID: 3687453438943715985}
   - component: {fileID: 3687453438943715999}
   m_Layer: 0
   m_Name: Stick_Deform_Trans
@@ -973,67 +909,7 @@ MonoBehaviour:
   dbgPathLimit: 50
   debugText: {fileID: 0}
   outAngle: 0
---- !u!114 &3687453438943715984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3687453438943715989}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f379e0ebc4edfb42826116c95c676c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3687453438943715985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3687453438943715989}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43bbbb8249ea1b142892d818ab47ab9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axisOfRotation_1: 0
-  axisOfRotation_2: 2
-  childCollider: {fileID: 0}
-  linearMapping: {fileID: 0}
-  hoverLock: 0
-  limited: 0
-  frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
-  onFrozenDistanceThreshold:
-    m_PersistentCalls:
-      m_Calls: []
-  minAngle: -45
-  freezeOnMin: 0
-  onMinAngle:
-    m_PersistentCalls:
-      m_Calls: []
-  maxAngle: 45
-  freezeOnMax: 0
-  onMaxAngle:
-    m_PersistentCalls:
-      m_Calls: []
-  minAngle_2: -45
-  freezeOnMin_2: 0
-  onMinAngle_2:
-    m_PersistentCalls:
-      m_Calls: []
-  maxAngle_2: 45
-  freezeOnMax_2: 0
-  onMaxAngle_2:
-    m_PersistentCalls:
-      m_Calls: []
-  forceStart: 0
-  startAngle: 0
-  rotateGameObject: 1
-  debugPath: 0
-  dbgPathLimit: 50
-  debugText: {fileID: 0}
-  outAngle: 0
+  returnOriginalRot: 1
 --- !u!114 &3687453438943715999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,11 +925,11 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   soundSourceObject: {fileID: 0}
   cd: {fileID: 3687453438943715987}
-  objectMoveSpeed: 0.02
+  objectMoveSpeed: 0.5
   axisOfRotation: 2
   transformAdjustment: 0
-  X_Max: 0
-  X_Min: 0
+  targetOriginalPosition: {x: 0, y: 0, z: 0}
+  dropped: 0
 --- !u!1 &3687453439196107834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,8 +1109,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: TurnOnRagdoll
-        m_Mode: 6
+        m_MethodName: CrashRoboticArm
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
