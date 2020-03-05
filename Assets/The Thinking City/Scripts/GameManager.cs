@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerInfo
 {
@@ -17,6 +18,13 @@ public class PlayerInfo
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _bloodParticles = null;
+    [SerializeField] private TextMeshProUGUI _objectiveDisplay = null;
+    [SerializeField] private BoxCollider[] _missionMilestoneColliders;
+
+    [SerializeField] private GameObject[] _keycards = null;
+
+    private Dictionary<int, string> _objectives;
+    private int _currentObjective = 0;
 
     private static GameManager _instance = null;
     public static GameManager instance
@@ -38,6 +46,15 @@ public class GameManager : MonoBehaviour
 
     public ParticleSystem bloodParticles { get { return _bloodParticles; } }
 
+    private void Start()
+    {
+        _objectives = new Dictionary<int, string>();
+        _objectives.Add(0, "Turn on the power");
+        _objectives.Add(1, "Search the labs for keycards");
+        _objectives.Add(2, "Pull power lever");
+        _objectives.Add(3, "Lift lockdown from security");
+        _objectives.Add(4, "Escape!");
+    }
     public void RegisterAIStateMachine(int key, AIStateMachine stateMachine)
     {
         if (!_stateMachines.ContainsKey(key))
@@ -52,6 +69,45 @@ public class GameManager : MonoBehaviour
             return machine;
 
         return null;
+    }
+
+    private void DisplayObjective(string text)
+    {
+        
+        _objectiveDisplay.text = text;
+        ++_currentObjective;
+    }
+
+    private void DisableMilestoneCollider(int _currentMilestone)
+    {
+        _missionMilestoneColliders[_currentMilestone].enabled = false;
+    }
+
+    private void EnableNextMilestoneCollider(int _enableMilestoneCollider)
+    {
+        _missionMilestoneColliders[_enableMilestoneCollider].enabled = true;
+    }
+
+    public void NextObjective()
+    {
+        if(_currentObjective!=1 && _currentObjective != 2 && _currentObjective != 3)
+        {
+            DisableMilestoneCollider(_currentObjective);
+            DisplayObjective(_objectives[_currentObjective]);
+            EnableNextMilestoneCollider(_currentObjective);
+        }
+        else if(_currentObjective == 1 && _keycards[0].gameObject.activeSelf && _keycards[1].gameObject.activeSelf && _keycards[2].gameObject.activeSelf)
+        {
+            DisableMilestoneCollider(_currentObjective);
+            DisplayObjective(_objectives[_currentObjective]);
+            EnableNextMilestoneCollider(_currentObjective);
+        }
+        
+    }
+
+    public GameObject GetCurrentObjective()
+    {
+        return _missionMilestoneColliders[_currentObjective].gameObject;
     }
 
     // --------------------------------------------------------------------

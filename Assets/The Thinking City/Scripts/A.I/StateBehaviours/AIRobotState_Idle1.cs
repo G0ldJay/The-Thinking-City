@@ -77,7 +77,7 @@ public class AIRobotState_Idle1 : AIRobotState
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
             {
             //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDetected", gameObject); //Play sound
+            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDetected", gameObject); //Play sound
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat); //Set new target
                 return AIStateType.Pursuit; //Enter new state 
             }
@@ -86,7 +86,7 @@ public class AIRobotState_Idle1 : AIRobotState
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light)
             {
             //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
+            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat); //Set new target 
                 return AIStateType.Alerted; //Enter new state 
             }
@@ -95,7 +95,7 @@ public class AIRobotState_Idle1 : AIRobotState
             if (_robotStateMachine.AudioThreat.type == AITargetType.Audio)
             {
             //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
+            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
             _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat); //Set new target 
                 return AIStateType.Alerted; //Enter new state 
             }

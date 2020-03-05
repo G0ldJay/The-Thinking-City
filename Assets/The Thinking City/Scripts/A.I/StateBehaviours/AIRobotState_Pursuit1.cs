@@ -85,7 +85,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
                 case AITargetType.Visual_Light:     //If we have reached the light source
                     _stateMachine.ClearTarget();    //Clear the threat
                     //EOGHAN PLAY ROBOT SEARCHING SOUND
-                    FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject);
+                    //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject);
                     return AIStateType.Alerted;     //Become alert and scan for targets
 
                 case AITargetType.Visual_Food:

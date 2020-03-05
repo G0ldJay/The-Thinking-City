@@ -9,45 +9,80 @@ public class DoorFunctionality : MonoBehaviour
     public Transform DoorTop;
     public Transform DoorBottom;
 
-    private Transform startTransform = null;
-    private Transform startTransform2 = null;
-    private Transform mtransform = null;
-    private Transform mtransform2 = null;
+    private InterfaceAnimManager    current;
+    private int                     indexInterface    = 0;
+    private Transform               startTransform    = null;
+    private Transform               startTransform2   = null;
+    private Transform               mtransform        = null;
+    private Transform               mtransform2       = null;
 
-    [SerializeField] private Material _doorLightClosed = null;
-    [SerializeField] private Material _doorLightOpen = null;
-    [SerializeField] private GameObject _doorlight = null;
+    //[SerializeField] private GameObject                 _hologramLocked     = null;
+    //[SerializeField] private GameObject                 _hologramUnlocked   = null;
+    [SerializeField] private Material                   _doorLightClosed    = null;
+    [SerializeField] private Material                   _doorLightOpen      = null;
+    [SerializeField] private GameObject                 _doorlight          = null;
+    [SerializeField] private InterfaceAnimManager[]     holoInterfaceList;
 
-    private DoorState doorState = DoorState.Closed;
-    private Vector3 openPos = Vector3.zero;
-    private Vector3 closedPos = Vector3.zero;
+    private DoorState   doorState   = DoorState.Closed;
+    private Vector3     openPos     = Vector3.zero;
+    private Vector3     closedPos   = Vector3.zero;
 
-    private Vector3 openPos2 = Vector3.zero;
-    private Vector3 closedPos2 = Vector3.zero;
+    private Vector3 openPos2    = Vector3.zero;
+    private Vector3 closedPos2  = Vector3.zero;
 
     private float timer = 0.0f;
 
-    public float SlidingDistance =0.0f;
-    public float Duration = 0.0f;
-    public AnimationCurve JumpCurve = new AnimationCurve();
+    public float            SlidingDistance =0.0f;
+    public float            Duration        = 0.0f;
+    public AnimationCurve   JumpCurve       = new AnimationCurve();
 
     private AudioSource audio = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        startTransform = DoorTop;
+        startTransform  = DoorTop;
         startTransform2 = DoorBottom;
 
         audio = GetComponent<AudioSource>();
 
-        mtransform = DoorTop;
-        closedPos = DoorTop.position;
-        openPos = closedPos + (mtransform.up * SlidingDistance);
+        mtransform  = DoorTop;
+        closedPos   = DoorTop.position;
+        openPos     = closedPos + (mtransform.up * SlidingDistance);
 
         mtransform2 = DoorBottom;
-        closedPos2 = DoorBottom.position;
-        openPos2 = closedPos2 + (mtransform2.up *  SlidingDistance);
+        closedPos2  = DoorBottom.position;
+        openPos2    = closedPos2 + (mtransform2.up *  SlidingDistance);
+
+        //_hologramLocked.SetActive(true);
+        //_hologramUnlocked.SetActive(false);
+
+        if (holoInterfaceList[indexInterface] != null)
+        {
+            CallInterface(holoInterfaceList[indexInterface]);
+        }   
+    }
+
+    private void CallInterface(InterfaceAnimManager _interface)
+    {
+        if (current)
+            current.startDisappear(true);
+
+        current = _interface;
+        if (_interface)
+        {
+            current.gameObject.SetActive(true);
+            current.startAppear();
+        }
+    }
+
+    public void DoNext()
+    {
+        indexInterface++;
+        if (indexInterface >= holoInterfaceList.Length)
+            indexInterface = 0;
+
+        CallInterface(holoInterfaceList[indexInterface]);
     }
 
     // Update is called once per frame
@@ -71,10 +106,13 @@ public class DoorFunctionality : MonoBehaviour
     {
         if(currentState == DoorState.Closed)
         {
+            DoNext();
             _doorlight.GetComponent<MeshRenderer>().material = _doorLightClosed;
         }
         else
         {
+            DoNext();
+            yield return new WaitForSeconds(1.0f);
             _doorlight.GetComponent<MeshRenderer>().material = _doorLightOpen;
             yield return new WaitForSeconds(0.1f);
             _doorlight.GetComponent<MeshRenderer>().material = _doorLightClosed;
