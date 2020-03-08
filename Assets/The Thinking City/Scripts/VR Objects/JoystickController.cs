@@ -45,7 +45,7 @@ public class JoystickController : MonoBehaviour {
                 }
             }
             else if (transformAdjustment == TransformAdj.rotate) {
-                targetObject.transform.localEulerAngles += new Vector3(0, objectMoveSpeed * rot * Time.deltaTime, 0);
+                targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot * Time.deltaTime);
             }
             // play sound effect if moving
             SHRA.PlayServos();
