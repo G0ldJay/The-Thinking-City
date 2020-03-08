@@ -6,6 +6,11 @@ public class HolotableObjectViewer : MonoBehaviour {
     private string currentObj;
     public Material hologram;
 
+    private void Awake() {
+        HoloObjHolder firstObj = GetComponent<SetButtonObjects>().objs[0].GetComponent<HoloObjHolder>();
+        LoadHoloObject(firstObj);
+    }
+
     public void LoadHoloObject(HoloObjHolder HOH) {
         GameObject newObj = HOH.GetObj();
 
