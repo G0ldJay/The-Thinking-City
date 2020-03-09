@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //public enum DoorState { Open, Animating, Closed};
@@ -94,12 +93,15 @@ public class DoorFunctionality : MonoBehaviour
         {
             int rand = Random.Range(0, 101);
 
-            if(rand>45)
-                StartCoroutine(AnimateDoor((doorState == DoorState.Open) ? DoorState.Closed : DoorState.Open));
+            if (rand > 45)
+                ActivateDoor();
 
             timer = 0;
-        }
-            
+        }    
+    }
+
+    public void ActivateDoor() {
+        StartCoroutine(AnimateDoor((doorState == DoorState.Open) ? DoorState.Closed : DoorState.Open));
     }
 
     IEnumerator AnimateDoor(DoorState currentState)
