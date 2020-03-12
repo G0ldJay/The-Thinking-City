@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &2026023485597202775
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6239502902565811832}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0.000000005122274}
 --- !u!54 &6365816882641108782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29,6 +16,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2026023485597202775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239502902565811832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.000000005122274}
 --- !u!1 &7037989499645488011
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2906849224719122795}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Central Floor Panel 2x2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ Transform:
   m_GameObject: {fileID: 7037989499645488011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.6870703, y: 0.42528132, z: -22.70907}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 12, y: 3, z: 4}
   m_Children:
   - {fileID: 6975076418499822699}
   m_Father: {fileID: 0}
@@ -126,7 +126,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dc78b2b5a815d5a40b80b457d18e6d1a, type: 2}
+      objectReference: {fileID: 2100000, guid: bbae7b7cafeae1742879c59190a55b9c, type: 2}
     - target: {fileID: -927199367670048503, guid: 751d5e81b2b2b194c98f605144084f60,
         type: 3}
       propertyPath: m_Name
@@ -141,6 +141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 751d5e81b2b2b194c98f605144084f60,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 751d5e81b2b2b194c98f605144084f60, type: 3}

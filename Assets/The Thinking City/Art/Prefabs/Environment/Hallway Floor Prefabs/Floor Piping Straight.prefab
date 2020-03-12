@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 825326952027404717}
   - component: {fileID: 648381432940168145}
   - component: {fileID: 3070626567713200111}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Rail001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 5825478492205639791}
   - component: {fileID: 1910481843394920704}
   - component: {fileID: 4768671622223943470}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Rail005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 5642480313132544580}
   - component: {fileID: 1177106729773853337}
   - component: {fileID: 4486048857003370485}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Rail004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 138271530619278709}
   - component: {fileID: 2294589656292618395}
   - component: {fileID: 9103181547143596835}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Rail002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6227289579983623020}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Floor Piping Straight
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259767328707830478}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Full Floor Grate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 66452724734589434}
   - component: {fileID: 399053893225258222}
   - component: {fileID: 3717162707735027492}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Rail003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 8931942331011576231}
   - component: {fileID: 6890708527558177603}
   - component: {fileID: 1204849908796809274}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Rail006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 4598894434891124439}
   - component: {fileID: 4050215989825115396}
   - component: {fileID: 6012747370696486165}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Box002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 5725013198530933936}
   - component: {fileID: 8151075663543148455}
   - component: {fileID: 7243949306678366832}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Rail007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,11 +724,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6227289579983623020}
     m_Modifications:
+    - target: {fileID: -7050521040049516133, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: -6484941046169300072, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: -5580916350219692131, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e750261f70590f94882891aff965eb64, type: 2}
+    - target: {fileID: -4926786216002692922, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -784,21 +799,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3449532170947455738, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Name
       value: Central Floor Pipe (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -678655025697594940, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e750261f70590f94882891aff965eb64, type: 2}
+    - target: {fileID: 721056895991426811, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 1740271780838707924, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e750261f70590f94882891aff965eb64, type: 2}
+    - target: {fileID: 1992041862456829583, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187449669427467095, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 5452068790998213776, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -834,11 +874,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6227289579983623020}
     m_Modifications:
+    - target: {fileID: -7050521040049516133, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: -6484941046169300072, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: -5580916350219692131, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e750261f70590f94882891aff965eb64, type: 2}
+    - target: {fileID: -4926786216002692922, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -894,21 +949,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3449532170947455738, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Name
       value: Central Floor Pipe (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -678655025697594940, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e750261f70590f94882891aff965eb64, type: 2}
+    - target: {fileID: 721056895991426811, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 1740271780838707924, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e750261f70590f94882891aff965eb64, type: 2}
+    - target: {fileID: 1992041862456829583, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187449669427467095, guid: 11e01883fa2987f4fb909a23c25c64d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 5452068790998213776, guid: 11e01883fa2987f4fb909a23c25c64d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

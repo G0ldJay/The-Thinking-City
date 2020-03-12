@@ -96,6 +96,7 @@ public abstract class AIRobotState : AIState
 			}
 			else if (other.CompareTag ("AI Sound Emitter")) //If an alarming sound has come into sensor radius
 			{
+                Debug.Log("SOUND DETECTED");
 				SphereCollider  soundTrigger = (SphereCollider) other;
 				if (soundTrigger==null) return;
 				
