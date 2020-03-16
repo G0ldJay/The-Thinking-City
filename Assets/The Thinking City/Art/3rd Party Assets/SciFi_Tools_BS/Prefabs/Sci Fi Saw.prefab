@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &8125227053095129881
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844481587720723851}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2929721692435528942, guid: 8436df17eb3c4fb40a92175b659f90f1, type: 3}
 --- !u!1 &3292188463877000283
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +26,7 @@ GameObject:
   - component: {fileID: 4468002590479637345}
   - component: {fileID: 6261534719695498428}
   - component: {fileID: 4489826514467786390}
-  - component: {fileID: 4352357707684751674}
+  - component: {fileID: 901798720082273671}
   m_Layer: 0
   m_Name: Sci Fi Saw
   m_TagString: Untagged
@@ -28,7 +42,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3292188463877000283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.223028, y: 1.617801, z: 9.275266}
+  m_LocalPosition: {x: -21.223028, y: 1.518, z: 9.275266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3800365116131919164}
@@ -46,7 +60,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -157,7 +171,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
---- !u!114 &4352357707684751674
+--- !u!114 &901798720082273671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,6 +186,20 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!64 &5416201646928379895
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427395887631996012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6306027207531055637, guid: 8436df17eb3c4fb40a92175b659f90f1, type: 3}
 --- !u!1001 &8198573592574553638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,6 +272,18 @@ PrefabInstance:
 --- !u!4 &3800365116131919164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8436df17eb3c4fb40a92175b659f90f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8198573592574553638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &844481587720723851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -396566661202807891, guid: 8436df17eb3c4fb40a92175b659f90f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8198573592574553638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7427395887631996012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1645016779821251146, guid: 8436df17eb3c4fb40a92175b659f90f1,
     type: 3}
   m_PrefabInstance: {fileID: 8198573592574553638}
   m_PrefabAsset: {fileID: 0}
