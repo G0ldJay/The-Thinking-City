@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8494413572570148209}
-  - component: {fileID: 8494413572570148208}
+  - component: {fileID: 3378964029734270948}
   m_Layer: 0
   m_Name: Scifi_Barrel_01
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8494413572570148208
+--- !u!114 &3378964029734270948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,3 +155,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 20
+  _gravity: 0
