@@ -4,6 +4,7 @@ using System.Collections;
 public class CharacterManager : MonoBehaviour
 {
     // Inspector Assigned
+    [SerializeField] private GameObject _vrPlayer = null;  
     [SerializeField] private CapsuleCollider _meleeTrigger = null;
     //[SerializeField] private CameraBloodEffect	_cameraBloodEffect 	= null; TODO look into blood effect on HDRP
     [SerializeField] private Camera _camera = null;
@@ -19,9 +20,9 @@ public class CharacterManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        _collider = GetComponent<Collider>();
-        _fpsController = GetComponent<FPSController>();
-        _characterController = GetComponent<CharacterController>();
+        _collider = _vrPlayer.GetComponent<Collider>();
+        _fpsController = _vrPlayer.GetComponent<FPSController>();
+        _characterController = _vrPlayer.GetComponent<CharacterController>();
         _gameManager = GameManager.instance;
 
         _aiBodyPartLayer = LayerMask.NameToLayer("AI Body Part");
