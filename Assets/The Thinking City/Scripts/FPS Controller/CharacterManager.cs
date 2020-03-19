@@ -39,16 +39,14 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
-    void Update()
-    {
+    void Update() {
         if (Input.GetMouseButtonDown(0))
         {
             DoDamage();
         }
     }
 
-    public void TakeDamage(float amount)
-    {
+    public void TakeDamage(float amount) {
         _health = Mathf.Max(_health - (amount * Time.deltaTime), 0.0f);
         //if (_cameraBloodEffect!=null)
         //{
@@ -59,10 +57,16 @@ public class CharacterManager : MonoBehaviour
         //      {
         //          Debug.Log("Missing camera blood effect script");
         //      }
+        if(_health <= 0) {
+            KillPlayer();
+        }
     }
 
-    public void DoDamage(int hitDirection = 0)
-    {
+    void KillPlayer() {
+        
+    }
+
+    public void DoDamage(int hitDirection = 0) {
         if (_camera      == null) return;
         if (_gameManager == null) return;
 

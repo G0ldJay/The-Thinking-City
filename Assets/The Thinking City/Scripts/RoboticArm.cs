@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RoboticArm : MonoBehaviour {
+    public GameObject playerInterestedObj;
+
     private Collider    mainCollider;
     private Collider[]  allColliders;
     private Rigidbody[] rigRigidbodies;
@@ -48,6 +50,8 @@ public class RoboticArm : MonoBehaviour {
         TurnOnRagdoll(true);
         //stop all movement
         StopAllMovement();
+        //drop obj of interest
+        playerInterestedObj.GetComponent<Rigidbody>().useGravity = true;
         crashed = true;
     }
 
