@@ -62,7 +62,7 @@ public class CharacterManager : MonoBehaviour
 
     public void DoDamage(int hitDirection = 0)
     {
-        if (_camera == null) return;
+        if (_camera      == null) return;
         if (_gameManager == null) return;
 
         Ray ray;
