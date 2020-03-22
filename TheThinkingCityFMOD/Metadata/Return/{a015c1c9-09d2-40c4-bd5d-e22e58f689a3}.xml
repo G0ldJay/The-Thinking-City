@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerReturn" id="{a015c1c9-09d2-40c4-bd5d-e22e58f689a3}">
+		<property name="volume">
+			<value>-11.5</value>
+		</property>
+		<property name="name">
+			<value>GravityMuffle</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{95219625-2a3a-4ac1-bee8-c631f1a55e4c}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{eba00ad6-da0d-4475-be6d-77f96d57d9e7}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8ab722cc-8918-4cd2-8afb-3fdcf0a39b72}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{95219625-2a3a-4ac1-bee8-c631f1a55e4c}">
+		<relationship name="effects">
+			<destination>{ef04fc0e-1bd6-455b-8bc4-a8139a9307e4}</destination>
+			<destination>{7edf4ebf-10fb-4674-b288-ad21355c2eeb}</destination>
+			<destination>{6de683fb-3826-44f5-871a-9832a534f138}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{eba00ad6-da0d-4475-be6d-77f96d57d9e7}" />
+	<object class="ThreeEQEffect" id="{ef04fc0e-1bd6-455b-8bc4-a8139a9307e4}">
+		<property name="lowGain">
+			<value>10</value>
+		</property>
+		<property name="midGain">
+			<value>0.5</value>
+		</property>
+		<property name="highGain">
+			<value>-64</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{7edf4ebf-10fb-4674-b288-ad21355c2eeb}">
+		<property name="decayTime">
+			<value>600</value>
+		</property>
+		<property name="earlyDelay">
+			<value>54</value>
+		</property>
+		<property name="lateDelay">
+			<value>36</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>38</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{6de683fb-3826-44f5-871a-9832a534f138}" />
+</objects>
