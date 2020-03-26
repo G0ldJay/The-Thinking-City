@@ -9,8 +9,8 @@ public class Oisin_PlayerController : MonoBehaviour {
     public SteamVR_Action_Vector2 walkInput;
     //public SteamVR_Action_Vector2 rotInput;
     //public SteamVR_Action_Boolean running;
-    public float walkSpeed   = 1.8f;
-    //public float rotateSpeed = 2.0f;
+    public float walkSpeed    = 1.8f;
+    //public float rotateSpeed  = 2.0f;
     //public float runningSpeed = 2;
 
     private CharacterController characterController;
@@ -20,7 +20,7 @@ public class Oisin_PlayerController : MonoBehaviour {
     }
 
     void Update() {
-        if (walkInput.axis.magnitude > 0.1f) {
+        if (walkInput.axis.magnitude > 0.1f && !VRPauseMenu.paused) {
             ///float speed = running.state ? runningSpeed : walkSpeed;
             MovePlayer(walkSpeed);
         }
