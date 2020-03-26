@@ -7,10 +7,10 @@ using Valve.VR.InteractionSystem;
 public class Oisin_PlayerController : MonoBehaviour {
 
     public SteamVR_Action_Vector2 walkInput;
-    public SteamVR_Action_Vector2 rotInput;
+    //public SteamVR_Action_Vector2 rotInput;
     //public SteamVR_Action_Boolean running;
     public float walkSpeed   = 1.8f;
-    public float rotateSpeed = 2.0f;
+    //public float rotateSpeed = 2.0f;
     //public float runningSpeed = 2;
 
     private CharacterController characterController;
@@ -24,9 +24,9 @@ public class Oisin_PlayerController : MonoBehaviour {
             ///float speed = running.state ? runningSpeed : walkSpeed;
             MovePlayer(walkSpeed);
         }
-        if(rotInput.axis.magnitude > 0.1f) {
-            RotatePlayer(rotateSpeed);
-        }
+        //if(rotInput.axis.magnitude > 0.1f) {
+        //    RotatePlayer(rotateSpeed);
+        //}
     }
 
     void MovePlayer(float speed) {
@@ -34,7 +34,7 @@ public class Oisin_PlayerController : MonoBehaviour {
         characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
     }
 
-    void RotatePlayer(float speed) {
-        transform.Rotate(0, rotInput.axis.x * rotateSpeed * Time.deltaTime, 0);
-    }
+    //void RotatePlayer(float speed) {
+    //    transform.Rotate(0, rotInput.axis.x * rotateSpeed * Time.deltaTime, 0);
+    //}
 }

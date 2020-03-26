@@ -2239,6 +2239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93ffe233c2b2b64e9169f251002dba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _vrPlayer: {fileID: 0}
   _meleeTrigger: {fileID: 0}
   _camera: {fileID: 9165585524972460197}
   _health: 100
@@ -2267,11 +2268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e1676cf9ce42c4286de79997eb49f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input:
-    actionPath: /actions/default/in/TouchPad
+  walkInput:
+    actionPath: 
     needsReinit: 0
   walkSpeed: 2
-  runningSpeed: 3.5
 --- !u!114 &559964153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3005,7 +3005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013829830258, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000014277073068, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Layer
@@ -3018,7 +3018,22 @@ PrefabInstance:
     - target: {fileID: 114000010547881750, guid: dc06161b6d97feb419f45f03b62e14b9,
         type: 3}
       propertyPath: canTurnEverySeconds
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010547881750, guid: dc06161b6d97feb419f45f03b62e14b9,
+        type: 3}
+      propertyPath: showTurnAnimation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010547881750, guid: dc06161b6d97feb419f45f03b62e14b9,
+        type: 3}
+      propertyPath: fadeTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010547881750, guid: dc06161b6d97feb419f45f03b62e14b9,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1723379542535072741, guid: dc06161b6d97feb419f45f03b62e14b9,
         type: 3}
