@@ -9,6 +9,7 @@ public class VRPauseMenu : MonoBehaviour {
     public SteamVR_Action_Boolean PauseToggle;
     public static bool paused = false;
     public GameObject PauseMenuUi;
+    public GameObject pointer;
 
     void Update() {
         if(PauseToggle.state) {
@@ -24,12 +25,14 @@ public class VRPauseMenu : MonoBehaviour {
     public void Resume() {
         paused = false;
         PauseMenuUi.SetActive(false);
+        pointer.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void Pause() {
         paused = true;
         PauseMenuUi.SetActive(true);
+        pointer.SetActive(true);
         Time.timeScale = 0f;
     }
 
