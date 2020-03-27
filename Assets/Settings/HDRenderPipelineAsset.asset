@@ -151,13 +151,12 @@ MonoBehaviour:
   m_RenderPipelineResources: {fileID: 11400000, guid: 3ce144cff5783da45aa5d4fdc2da14b7,
     type: 2}
   m_RenderPipelineRayTracingResources: {fileID: 0}
-  m_DefaultVolumeProfile: {fileID: 11400000, guid: 3043edc9d9a47704fad99f10fea80a08,
-    type: 2}
+  m_DefaultVolumeProfile: {fileID: 0}
   m_DefaultLookDevProfile: {fileID: 0}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
       data1: 70280696823645
-      data2: 4539628424926265344
+      data2: 4539628424816951296
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -191,7 +190,7 @@ MonoBehaviour:
     supportShadowMask: 1
     supportSSR: 0
     supportSSAO: 1
-    supportSubsurfaceScattering: 1
+    supportSubsurfaceScattering: 0
     increaseSssSampleCount: 0
     supportVolumetrics: 1
     increaseResolutionOfVolumetrics: 0
@@ -219,14 +218,14 @@ MonoBehaviour:
     supportDitheringCrossFade: 1
     supportTerrainHole: 0
     supportRayTracing: 0
-    supportedRaytracingTier: 2
     lightLoopSettings:
-      cookieSize: 128
-      cookieTexArraySize: 16
+      cookieAtlasSize: 128
+      cookieFormat: 74
       pointCookieSize: 128
       cubeCookieTexArraySize: 16
-      planarReflectionProbeCacheSize: 2
-      planarReflectionTextureSize: 1024
+      cookieAtlasLastValidMip: 0
+      cookieTexArraySize: 16
+      planarReflectionAtlasSize: 1024
       reflectionProbeCacheSize: 64
       reflectionCubemapSize: 256
       reflectionCacheCompressed: 0
@@ -241,10 +240,11 @@ MonoBehaviour:
       maxAreaLightsOnScreen: 64
       maxEnvLightsOnScreen: 64
       maxDecalsOnScreen: 512
+      maxPlanarReflectionOnScreen: 16
     hdShadowInitParams:
       maxShadowRequests: 128
       directionalShadowsDepthBits: 32
-      shadowFilteringQuality: 0
+      shadowFilteringQuality: 1
       punctualLightShadowAtlas:
         shadowAtlasResolution: 4096
         shadowAtlasDepthBits: 32
@@ -269,7 +269,8 @@ MonoBehaviour:
       maxPunctualShadowMapResolution: 2048
       maxAreaShadowMapResolution: 2048
       supportScreenSpaceShadows: 0
-      maxScreenSpaceShadows: 2
+      maxScreenSpaceShadowSlots: 4
+      screenSpaceShadowBufferFormat: 48
     decalSettings:
       drawDistance: 1000
       atlasWidth: 4096
@@ -278,6 +279,7 @@ MonoBehaviour:
     postProcessSettings:
       m_LutSize: 32
       lutFormat: 48
+      bufferFormat: 74
     dynamicResolutionSettings:
       enabled: 0
       maxPercentage: 100
@@ -312,7 +314,7 @@ MonoBehaviour:
       ChromaticAberrationMaxSamples: 03000000060000000c000000
     lightSettings:
       useContactShadow:
-        m_Values: 
+        m_Values: 000000
         m_SchemaId:
           m_Id: 
     maximumLODLevel:
