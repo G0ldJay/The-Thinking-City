@@ -7,12 +7,7 @@ public class Pointer : MonoBehaviour {
     public float _DefaultLength = 5.0f;
     public GameObject _dot;
     public VRInputModule _InputModule;
-
-    private LineRenderer _LineRenderer = null;
-
-    private void Awake() {
-        _LineRenderer = GetComponent<LineRenderer>();
-    }
+    public LineRenderer _LineRenderer = null;
 
     private void Update() {
         UpdateLine();
