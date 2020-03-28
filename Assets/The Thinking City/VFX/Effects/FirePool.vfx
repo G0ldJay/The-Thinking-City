@@ -440,8 +440,8 @@ VisualEffectResource:
       Force_0(inout float3 velocity, float mass, float3 Force, float deltaTime) /*Mode:Absolute
       */\n{\n    velocity += (Force / mass) * deltaTime;\n}\nvoid Turbulence_18D(float3
       position, inout float3 velocity, float mass, float4x4 InvFieldTransform, float4x4
-      FieldTransform, float Intensity, float Drag, float frequency, float roughness,
-      float lacunarity, int octaves, float deltaTime) /*Mode:Relative NoiseType:Value
+      FieldTransform, float Intensity, float Drag, float frequency, int octaves,
+      float roughness, float lacunarity, float deltaTime) /*Mode:Relative NoiseType:Value
       */\n{\n    float3 vectorFieldCoord = mul(InvFieldTransform, float4(position,1.0f)).xyz;\n   
       \n    float3 value = GenerateValueCurlNoise(vectorFieldCoord + 0.5f, frequency,
       octaves, roughness, lacunarity);\n    value = mul(FieldTransform,float4(value,0.0f)).xyz
@@ -470,10 +470,10 @@ VisualEffectResource:
       stripData);\r\n#endif\r\n\t\t\t\r\n\t\t\t{\n\t\t\t    Force_0( /*inout */attributes.velocity,
       attributes.mass, float3(0, 12, 0), deltaTime_a);\n\t\t\t}\n\t\t\t{\n\t\t\t   
       Turbulence_18D(attributes.position,  /*inout */attributes.velocity, attributes.mass,
-      InvFieldTransform_b, FieldTransform_b, (float)15, (float)3, (float)1.5, (float)0.5,
-      (float)2, (int)2, deltaTime_a);\n\t\t\t}\n\t\t\t{\n\t\t\t    Turbulence_18D(attributes.position, 
+      InvFieldTransform_b, FieldTransform_b, (float)15, (float)3, (float)1.5, (int)2,
+      (float)0.5, (float)2, deltaTime_a);\n\t\t\t}\n\t\t\t{\n\t\t\t    Turbulence_18D(attributes.position, 
       /*inout */attributes.velocity, attributes.mass, InvFieldTransform_c, FieldTransform_c,
-      (float)32, (float)0.400000006, (float)1.5, (float)0.5, (float)2, (int)2, deltaTime_a);\n\t\t\t}\n\t\t\t{\n\t\t\t   
+      (float)32, (float)0.400000006, (float)1.5, (int)2, (float)0.5, (float)2, deltaTime_a);\n\t\t\t}\n\t\t\t{\n\t\t\t   
       float tmp_bd = attributes.age / attributes.lifetime;\n\t\t\t    float tmp_be
       = SampleCurve(uniform_g,tmp_bd);\n\t\t\t    Drag_0( /*inout */attributes.velocity,
       attributes.mass, tmp_be, deltaTime_a);\n\t\t\t}\n\t\t\tEulerIntegration( /*inout
@@ -508,10 +508,10 @@ VisualEffectResource:
       Force_0( /*inout */attributes.velocity, attributes.mass, float3(0, 12, 0),
       deltaTime_a);\n\t\t}\n\t\t{\n\t\t    Turbulence_18D(attributes.position,  /*inout
       */attributes.velocity, attributes.mass, InvFieldTransform_b, FieldTransform_b,
-      (float)15, (float)3, (float)1.5, (float)0.5, (float)2, (int)2, deltaTime_a);\n\t\t}\n\t\t{\n\t\t   
+      (float)15, (float)3, (float)1.5, (int)2, (float)0.5, (float)2, deltaTime_a);\n\t\t}\n\t\t{\n\t\t   
       Turbulence_18D(attributes.position,  /*inout */attributes.velocity, attributes.mass,
       InvFieldTransform_c, FieldTransform_c, (float)32, (float)0.400000006, (float)1.5,
-      (float)0.5, (float)2, (int)2, deltaTime_a);\n\t\t}\n\t\t{\n\t\t    float tmp_bd
+      (int)2, (float)0.5, (float)2, deltaTime_a);\n\t\t}\n\t\t{\n\t\t    float tmp_bd
       = attributes.age / attributes.lifetime;\n\t\t    float tmp_be = SampleCurve(uniform_g,tmp_bd);\n\t\t   
       Drag_0( /*inout */attributes.velocity, attributes.mass, tmp_be, deltaTime_a);\n\t\t}\n\t\tEulerIntegration(
       /*inout */attributes.position, attributes.velocity, deltaTime_a);\n\t\tAge(
@@ -2585,18 +2585,18 @@ VisualEffectResource:
         data[1]: 39
         data[2]: 34
         data[3]: -1
-      - op: 56
-        valueIndex: 136
-        data[0]: 36
-        data[1]: -1
-        data[2]: -1
-        data[3]: 0
       - op: 1
-        valueIndex: 140
+        valueIndex: 136
         data[0]: -1
         data[1]: -1
         data[2]: -1
         data[3]: 13
+      - op: 56
+        valueIndex: 137
+        data[0]: 36
+        data[1]: -1
+        data[2]: -1
+        data[3]: 0
       - op: 1
         valueIndex: 141
         data[0]: -1
@@ -2743,7 +2743,7 @@ VisualEffectResource:
         data[3]: 2
       - op: 56
         valueIndex: 181
-        data[0]: 50
+        data[0]: 49
         data[1]: -1
         data[2]: -1
         data[3]: 3
@@ -3170,7 +3170,7 @@ VisualEffectResource:
             m_PreInfinity: 2
             m_PostInfinity: 2
             m_RotationOrder: 4
-        - m_ExpressionIndex: 50
+        - m_ExpressionIndex: 49
           m_Value:
             serializedVersion: 2
             m_Curve:
@@ -4077,7 +4077,7 @@ VisualEffectResource:
       - nameId: uniform_c
         index: 4
       - nameId: uniform_d
-        index: 49
+        index: 50
       - nameId: mainTexture
         index: 76
       params:
@@ -10430,7 +10430,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614762}
   - {fileID: 8926484042661614768}
   - {fileID: 8926484042661614770}
-  m_UIPosition: {x: -58.24585, y: -631.93555}
+  m_UIPosition: {x: -69, y: -629}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -16335,6 +16335,12 @@ MonoBehaviour:
       m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
     attributes:
+    - m_Type: 0
+      m_Min: 1
+      m_Max: 8
+      m_Tooltip: 
+      m_Regex: 
+      m_RegexMaxLength: 0
     - m_Type: 3
       m_Min: -Infinity
       m_Max: Infinity
@@ -16511,6 +16517,12 @@ MonoBehaviour:
       m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
     attributes:
+    - m_Type: 0
+      m_Min: 1
+      m_Max: 8
+      m_Tooltip: 
+      m_Regex: 
+      m_RegexMaxLength: 0
     - m_Type: 3
       m_Min: -Infinity
       m_Max: Infinity
