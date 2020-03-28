@@ -22,7 +22,7 @@ public class JoystickController : MonoBehaviour {
     public TransformAdj transformAdjustment = TransformAdj.translate;
     private float maxRot, minRot, maxRange, minRange;
     private SoundHandlerRoboticArm SHRA;
-    public Vector3 targetOriginalPosition;
+    //public Vector3 targetOriginalPosition;
     public bool dropped;
 
     private void Start() {
@@ -31,21 +31,25 @@ public class JoystickController : MonoBehaviour {
         minRange = -1;
         maxRange =  1;
         SHRA = soundSourceObject.GetComponent<SoundHandlerRoboticArm>();
-        targetOriginalPosition = targetObject.transform.position;
+        //targetOriginalPosition = targetObject.transform.position;
     }
 
     void Update() {
-        float rot = GetNormalisedRotMagnitude();
-        Debug.Log(rot);
-        if(rot != 0 && !this.dropped) {
+        float mvmtMagnitude = GetNormalisedRotMagnitude();
+        Debug.Log(mvmtMagnitude);
+        if(mvmtMagnitude != 0 && !this.dropped) {
             if (transformAdjustment == TransformAdj.translate) {
-                targetObject.transform.Translate(objectMoveSpeed * rot * Time.deltaTime, 0, 0);
-                if(!CheckValidMovement()) {
-                    targetObject.transform.Translate(-objectMoveSpeed * rot * Time.deltaTime, 0, 0);
-                }
+                //targetObject.transform.Translate(objectMoveSpeed * rot * Time.deltaTime, 0, 0);
+                //if(!CheckValidMovement()) {
+                //    targetObject.transform.Translate(-objectMoveSpeed * rot * Time.deltaTime, 0, 0);
+                //}
+
+                // move forward or backwards along path
+                targetObject.GetComponent<FollowPath>().MoveAlongPath(mvmtMagnitude);
+
             }
             else if (transformAdjustment == TransformAdj.rotate) {
-                targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * rot * Time.deltaTime);
+                targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * mvmtMagnitude * Time.deltaTime);
             }
             // play sound effect if moving
             SHRA.PlayServos();
@@ -55,18 +59,18 @@ public class JoystickController : MonoBehaviour {
         }
     }
 
-    //check pos in bounds, if over a certain limit, return false to cancel movement.
-    private bool CheckValidMovement() {
-        Vector3 pos = targetObject.transform.position;
-        //check x axis position
-        if (pos.x > targetOriginalPosition.x + 5 || pos.x < targetOriginalPosition.x - 5) {
-            return false;
-        }
-        else if(pos.z > targetOriginalPosition.z + 5 || pos.z < targetOriginalPosition.z - 5) {
-            return false;
-        }
-        return true;
-    }
+    ////check pos in bounds, if over a certain limit, return false to cancel movement.
+    //private bool CheckValidMovement() {
+    //    Vector3 pos = targetObject.transform.position;
+    //    //check x axis position
+    //    if (pos.x > targetOriginalPosition.x + 5 || pos.x < targetOriginalPosition.x - 5) {
+    //        return false;
+    //    }
+    //    else if(pos.z > targetOriginalPosition.z + 5 || pos.z < targetOriginalPosition.z - 5) {
+    //        return false;
+    //    }
+    //    return true;
+    //}
 
     private float GetNormalisedRotMagnitude() {
         float rot = 0;
