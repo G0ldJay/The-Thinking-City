@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
     //[SerializeField] private CameraBloodEffect	_cameraBloodEffect 	= null; TODO look into blood effect on HDRP
     [SerializeField] private Camera _camera = null;
     [SerializeField] private float _health = 100.0f;
+    [SerializeField] private GameObject _deathZone;
 
     // Private
     private Collider _collider = null;
@@ -63,7 +64,7 @@ public class CharacterManager : MonoBehaviour
     }
 
     void KillPlayer() {
-        
+        transform.position = _deathZone.transform.position;
     }
 
     public void DoDamage(int hitDirection = 0) {
