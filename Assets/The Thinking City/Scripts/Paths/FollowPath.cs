@@ -5,12 +5,12 @@ using UnityEngine;
 public class FollowPath : MonoBehaviour {
 
     public EditorPathScript _Path;
-    public int    _WaypointID = 0;
+    public int    _WaypointID = 5;
     public float  _Speed;
     public float  _RotSpeed   = 5.0f;
     public string _PathName;
 
-    private float _ReachDistance = 1f;
+    private float _ReachDistance = 0.5f;
     //private int   _lastDirection = 0;
     private Quaternion _Reverse = new Quaternion(0, 0, 0, 1);
 
@@ -64,7 +64,7 @@ public class FollowPath : MonoBehaviour {
     }
 
     private void ValidateWaypointEnds() {
-        if (_WaypointID >= _Path._pathObjs.Count) {
+        if (_WaypointID > _Path._pathObjs.Count) {
             _WaypointID = _Path._pathObjs.Count;
             // activate light at end and allow dropping
         }
