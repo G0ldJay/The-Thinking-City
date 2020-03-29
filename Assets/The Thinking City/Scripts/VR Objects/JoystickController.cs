@@ -36,7 +36,7 @@ public class JoystickController : MonoBehaviour {
 
     void Update() {
         float mvmtMagnitude = GetNormalisedRotMagnitude();
-        Debug.Log(mvmtMagnitude);
+        //Debug.Log(mvmtMagnitude);
         if(mvmtMagnitude != 0 && !this.dropped) {
             if (transformAdjustment == TransformAdj.translate) {
                 //targetObject.transform.Translate(objectMoveSpeed * rot * Time.deltaTime, 0, 0);
