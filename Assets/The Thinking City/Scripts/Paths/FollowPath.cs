@@ -10,7 +10,8 @@ public class FollowPath : MonoBehaviour {
     public float  _RotSpeed   = 5.0f;
     public string _PathName;
 
-    private float _ReachDistance = 1.0f;
+    private float _ReachDistance = 0.5f;
+    private int _lastDirection = 0;
 
     Vector3 _LastPos;
     Vector3 _CurrPos;
@@ -23,13 +24,28 @@ public class FollowPath : MonoBehaviour {
 
     // Update is called once per frame
     public void MoveAlongPath(float joystickMagnitude) {
-        int direction = joystickMagnitude > 0 ? 1 : -1;
+        int direction = -1;
+        if(joystickMagnitude > 0) {
+            direction = 1;
+        }
+
+        // store last direction -> if new direction is different, force change target waypoint.
+        // ensure that out of switching when at ends of path is accounted for
+        if(direction != _lastDirection) { 
+            // if new direction is -1, decrement waypoint, 
+            // if new direction is +1, increment waypoint
+            _WaypointID += direction;
+            ValidateWaypointEnds();
+        }
+
         float dist         = Vector3.Distance(_Path._pathObjs[_WaypointID].position, transform.position);
-        transform.position = Vector3.MoveTowards(transform.position, _Path._pathObjs[_WaypointID].position, _Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _Path._pathObjs[_WaypointID].position, _Speed * joystickMagnitude * Time.deltaTime);
 
         // rotate toards position of next waypoint
-        var newRotation    = Quaternion.LookRotation(_Path._pathObjs[_WaypointID].position - transform.position);
-        
+        var newRotation = Quaternion.LookRotation(_Path._pathObjs[_WaypointID].position - transform.position);
+        if(direction == -1) {
+            newRotation *= new Quaternion(0, 0, 0, 1);
+        }
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, _RotSpeed * Time.deltaTime);
 
         if(dist <= _ReachDistance) {
@@ -38,9 +54,20 @@ public class FollowPath : MonoBehaviour {
             // turn on / off light on rails
         }
 
-        
-        if(_WaypointID >= _Path._pathObjs.Count) {
+        ValidateWaypointEnds();
+
+        _lastDirection = direction;
+    }
+
+    private void ValidateWaypointEnds() {
+        if (_WaypointID > _Path._pathObjs.Count) {
+            _WaypointID = _Path._pathObjs.Count - 1;
             // activate light at end and allow dropping
+        }
+        else if (_WaypointID < 0) {
+            _WaypointID = 0;
         }
     }
 }
+
+
