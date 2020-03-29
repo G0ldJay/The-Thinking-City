@@ -121,6 +121,15 @@ public class CorePowerUpQuest : MonoBehaviour
         //}
     }
 
+    public void LeverPulled()
+    {
+        if (!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
+        {
+            _coreOnline = true;
+            _coreReactorEffect.SetActive(true);
+        }
+    }
+
     public void OnTriggerEvent(GameObject slot, Collider other)
     {
         if(slot.CompareTag("Blue Card Slot") && other.CompareTag("Blue Keycard"))
