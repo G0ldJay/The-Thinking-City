@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class FollowPath : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class FollowPath : MonoBehaviour {
 
     private float _ReachDistance = 0.5f;
     //private int   _lastDirection = 0;
-    private Quaternion _Reverse = new Quaternion(0, 0, 0, 1);
+    //private Quaternion _ReverseQ = new Quaternion(0, 0, 0, 1);
 
     Vector3 _LastPos;
     Vector3 _CurrPos;
@@ -41,7 +42,7 @@ public class FollowPath : MonoBehaviour {
         //Debug.Log("Direction: " + direction);
 
         float dist         = Vector3.Distance(_Path._pathObjs[_WaypointID].position, transform.position);
-        transform.position = Vector3.MoveTowards(transform.position, _Path._pathObjs[_WaypointID].position, _Speed * joystickMagnitude * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _Path._pathObjs[_WaypointID].position, _Speed * Mathf.Abs(joystickMagnitude) * Time.deltaTime);
 
         // rotate toards position of next waypoint
         var newRotation = Quaternion.LookRotation(_Path._pathObjs[_WaypointID].position - transform.position);
@@ -64,8 +65,8 @@ public class FollowPath : MonoBehaviour {
     }
 
     private void ValidateWaypointEnds() {
-        if (_WaypointID > _Path._pathObjs.Count) {
-            _WaypointID = _Path._pathObjs.Count;
+        if (_WaypointID >= _Path._pathObjs.Count) {
+            _WaypointID = _Path._pathObjs.Count - 1;
             // activate light at end and allow dropping
         }
         else if(_WaypointID < 0) {
