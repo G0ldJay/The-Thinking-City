@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class RoboticArm : MonoBehaviour {
     public GameObject playerInterestedObj;
+    public GameObject followObj;
 
     private Collider    mainCollider;
     private Collider[]  allColliders;
     private Rigidbody[] rigRigidbodies;
     private bool crashed = false;
+    private Vector3 originalPos;
 
     private void Awake() {
         mainCollider = GetComponent<Collider>();
         allColliders = gameObject.GetComponentsInChildren<Collider>(true);
         rigRigidbodies = gameObject.GetComponentsInChildren<Rigidbody>();
         TurnOnRagdoll(false);
+        originalPos = transform.position;
+    }
+
+    private void Update() {
+        transform.position = new Vector3(followObj.transform.position.x, originalPos.y, followObj.transform.position.z);
     }
 
     public void TurnOnRagdoll(bool isRagdoll) {
