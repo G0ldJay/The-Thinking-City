@@ -10,6 +10,7 @@ public class FollowPath : MonoBehaviour {
     public float  _Speed;
     public float  _RotSpeed   = 5.0f;
     public string _PathName;
+    int _EndWaypoint;
 
     private float _ReachDistance = 0.5f;
     //private int   _lastDirection = 0;
@@ -22,6 +23,7 @@ public class FollowPath : MonoBehaviour {
     void Start() {
         // _Path = GameObject.Find(_PathName).GetComponent<EditorPathScript>();
         _LastPos = transform.position;
+        _EndWaypoint = _Path._pathObjs.Count - 1;
     }
 
     // Update is called once per frame
@@ -49,14 +51,19 @@ public class FollowPath : MonoBehaviour {
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, _RotSpeed * Time.deltaTime);
 
         if (dist <= _ReachDistance) {
+            
+            // turn on / off light on rails
+            if (_WaypointID == _EndWaypoint) {
+
+            }
+
             // change target waypoint
-            if (direction == 1) { 
+            if (direction == 1) {
                 _WaypointID++;
             }
             else {
                 _WaypointID--;
             }
-            // turn on / off light on rails
         }
 
         ValidateWaypointEnds();
@@ -66,8 +73,8 @@ public class FollowPath : MonoBehaviour {
 
     private void ValidateWaypointEnds() {
         if (_WaypointID >= _Path._pathObjs.Count) {
-            _WaypointID = _Path._pathObjs.Count - 1;
-            // activate light at end and allow dropping
+            _WaypointID = _EndWaypoint;
+
         }
         else if(_WaypointID < 0) {
             _WaypointID = 0;
