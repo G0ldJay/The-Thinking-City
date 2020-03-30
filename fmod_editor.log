@@ -15,6 +15,256 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FDE68
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FDE68
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A7C19EC28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A7C19EC28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FD0E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FD0E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8288
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8288
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025A1D44FAA8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotTentacleStep1', format=2, channels=2, frequency=48000, lengthbytes=10912, lengthpcm=57120, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.160735.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4226816
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED358B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='door_open_01', format=2, channels=2, frequency=48000, lengthbytes=50816, lengthpcm=215636, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED3BDC8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep3', format=2, channels=2, frequency=48000, lengthbytes=11168, lengthpcm=55200, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED3BDC8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep2', format=2, channels=2, frequency=48000, lengthbytes=10400, lengthpcm=56160, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.861794.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED3BDC8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep1', format=2, channels=2, frequency=48000, lengthbytes=12640, lengthpcm=64320, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.657966.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8E58
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8E58
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8438
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8438
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8CA8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8CA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8CA8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8CA8
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000025A1D4B3818 : node = 0000025A1BDC3200
+[LOG] SystemI::createSound                     : add node to async list : head = 0000025C79B82398.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A1D4B3818
+[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 0000025A1D4B34B8 : node = 0000025A1BDC3FC0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025C79B82398.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025A1BDC3310
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A1D4B3818
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A1D4B34B8
+[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025A1BDC40D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A1D4B34B8
+[LOG] SoundI::getSubSound                      : sound 0000025A1D4B3818.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000025A1D4B34B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : consoleHum (0000025A24743DD8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FC9B8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FD448)
+[LOG] SoundI::release                          : consoleHum (0000025A24742CF8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FB158)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FD0E8)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : BaseAlarm (0000025A247427E8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FCCF8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FD298)
+[LOG] SoundI::release                          : BaseAlarm (0000025A18716738)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FBB18)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FDE68)
+[LOG] SoundI::release                          : BaseAlarm (0000025A24742998)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180F9DD8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FD7A8)
+[LOG] SoundI::release                          : BaseAlarm (0000025A187159B8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180F90D8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FDCB8)
+[LOG] SoundI::release                          : steamLoop (0000025A1D4B3158)
+[LOG] SoundI::release                          :     steamLoop (0000025A180F9758)
+[LOG] SoundI::release                          :     steamLoop (0000025A7C19EC28)
+[LOG] SoundI::release                          : steamLoop (0000025A24743718)
+[LOG] SoundI::release                          :     steamLoop (0000025A180FA5F8)
+[LOG] SoundI::release                          :     steamLoop (0000025B3A5A8288)
+[LOG] SoundI::release                          : consoleHum (0000025A1D4B3818)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FB7D8)
+[LOG] SoundI::release                          :     consoleHum (0000025A21454258)
+[LOG] SoundI::release                          : consoleHum (0000025A1D4B34B8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180F95B8)
+[LOG] SoundI::release                          :     consoleHum (0000025A21454408)
+[LOG] SoundI::release                          : ambience (0000025A24743208)
+[LOG] SoundI::release                          :     ambience (0000025A180FB498)
+[LOG] SoundI::release                          :     ambience (0000025B3A5A8798)
+[LOG] SoundI::release                          : GravityHum (0000025A24742128)
+[LOG] SoundI::release                          :     GravityHum (0000025A180FAE18)
+[LOG] SoundI::release                          :     GravityHum (0000025A180FD5F8)
+[LOG] SoundI::release                          : Bubbling (0000025A1D4B39C8)
+[LOG] SoundI::release                          :     Bubbling (0000025A180FC198)
+[LOG] SoundI::release                          :     Bubbling (0000025A7C19F7F8)
+[LOG] SoundI::release                          : Bubbling (0000025A1DA9F088)
+[LOG] SoundI::release                          :     Bubbling (0000025A20241C58)
+[LOG] SoundI::release                          :     Bubbling (0000025B3A5AF2C8)
+[LOG] SoundI::release                          : Bubbling (0000025A24743058)
+[LOG] SoundI::release                          :     Bubbling (0000025A180FBFF8)
+[LOG] SoundI::release                          :     Bubbling (0000025B3A5A85E8)
+[LOG] SoundI::release                          : Bubbling (0000025A1D4B43E8)
+[LOG] SoundI::release                          :     Bubbling (0000025A180FC338)
+[LOG] SoundI::release                          :     Bubbling (0000025A7C19EDD8)
+[LOG] SoundI::release                          : Bubbling (0000025A187163D8)
+[LOG] SoundI::release                          :     Bubbling (0000025A20242E38)
+[LOG] SoundI::release                          :     Bubbling (0000025B3A5AF988)
+[LOG] SoundI::release                          : TentacleSlither (0000025A24743A78)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A180FBE58)
+[LOG] SoundI::release                          :     TentacleSlither (0000025B3A5A8CA8)
+[LOG] SoundI::release                          : TentacleSlither (0000025A18716588)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A202422D8)
+[LOG] SoundI::release                          :     TentacleSlither (0000025B3A5AF7D8)
+[LOG] SoundI::release                          : TentacleSlither (0000025A24743568)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A180FA2B8)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A180FDB08)
+[LOG] SoundI::release                          : CableSparks (0000025A24743C28)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FB2F8)
+[LOG] SoundI::release                          :     CableSparks (0000025A7C19F648)
+[LOG] SoundI::release                          : CableSparks (0000025A247422D8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FCB58)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8948)
+[LOG] SoundI::release                          : CableSparks (0000025A24742EA8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FA458)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8E58)
+[LOG] SoundI::release                          : CableSparks (0000025A247438C8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FAAD8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FD958)
+[LOG] SoundI::release                          : CableSparks (0000025A1D4B2FA8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FB978)
+[LOG] SoundI::release                          :     CableSparks (0000025A7C19F2E8)
+[LOG] SoundI::release                          : CableSparks (0000025A24742B48)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FB638)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A80D8)
+[LOG] SoundI::release                          : CableSparks (0000025A24742488)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FCE98)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8438)
+[LOG] SoundI::release                          : CableSparks (0000025A1D4B3D28)
+[LOG] SoundI::release                          :     CableSparks (0000025A180F9F78)
+[LOG] SoundI::release                          :     CableSparks (0000025A7C19F138)
+[LOG] SoundI::release                          : CableSparks (0000025A247433B8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FBCB8)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8AF8)
+[LOG] SoundI::release                          :  (0000025B1EEF3198)
+[LOG] SoundI::release                          :     door_open_01 (0000025A1868F8C8)
+[LOG] SoundI::release                          :  (00000259D77825B8)
+[LOG] SoundI::release                          :     RobotTentacleStep1 (0000025A178572C8)
+[LOG] SoundI::release                          :  (0000025B1EEF3758)
+[LOG] SoundI::release                          :     RobotSteelStep1 (0000025A1868FC08)
+[LOG] SoundI::release                          :  (0000025B1EEF3E88)
+[LOG] SoundI::release                          :     RobotSteelStep2 (0000025A1868F0A8)
+[LOG] SoundI::release                          :  (0000025B1EEF3478)
+[LOG] SoundI::release                          :     RobotSteelStep3 (0000025A1868FA68)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
@@ -26,10 +276,15 @@
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
