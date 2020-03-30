@@ -28,7 +28,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7826996803006320733
 Transform:
@@ -66,6 +66,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7826996803006320733}
     m_Modifications:
+    - target: {fileID: -7159948834132844759, guid: 1b17261aec6f1f04f9e5df287b4dbdf5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1b17261aec6f1f04f9e5df287b4dbdf5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -135,6 +140,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Reactor_Body_UV
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1b17261aec6f1f04f9e5df287b4dbdf5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4331436867522224209, guid: 1b17261aec6f1f04f9e5df287b4dbdf5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b17261aec6f1f04f9e5df287b4dbdf5, type: 3}
@@ -236,6 +251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Reactor_Window
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be93bdc81afbb704c8dd66e2ad571952,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be93bdc81afbb704c8dd66e2ad571952, type: 3}

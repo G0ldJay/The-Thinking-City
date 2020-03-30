@@ -31,20 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &5038645357975077012
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9138815543823082831}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 5060444177187149915, guid: 8af290498e08fc04ba38f88c6f0ce647, type: 3}
 --- !u!64 &3666475116693644313
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73,6 +59,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -5573580799846109427, guid: 8af290498e08fc04ba38f88c6f0ce647, type: 3}
+--- !u!64 &5038645357975077012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138815543823082831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5060444177187149915, guid: 8af290498e08fc04ba38f88c6f0ce647, type: 3}
 --- !u!1001 &8417840391261162420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80,10 +80,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4552929110267576017}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 8af290498e08fc04ba38f88c6f0ce647,
+    - target: {fileID: -8077955567153436957, guid: 8af290498e08fc04ba38f88c6f0ce647,
         type: 3}
-      propertyPath: m_Name
-      value: Hallway Wall Mid 1x3
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 587079f76ded82f448e3eb36000e7b45, type: 2}
+    - target: {fileID: -4682901362387869790, guid: 8af290498e08fc04ba38f88c6f0ce647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8af290498e08fc04ba38f88c6f0ce647,
         type: 3}
@@ -140,17 +145,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8405317065323677370, guid: 8af290498e08fc04ba38f88c6f0ce647,
+    - target: {fileID: -927199367670048503, guid: 8af290498e08fc04ba38f88c6f0ce647,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 587079f76ded82f448e3eb36000e7b45, type: 2}
+      propertyPath: m_Name
+      value: Hallway Wall Mid 1x3
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8af290498e08fc04ba38f88c6f0ce647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 640836018035811465, guid: 8af290498e08fc04ba38f88c6f0ce647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 721056895991426811, guid: 8af290498e08fc04ba38f88c6f0ce647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7796965159598972112, guid: 8af290498e08fc04ba38f88c6f0ce647,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 587079f76ded82f448e3eb36000e7b45, type: 2}
-    - target: {fileID: -8077955567153436957, guid: 8af290498e08fc04ba38f88c6f0ce647,
+    - target: {fileID: 8405317065323677370, guid: 8af290498e08fc04ba38f88c6f0ce647,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
