@@ -2,14 +2,12 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20007 (107206), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
-[LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000187D0741048 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000025B1F129318 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,40 +15,61 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FDE68
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FDE68
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE9C8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE9C8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000735BCAF51C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE05B58630
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE05B58600
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE05B58700
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE05B587C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000186B0A96DD8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='door_open_01', format=2, channels=2, frequency=48000, lengthbytes=50816, lengthpcm=215636, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A7C19EC28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A7C19EC28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FD0E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FD0E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8288
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8288
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000735BCAF51C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE05B58630
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE05B58600
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE05B58700
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE05B587C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000188A32D6B58
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025A1D44FAA8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotTentacleStep1', format=2, channels=2, frequency=48000, lengthbytes=10912, lengthpcm=57120, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.160735.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4226816
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED358B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='door_open_01', format=2, channels=2, frequency=48000, lengthbytes=50816, lengthpcm=215636, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED3BDC8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep3', format=2, channels=2, frequency=48000, lengthbytes=11168, lengthpcm=55200, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
@@ -59,14 +78,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000735BCAF51C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE05B58630
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE05B58600
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE05B58700
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE05B587C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000188A32D6B58
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED3BDC8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep2', format=2, channels=2, frequency=48000, lengthbytes=10400, lengthpcm=56160, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.861794.
@@ -75,1364 +94,163 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000735BCAF51C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8057FEEBC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE05B58630
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE05B58600
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE05B58700
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE05B587C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000188A32D6B58
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD717D8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD717D8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD717D8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD717D87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025B1ED3BDC8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep1', format=2, channels=2, frequency=48000, lengthbytes=12640, lengthpcm=64320, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.657966.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE668
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE668
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000735BCAF51C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE05B58630
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE05B58600
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE05B58700
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE05B587C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000188A32D5CE8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotTentacleStep1', format=2, channels=2, frequency=48000, lengthbytes=10912, lengthpcm=57120, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.160735.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8E58
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8E58
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8438
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8438
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8CA8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8CA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A180FD5F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025B3A5A8CA8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025B3A5A8CA8
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000186B9922AB8 : node = 00000186BA3829A0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B9922AB8
+[LOG] SystemI::createSound                     : setdata soundi = 0000025A1D4B3818 : node = 0000025A1BDC3200
+[LOG] SystemI::createSound                     : add node to async list : head = 0000025C79B82398.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A1D4B3818
 [LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
 [LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B8A89748 : node = 00000186BA3816E0
+[LOG] SystemI::createSound                     :     setdata soundi = 0000025A1D4B34B8 : node = 0000025A1BDC3FC0
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025C79B82398.  list count = 0
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186BA382AB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025A1BDC3310
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B9922AB8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A89748
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A1D4B3818
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025A1D4B34B8
 [LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186BA3817F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025A1BDC40D0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A89748
-[LOG] SoundI::getSubSound                      : sound 00000186B9922AB8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B8A89748.  Subsound index 0 / 1
-[LOG] SoundI::release                          : consoleHum (00000186B93D10F8)
-[LOG] SoundI::release                          :     consoleHum (00000187BE16F678)
-[LOG] SoundI::release                          :     consoleHum (00000187B7FBED28)
-[LOG] SoundI::release                          : consoleHum (00000186B93D0378)
-[LOG] SoundI::release                          :     consoleHum (00000187BE172738)
-[LOG] SoundI::release                          :     consoleHum (00000187B88D8D88)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A89AA8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A89AA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE668
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE668
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025A1D4B34B8
+[LOG] SoundI::getSubSound                      : sound 0000025A1D4B3818.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000025A1D4B34B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : consoleHum (0000025A24743DD8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FC9B8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FD448)
+[LOG] SoundI::release                          : consoleHum (0000025A24742CF8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FB158)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FD0E8)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE9C8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE9C8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0663228 : node = 000001894753B3D0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663228
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664D28 : node = 000001894753B510
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001894753B4E0
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664308 : node = 000001894753CE10
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 1
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664818 : node = 000001867439CF00
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 2
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664158 : node = 00000186BA1FF480
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663228
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664D28
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001894753B620
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664D28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664308
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001894753CF20
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664308
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664818
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001867439D010
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664818
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664158
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186BA1FF590
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664158
-[LOG] SoundI::getSubSound                      : sound 00000187D0663228.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664D28.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664308.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664818.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664158.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Bubbling (00000186B842E468)
-[LOG] SoundI::release                          :     Bubbling (00000187BE171D78)
-[LOG] SoundI::release                          :     Bubbling (00000187B8A8AD38)
-[LOG] SoundI::release                          : Bubbling (00000186B842DBF8)
-[LOG] SoundI::release                          :     Bubbling (00000187BE1730F8)
-[LOG] SoundI::release                          :     Bubbling (00000187B7FBD078)
-[LOG] SoundI::release                          : Bubbling (00000188A2FF7278)
-[LOG] SoundI::release                          :     Bubbling (00000187BE16F198)
-[LOG] SoundI::release                          :     Bubbling (00000187B7FBDFA8)
-[LOG] SoundI::release                          : Bubbling (00000186B93D0BE8)
-[LOG] SoundI::release                          :     Bubbling (00000187BE171078)
-[LOG] SoundI::release                          :     Bubbling (00000187B88D8BD8)
-[LOG] SoundI::release                          : Bubbling (00000186B93D0A38)
-[LOG] SoundI::release                          :     Bubbling (00000187BE171558)
-[LOG] SoundI::release                          :     Bubbling (0000018644CEB6F8)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0663738 : node = 00000187D0667660
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663738
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D06638E8 : node = 00000187D0667B60
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000187D0667770
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663738
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D06638E8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000187D0667C70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D06638E8
-[LOG] SoundI::getSubSound                      : sound 00000187D0663738.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D06638E8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : consoleHum (00000187B8A89748)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73BB78)
-[LOG] SoundI::release                          :     consoleHum (00000187D06644B8)
-[LOG] SoundI::release                          : consoleHum (00000186B9922AB8)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73C6D8)
-[LOG] SoundI::release                          :     consoleHum (00000187B8A89AA8)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0663C48 : node = 00000187D0669320
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663C48
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000187D0669430
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BaseAlarm', format=2, channels=2, frequency=48000, lengthbytes=665056, lengthpcm=2928000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.218316.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663C48
-[LOG] SoundI::getSubSound                      : sound 00000187D0663C48.  Subsound index 0 / 1
-[LOG] SoundI::release                          : BaseAlarm (0000018644CEAE88)
-[LOG] SoundI::release                          :     BaseAlarm (00000187BE171BD8)
-[LOG] SoundI::release                          :     BaseAlarm (00000187B7FBEB78)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663DF8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663DF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBDDF8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBDDF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8878
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8878
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187B7FBEB78 : node = 00000186BA3816E0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBEB78
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBED28 : node = 00000186BA3829A0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186BA3817F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='steamLoop', format=2, channels=1, frequency=48000, lengthbytes=582080, lengthpcm=3307171, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.104614.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBEB78
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBED28
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186BA382AB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='steamLoop', format=2, channels=1, frequency=48000, lengthbytes=582080, lengthpcm=3307171, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.104614.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBED28
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBEB78.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBED28.  Subsound index 0 / 1
-[LOG] SoundI::release                          : steamLoop (0000018644CEACD8)
-[LOG] SoundI::release                          :     steamLoop (00000187BE1713B8)
-[LOG] SoundI::release                          :     steamLoop (00000187B7FBE668)
-[LOG] SoundI::release                          : steamLoop (00000188A2FF7428)
-[LOG] SoundI::release                          :     steamLoop (00000187BE16F338)
-[LOG] SoundI::release                          :     steamLoop (00000187B7FBE4B8)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663DF8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663DF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A8AB88
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A8AB88
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000186B93D0A38 : node = 000001894753B290
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D0A38
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     setdata soundi = 00000186B93D0378 : node = 000001894753A110
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001894753B3A0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     setdata soundi = 00000186B93D0BE8 : node = 00000187D06677A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 1
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000186B93D10F8 : node = 00000187D0666260
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 2
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B8A89748 : node = 00000187D0667A20
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 3
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B8A8AD38 : node = 00000186AEDF6020
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 4
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B8A89AA8 : node = 00000186AEDF3AA0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 5
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000018644CEB6F8 : node = 00000186AEDF45E0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 6
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000018644CEAE88 : node = 00000186AEDF58A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 7
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D0A38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D0378
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001894753A220
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D0378
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D0BE8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000187D06678B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D0BE8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D10F8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000187D0666370
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D10F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A89748
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000187D0667B30
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A89748
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A8AD38
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6130
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A8AD38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A89AA8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF3BB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A89AA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018644CEB6F8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF46F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018644CEB6F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018644CEAE88
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF59B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018644CEAE88
-[LOG] SoundI::getSubSound                      : sound 00000186B93D0A38.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000186B93D0378.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000186B93D0BE8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000186B93D10F8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B8A89748.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B8A8AD38.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B8A89AA8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000018644CEB6F8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000018644CEAE88.  Subsound index 0 / 1
-[LOG] SoundI::release                          : CableSparks (00000186B842DF58)
-[LOG] SoundI::release                          :     CableSparks (00000187BE173438)
-[LOG] SoundI::release                          :     CableSparks (00000187B8A8AB88)
-[LOG] SoundI::release                          : CableSparks (0000018644CEB038)
-[LOG] SoundI::release                          :     CableSparks (00000187BE174618)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBE308)
-[LOG] SoundI::release                          : CableSparks (0000018644CEB398)
-[LOG] SoundI::release                          :     CableSparks (00000187BE170D38)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBE158)
-[LOG] SoundI::release                          : CableSparks (00000188A2FF70C8)
-[LOG] SoundI::release                          :     CableSparks (00000187BE171218)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBDC48)
-[LOG] SoundI::release                          : CableSparks (00000188A2FF8868)
-[LOG] SoundI::release                          :     CableSparks (00000187BE16F9B8)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBD738)
-[LOG] SoundI::release                          : CableSparks (00000188A2FF86B8)
-[LOG] SoundI::release                          :     CableSparks (00000187BE172F58)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBD588)
-[LOG] SoundI::release                          : CableSparks (00000188A2FF8A18)
-[LOG] SoundI::release                          :     CableSparks (00000187BE1728D8)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBDA98)
-[LOG] SoundI::release                          : CableSparks (00000188A2FF8358)
-[LOG] SoundI::release                          :     CableSparks (00000187BE171A38)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBD3D8)
-[LOG] SoundI::release                          : CableSparks (00000186B93CF7A8)
-[LOG] SoundI::release                          :     CableSparks (00000187BE1709F8)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBE818)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBDDF8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBDDF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B842DBF8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B842DBF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8878
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8878
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000188A2FF8358 : node = 00000186AEDF4D60
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF8358
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     setdata soundi = 00000188A2FF86B8 : node = 00000186AEDF3BE0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF4E70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF8358
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF86B8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF3CF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF86B8
-[LOG] SoundI::getSubSound                      : sound 00000188A2FF8358.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000188A2FF86B8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : consoleHum (00000187D06638E8)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73DF38)
-[LOG] SoundI::release                          :     consoleHum (00000187D06633D8)
-[LOG] SoundI::release                          : consoleHum (00000187D0663738)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73B9D8)
-[LOG] SoundI::release                          :     consoleHum (00000187D0663FA8)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8D88
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8D88
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE4B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE4B8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE4B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE4B8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187B7FBE818 : node = 00000186AEDF5DA0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE818
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBE158 : node = 00000186AEDF6660
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF5EB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBE308 : node = 00000186AEDF5620
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 1
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBD3D8 : node = 00000186AEDF6CA0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 2
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBD588 : node = 00000186AEDF6DE0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE818
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE158
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6770
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE158
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE308
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF5730
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE308
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD3D8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6DB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD3D8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD588
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6EF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD588
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBE818.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBE158.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBE308.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBD3D8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBD588.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Bubbling (00000187D0664158)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73C878)
-[LOG] SoundI::release                          :     Bubbling (00000187D0663588)
-[LOG] SoundI::release                          : Bubbling (00000187D0664818)
-[LOG] SoundI::release                          :     Bubbling (00000186DD740638)
-[LOG] SoundI::release                          :     Bubbling (00000187D0664B78)
-[LOG] SoundI::release                          : Bubbling (00000187D0664308)
-[LOG] SoundI::release                          :     Bubbling (00000186DD741678)
-[LOG] SoundI::release                          :     Bubbling (00000187D06649C8)
-[LOG] SoundI::release                          : Bubbling (00000187D0664D28)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73B358)
-[LOG] SoundI::release                          :     Bubbling (00000187D0664668)
-[LOG] SoundI::release                          : Bubbling (00000187D0663228)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73BD18)
-[LOG] SoundI::release                          :     Bubbling (00000187D0663A98)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0663A98 : node = 00000186AEDF59E0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663A98
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664158 : node = 00000186AEDF67A0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF5AF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663A98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664158
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF68B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664158
-[LOG] SoundI::getSubSound                      : sound 00000187D0663A98.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664158.  Subsound index 0 / 1
-[LOG] SoundI::release                          : consoleHum (00000188A2FF86B8)
-[LOG] SoundI::release                          :     consoleHum (00000186DD740FF8)
-[LOG] SoundI::release                          :     consoleHum (00000188A2FF8A18)
-[LOG] SoundI::release                          : consoleHum (00000188A2FF8358)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73C058)
-[LOG] SoundI::release                          :     consoleHum (00000188A2FF8868)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D06644B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D06644B8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663DF8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663DF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8BD8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D06644B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D06644B8
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 74048
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000735BCAF51C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE05B58630
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE05B58600
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE05B58700
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE05B587C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000186B0A93C58
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='wetHit', format=2, channels=2, frequency=48000, lengthbytes=28576, lengthpcm=136800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.223969.
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0663738 : node = 00000186AEDF3460
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663738
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF3570
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BaseAlarm', format=2, channels=2, frequency=48000, lengthbytes=665056, lengthpcm=2928000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.218316.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663738
-[LOG] SoundI::getSubSound                      : sound 00000187D0663738.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0664D28 : node = 00000186AEDF3BE0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664D28
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1193600
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2080
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF3CF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ambience', format=2, channels=2, frequency=48000, lengthbytes=1192512, lengthpcm=5859369, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.650513.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664D28
-[LOG] SoundI::getSubSound                      : sound 00000187D0664D28.  Subsound index 0 / 1
-[LOG] SoundI::release                          : BaseAlarm (00000187D0663C48)
-[LOG] SoundI::release                          :     BaseAlarm (00000186DD73E418)
-[LOG] SoundI::release                          :     BaseAlarm (00000187D0663DF8)
-[LOG] SoundI::release                          : ambience (00000186B93D0528)
-[LOG] SoundI::release                          :     ambience (00000187BE170ED8)
-[LOG] SoundI::release                          :     ambience (00000187B7FBD228)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBDA98
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBDA98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8BD8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664818
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664818
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBDA98
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBDA98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663FA8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663FA8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBDFA8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBDFA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664668
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664668
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664308
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664308
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0663588 : node = 00000186AEDF5B20
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663588
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D06638E8 : node = 00000186AEDF6160
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF5C30
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='steamLoop', format=2, channels=1, frequency=48000, lengthbytes=582080, lengthpcm=3307171, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.104614.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663588
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D06638E8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6270
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='steamLoop', format=2, channels=1, frequency=48000, lengthbytes=582080, lengthpcm=3307171, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.104614.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D06638E8
-[LOG] SoundI::getSubSound                      : sound 00000187D0663588.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D06638E8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : steamLoop (00000187B7FBED28)
-[LOG] SoundI::release                          :     steamLoop (00000186DD73C1F8)
-[LOG] SoundI::release                          :     steamLoop (00000187B7FBD078)
-[LOG] SoundI::release                          : steamLoop (00000187B7FBEB78)
-[LOG] SoundI::release                          :     steamLoop (00000186DD73CA18)
-[LOG] SoundI::release                          :     steamLoop (00000187B7FBDFA8)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0664B78 : node = 00000186AEDF35A0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187D0663DF8 : node = 00000186AEDF4EA0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664B78
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF36B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664B78
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0663DF8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF4FB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0663DF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D06649C8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D06649C8
-[LOG] SoundI::getSubSound                      : sound 00000187D0664B78.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0663DF8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : consoleHum (00000187D0664158)
-[LOG] SoundI::release                          :     consoleHum (00000186DD740638)
-[LOG] SoundI::release                          :     consoleHum (00000187D0664308)
-[LOG] SoundI::release                          : consoleHum (00000187D0663A98)
-[LOG] SoundI::release                          :     consoleHum (00000186DD741678)
-[LOG] SoundI::release                          :     consoleHum (00000187D0664668)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8BD8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D06649C8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D06649C8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8BD8
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000188A2FF8868 : node = 00000186AEDF4860
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF8868
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF4970
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GravityHum', format=2, channels=2, frequency=48000, lengthbytes=750848, lengthpcm=6989884, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.906862.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF8868
-[LOG] SoundI::getSubSound                      : sound 00000188A2FF8868.  Subsound index 0 / 1
-[LOG] SoundI::release                          : GravityHum (00000186B93D1458)
-[LOG] SoundI::release                          :     GravityHum (00000187BE16F4D8)
-[LOG] SoundI::release                          :     GravityHum (00000187B7FBE9C8)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF8A18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF8A18
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187B7FBD078 : node = 00000186AEDF4D60
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD078
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBDFA8 : node = 00000186AEDF6520
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF4E70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBE9C8 : node = 00000186AEDF4720
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 1
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBEB78 : node = 00000186AEDF6B60
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 2
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBED28 : node = 00000186AEDF5C60
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 3
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBD228 : node = 00000186AEDF4FE0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 4
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664158 : node = 00000186AEDF49A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 5
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664308 : node = 00000186AEDF30A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 6
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187D0664668 : node = 00000186AEDF3960
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 7
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD078
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBDFA8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6630
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBDFA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE9C8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF4830
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE9C8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBEB78
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6C70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBEB78
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBED28
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF5D70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBED28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD228
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF50F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD228
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664158
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF4AB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664158
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664308
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF31B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664308
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664668
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF3A70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CableSparks', format=2, channels=2, frequency=48000, lengthbytes=948128, lengthpcm=3654715, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.541467.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664668
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBD078.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBDFA8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBE9C8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBEB78.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBED28.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBD228.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664158.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664308.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187D0664668.  Subsound index 0 / 1
-[LOG] SoundI::release                          : CableSparks (0000018644CEAE88)
-[LOG] SoundI::release                          :     CableSparks (00000186DD740E58)
-[LOG] SoundI::release                          :     CableSparks (00000186B842DBF8)
-[LOG] SoundI::release                          : CableSparks (0000018644CEB6F8)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73B4F8)
-[LOG] SoundI::release                          :     CableSparks (00000186B842E468)
-[LOG] SoundI::release                          : CableSparks (00000187B8A89AA8)
-[LOG] SoundI::release                          :     CableSparks (00000186DD741818)
-[LOG] SoundI::release                          :     CableSparks (00000187B88D8D88)
-[LOG] SoundI::release                          : CableSparks (00000187B8A89748)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73CEF8)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBE668)
-[LOG] SoundI::release                          : CableSparks (00000186B93D10F8)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73E5B8)
-[LOG] SoundI::release                          :     CableSparks (00000187B7FBE4B8)
-[LOG] SoundI::release                          : CableSparks (00000186B93D0BE8)
-[LOG] SoundI::release                          :     CableSparks (00000186DD740978)
-[LOG] SoundI::release                          :     CableSparks (00000187D0663078)
-[LOG] SoundI::release                          : CableSparks (00000186B93D0378)
-[LOG] SoundI::release                          :     CableSparks (00000186DD741338)
-[LOG] SoundI::release                          :     CableSparks (00000187D06644B8)
-[LOG] SoundI::release                          : CableSparks (00000186B93D0A38)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73FC78)
-[LOG] SoundI::release                          :     CableSparks (0000018644CEACD8)
-[LOG] SoundI::release                          : CableSparks (00000187B8A8AD38)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73F938)
-[LOG] SoundI::release                          :     CableSparks (00000187B88D8BD8)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D06649C8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D06649C8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF7278
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF7278
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF8A18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF8A18
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000186B93D0BE8 : node = 00000186AEDF67A0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000186B93D0378 : node = 00000186AEDF4AE0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D0BE8
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000186B93D10F8 : node = 00000186AEDF3AA0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF68B0
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     setdata soundi = 00000186B93D0A38 : node = 00000186AEDF3D20
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 2
-[LOG] SystemI::createSound                     :     filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B8A89748 : node = 00000186AEDF68E0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D0BE8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D0378
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF4BF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D0378
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D10F8
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF3BB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D10F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D0A38
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF3E30
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D0A38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A89748
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF69F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbling', format=2, channels=2, frequency=48000, lengthbytes=555776, lengthpcm=2473344, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076318.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A89748
-[LOG] SoundI::getSubSound                      : sound 00000186B93D0BE8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000186B93D0378.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000186B93D10F8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000186B93D0A38.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B8A89748.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Bubbling (00000187B7FBD588)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73B9D8)
-[LOG] SoundI::release                          :     Bubbling (00000187D06633D8)
-[LOG] SoundI::release                          : Bubbling (00000187B7FBD3D8)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73FE18)
-[LOG] SoundI::release                          :     Bubbling (00000187D0663FA8)
-[LOG] SoundI::release                          : Bubbling (00000187B7FBE308)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73F458)
-[LOG] SoundI::release                          :     Bubbling (00000187B7FBDC48)
-[LOG] SoundI::release                          : Bubbling (00000187B7FBE158)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73B698)
-[LOG] SoundI::release                          :     Bubbling (00000187B7FBDA98)
-[LOG] SoundI::release                          : Bubbling (00000187B7FBE818)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73F2B8)
-[LOG] SoundI::release                          :     Bubbling (00000187B7FBD738)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018644CEB398
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018644CEB398
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93CF7A8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93CF7A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D1458
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D1458
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A8AD38
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A8AD38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8878
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8878
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187B7FBD588 : node = 00000186AEDF6A20
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD588
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     setdata soundi = 00000187B7FBE158 : node = 00000186AEDF5120
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF6B30
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD588
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE158
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF5230
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='consoleHum', format=2, channels=2, frequency=48000, lengthbytes=240544, lengthpcm=1356978, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063169.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE158
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBD588.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBE158.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B8A8AD38
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B8A8AD38
-[LOG] SoundI::release                          : consoleHum (00000187D0663DF8)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73C058)
-[LOG] SoundI::release                          :     consoleHum (00000188A2FF86B8)
-[LOG] SoundI::release                          : consoleHum (00000187D0664B78)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73BD18)
-[LOG] SoundI::release                          :     consoleHum (00000188A2FF8358)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF7278
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF7278
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187D0664818
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187D0664818
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018644CEB398
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018644CEB398
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD8E8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF8A18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF8A18
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93CF7A8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93CF7A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B88D8878
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B88D8878
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188A2FF7428
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188A2FF7428
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBDDF8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBDDF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000186B93D1458
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000186B93D1458
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000187B7FBE818 : node = 00000186AEDF45E0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000187BE1719E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBE818
-[LOG] SystemI::createSoundInternal             :     Create name='TheThinkingCityFMOD\Build\Desktop/Environment Effects.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4226816
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000186AEDF46F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BaseAlarm', format=2, channels=2, frequency=48000, lengthbytes=665056, lengthpcm=2928000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.218316.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBE818
-[LOG] SoundI::getSubSound                      : sound 00000187B7FBE818.  Subsound index 0 / 1
-[LOG] SoundI::release                          : BaseAlarm (00000187D0663738)
-[LOG] SoundI::release                          :     BaseAlarm (00000186DD73BEB8)
-[LOG] SoundI::release                          :     BaseAlarm (00000187D0664818)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187B7FBD3D8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187B7FBD3D8
-[LOG] SoundI::release                          : BaseAlarm (00000187B7FBE818)
-[LOG] SoundI::release                          :     BaseAlarm (00000186DD73E5B8)
-[LOG] SoundI::release                          :     BaseAlarm (00000187B7FBD3D8)
-[LOG] SoundI::release                          : steamLoop (00000187D06638E8)
-[LOG] SoundI::release                          :     steamLoop (00000186DD740FF8)
-[LOG] SoundI::release                          :     steamLoop (00000187D06649C8)
-[LOG] SoundI::release                          : steamLoop (00000187D0663588)
-[LOG] SoundI::release                          :     steamLoop (00000186DD73BB78)
-[LOG] SoundI::release                          :     steamLoop (00000187D0663C48)
-[LOG] SoundI::release                          : consoleHum (00000187B7FBD588)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73C878)
-[LOG] SoundI::release                          :     consoleHum (00000187B7FBDC48)
-[LOG] SoundI::release                          : consoleHum (00000187B7FBE158)
-[LOG] SoundI::release                          :     consoleHum (00000186DD73CA18)
-[LOG] SoundI::release                          :     consoleHum (00000187B7FBE308)
-[LOG] SoundI::release                          : ambience (00000187D0664D28)
-[LOG] SoundI::release                          :     ambience (00000186DD73E758)
-[LOG] SoundI::release                          :     ambience (00000187D0663228)
-[LOG] SoundI::release                          : GravityHum (00000188A2FF8868)
-[LOG] SoundI::release                          :     GravityHum (00000186DD741678)
-[LOG] SoundI::release                          :     GravityHum (00000188A2FF8A18)
-[LOG] SoundI::release                          : Bubbling (00000186B93D0A38)
-[LOG] SoundI::release                          :     Bubbling (00000186DD740978)
-[LOG] SoundI::release                          :     Bubbling (00000186B842DBF8)
-[LOG] SoundI::release                          : Bubbling (00000186B93D0BE8)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73F938)
-[LOG] SoundI::release                          :     Bubbling (00000187B8A8AB88)
-[LOG] SoundI::release                          : Bubbling (00000187B8A89748)
-[LOG] SoundI::release                          :     Bubbling (00000186DD740E58)
-[LOG] SoundI::release                          :     Bubbling (00000186B842DF58)
-[LOG] SoundI::release                          : Bubbling (00000186B93D10F8)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73D238)
-[LOG] SoundI::release                          :     Bubbling (00000187B8A89AA8)
-[LOG] SoundI::release                          : Bubbling (00000186B93D0378)
-[LOG] SoundI::release                          :     Bubbling (00000186DD73FC78)
-[LOG] SoundI::release                          :     Bubbling (00000187B8A8AD38)
-[LOG] SoundI::release                          : TentacleSlither (00000188A2FF8D78)
-[LOG] SoundI::release                          :     TentacleSlither (00000187BE173F98)
-[LOG] SoundI::release                          :     TentacleSlither (00000187B7FBD8E8)
-[LOG] SoundI::release                          : TentacleSlither (00000186B93D01C8)
-[LOG] SoundI::release                          :     TentacleSlither (00000187BE170B98)
-[LOG] SoundI::release                          :     TentacleSlither (00000187B88D8878)
-[LOG] SoundI::release                          : TentacleSlither (00000186B93CF958)
-[LOG] SoundI::release                          :     TentacleSlither (00000187BE172598)
-[LOG] SoundI::release                          :     TentacleSlither (00000187B7FBDDF8)
-[LOG] SoundI::release                          : CableSparks (00000187B7FBED28)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73B358)
-[LOG] SoundI::release                          :     CableSparks (00000188A2FF70C8)
-[LOG] SoundI::release                          : CableSparks (00000187B7FBEB78)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73C1F8)
-[LOG] SoundI::release                          :     CableSparks (00000186B93CF7A8)
-[LOG] SoundI::release                          : CableSparks (00000187D0664308)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73C538)
-[LOG] SoundI::release                          :     CableSparks (0000018644CEB038)
-[LOG] SoundI::release                          : CableSparks (00000187B7FBE9C8)
-[LOG] SoundI::release                          :     CableSparks (00000186DD740638)
-[LOG] SoundI::release                          :     CableSparks (00000186B93D0528)
-[LOG] SoundI::release                          : CableSparks (00000187D0664158)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73E418)
-[LOG] SoundI::release                          :     CableSparks (00000188A2FF7428)
-[LOG] SoundI::release                          : CableSparks (00000187B7FBDFA8)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73EA98)
-[LOG] SoundI::release                          :     CableSparks (00000186B93D1458)
-[LOG] SoundI::release                          : CableSparks (00000187D0664668)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73C6D8)
-[LOG] SoundI::release                          :     CableSparks (0000018644CEB398)
-[LOG] SoundI::release                          : CableSparks (00000187B7FBD228)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73C398)
-[LOG] SoundI::release                          :     CableSparks (00000188A2FF7278)
-[LOG] SoundI::release                          : CableSparks (00000187B7FBD078)
-[LOG] SoundI::release                          :     CableSparks (00000186DD73DF38)
-[LOG] SoundI::release                          :     CableSparks (00000187D0663A98)
-[LOG] SoundI::release                          :  (000001875E107B78)
-[LOG] SoundI::release                          :     door_open_01 (00000186DD73DD98)
-[LOG] SoundI::release                          :  (000001875E108F98)
-[LOG] SoundI::release                          :     wetHit (00000186DD73EC38)
-[LOG] SoundI::release                          :  (000001875E108E28)
-[LOG] SoundI::release                          :     RobotTentacleStep1 (00000186DD73FFB8)
-[LOG] SoundI::release                          :  (000001875E108588)
-[LOG] SoundI::release                          :     RobotSteelStep1 (00000186DD7414D8)
-[LOG] SoundI::release                          :  (000001875E109278)
-[LOG] SoundI::release                          :     RobotSteelStep2 (00000186DD73D3D8)
-[LOG] SoundI::release                          :  (000001875E107E58)
-[LOG] SoundI::release                          :     RobotSteelStep3 (00000186DD740CB8)
+[LOG] SoundI::release                          : BaseAlarm (0000025A247427E8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FCCF8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FD298)
+[LOG] SoundI::release                          : BaseAlarm (0000025A18716738)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FBB18)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FDE68)
+[LOG] SoundI::release                          : BaseAlarm (0000025A24742998)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180F9DD8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FD7A8)
+[LOG] SoundI::release                          : BaseAlarm (0000025A187159B8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180F90D8)
+[LOG] SoundI::release                          :     BaseAlarm (0000025A180FDCB8)
+[LOG] SoundI::release                          : steamLoop (0000025A1D4B3158)
+[LOG] SoundI::release                          :     steamLoop (0000025A180F9758)
+[LOG] SoundI::release                          :     steamLoop (0000025A7C19EC28)
+[LOG] SoundI::release                          : steamLoop (0000025A24743718)
+[LOG] SoundI::release                          :     steamLoop (0000025A180FA5F8)
+[LOG] SoundI::release                          :     steamLoop (0000025B3A5A8288)
+[LOG] SoundI::release                          : consoleHum (0000025A1D4B3818)
+[LOG] SoundI::release                          :     consoleHum (0000025A180FB7D8)
+[LOG] SoundI::release                          :     consoleHum (0000025A21454258)
+[LOG] SoundI::release                          : consoleHum (0000025A1D4B34B8)
+[LOG] SoundI::release                          :     consoleHum (0000025A180F95B8)
+[LOG] SoundI::release                          :     consoleHum (0000025A21454408)
+[LOG] SoundI::release                          : ambience (0000025A24743208)
+[LOG] SoundI::release                          :     ambience (0000025A180FB498)
+[LOG] SoundI::release                          :     ambience (0000025B3A5A8798)
+[LOG] SoundI::release                          : GravityHum (0000025A24742128)
+[LOG] SoundI::release                          :     GravityHum (0000025A180FAE18)
+[LOG] SoundI::release                          :     GravityHum (0000025A180FD5F8)
+[LOG] SoundI::release                          : Bubbling (0000025A1D4B39C8)
+[LOG] SoundI::release                          :     Bubbling (0000025A180FC198)
+[LOG] SoundI::release                          :     Bubbling (0000025A7C19F7F8)
+[LOG] SoundI::release                          : Bubbling (0000025A1DA9F088)
+[LOG] SoundI::release                          :     Bubbling (0000025A20241C58)
+[LOG] SoundI::release                          :     Bubbling (0000025B3A5AF2C8)
+[LOG] SoundI::release                          : Bubbling (0000025A24743058)
+[LOG] SoundI::release                          :     Bubbling (0000025A180FBFF8)
+[LOG] SoundI::release                          :     Bubbling (0000025B3A5A85E8)
+[LOG] SoundI::release                          : Bubbling (0000025A1D4B43E8)
+[LOG] SoundI::release                          :     Bubbling (0000025A180FC338)
+[LOG] SoundI::release                          :     Bubbling (0000025A7C19EDD8)
+[LOG] SoundI::release                          : Bubbling (0000025A187163D8)
+[LOG] SoundI::release                          :     Bubbling (0000025A20242E38)
+[LOG] SoundI::release                          :     Bubbling (0000025B3A5AF988)
+[LOG] SoundI::release                          : TentacleSlither (0000025A24743A78)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A180FBE58)
+[LOG] SoundI::release                          :     TentacleSlither (0000025B3A5A8CA8)
+[LOG] SoundI::release                          : TentacleSlither (0000025A18716588)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A202422D8)
+[LOG] SoundI::release                          :     TentacleSlither (0000025B3A5AF7D8)
+[LOG] SoundI::release                          : TentacleSlither (0000025A24743568)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A180FA2B8)
+[LOG] SoundI::release                          :     TentacleSlither (0000025A180FDB08)
+[LOG] SoundI::release                          : CableSparks (0000025A24743C28)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FB2F8)
+[LOG] SoundI::release                          :     CableSparks (0000025A7C19F648)
+[LOG] SoundI::release                          : CableSparks (0000025A247422D8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FCB58)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8948)
+[LOG] SoundI::release                          : CableSparks (0000025A24742EA8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FA458)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8E58)
+[LOG] SoundI::release                          : CableSparks (0000025A247438C8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FAAD8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FD958)
+[LOG] SoundI::release                          : CableSparks (0000025A1D4B2FA8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FB978)
+[LOG] SoundI::release                          :     CableSparks (0000025A7C19F2E8)
+[LOG] SoundI::release                          : CableSparks (0000025A24742B48)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FB638)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A80D8)
+[LOG] SoundI::release                          : CableSparks (0000025A24742488)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FCE98)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8438)
+[LOG] SoundI::release                          : CableSparks (0000025A1D4B3D28)
+[LOG] SoundI::release                          :     CableSparks (0000025A180F9F78)
+[LOG] SoundI::release                          :     CableSparks (0000025A7C19F138)
+[LOG] SoundI::release                          : CableSparks (0000025A247433B8)
+[LOG] SoundI::release                          :     CableSparks (0000025A180FBCB8)
+[LOG] SoundI::release                          :     CableSparks (0000025B3A5A8AF8)
+[LOG] SoundI::release                          :  (0000025B1EEF3198)
+[LOG] SoundI::release                          :     door_open_01 (0000025A1868F8C8)
+[LOG] SoundI::release                          :  (00000259D77825B8)
+[LOG] SoundI::release                          :     RobotTentacleStep1 (0000025A178572C8)
+[LOG] SoundI::release                          :  (0000025B1EEF3758)
+[LOG] SoundI::release                          :     RobotSteelStep1 (0000025A1868FC08)
+[LOG] SoundI::release                          :  (0000025B1EEF3E88)
+[LOG] SoundI::release                          :     RobotSteelStep2 (0000025A1868F0A8)
+[LOG] SoundI::release                          :  (0000025B1EEF3478)
+[LOG] SoundI::release                          :     RobotSteelStep3 (0000025A1868FA68)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -1443,6 +261,21 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
