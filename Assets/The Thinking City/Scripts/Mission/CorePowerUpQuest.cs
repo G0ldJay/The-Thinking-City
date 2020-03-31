@@ -16,6 +16,12 @@ public class CorePowerUpQuest : MonoBehaviour
     [SerializeField] private GameObject _staticRedCard      = null;
     [SerializeField] private GameObject _staticBlueCard     = null;
 
+    [SerializeField] private GameObject _cardInsertSoundA = null;
+    [SerializeField] private GameObject _cardInsertSoundB = null;
+    [SerializeField] private GameObject _cardInsertSoundC = null;
+
+    [SerializeField] private GameObject _powerUpSound = null;
+
     [SerializeField] private BoxCollider _greenCardSlot    = null;
     [SerializeField] private BoxCollider _redCardSlot      = null;
     [SerializeField] private BoxCollider _blueCardSlot     = null;
@@ -129,6 +135,7 @@ public class CorePowerUpQuest : MonoBehaviour
         if (!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
         {
             _coreOnline = true;
+            _powerUpSound.SetActive(true);
             StartCoroutine(ActivateReactorEffect());
 
             for(int i =0; i<_lightningEffects.Length; i++)
@@ -149,6 +156,7 @@ public class CorePowerUpQuest : MonoBehaviour
         {
             Destroy(other.gameObject);
             _staticBlueCard.SetActive(true);
+            _cardInsertSoundA.SetActive(true);
             _bluePowerUnitMaterial.material = _bluePowerUnitOnMaterial;
             _blueCardOnline = true;
         }
@@ -157,6 +165,7 @@ public class CorePowerUpQuest : MonoBehaviour
         {
             Destroy(other.gameObject);
             _staticRedCard.SetActive(true);
+            _cardInsertSoundB.SetActive(true);
             _redPowerUnitMaterial.material = _redPowerUnitOnMaterial;
             _redCardOnline = true;
         }
@@ -165,6 +174,7 @@ public class CorePowerUpQuest : MonoBehaviour
         {
             Destroy(other.gameObject);
             _staticGreenCard.SetActive(true);
+            _cardInsertSoundC.SetActive(true);
             _greenPowerUnitMaterial.material = _greenPowerUnitOnMaterial;
             _greenCardOnline = true;
         }

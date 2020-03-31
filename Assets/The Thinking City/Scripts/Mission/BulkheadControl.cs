@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulkheadControl : MonoBehaviour
 {
     [SerializeField] private Animator _bulkheadAnimator = null;
-    [SerializeField] private KlaxonExit[] _exitKlaxons = null;
+    [SerializeField] private KlaxonPodLightSpin[] _exitKlaxons = null;
 
     private bool _doorsOpen = false;    
 
@@ -25,7 +25,7 @@ public class BulkheadControl : MonoBehaviour
             {
                 for(int i = 0; i < _exitKlaxons.Length; i++)
                 {
-                    _exitKlaxons[i].ActivateKlaxons();
+                    _exitKlaxons[i].StartOrbit();
                 }
             }
 

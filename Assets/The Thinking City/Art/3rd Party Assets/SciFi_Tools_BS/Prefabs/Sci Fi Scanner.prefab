@@ -27,9 +27,10 @@ GameObject:
   - component: {fileID: 1229031385173258890}
   - component: {fileID: 7726581251516512701}
   - component: {fileID: 6120189125439756698}
+  - component: {fileID: 884365457914551750}
   m_Layer: 0
   m_Name: Sci Fi Scanner
-  m_TagString: Untagged
+  m_TagString: Gen Smasher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,6 +187,19 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!65 &884365457914551750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583755811654789579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.04, z: 0.24}
+  m_Center: {x: 0, y: 0.08, z: 0}
 --- !u!1001 &6366447123127362908
 PrefabInstance:
   m_ObjectHideFlags: 0

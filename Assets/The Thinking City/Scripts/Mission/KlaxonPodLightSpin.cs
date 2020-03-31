@@ -6,6 +6,7 @@ public class KlaxonPodLightSpin : MonoBehaviour
 {
     [SerializeField] private GameObject _klaxonLightOne = null;
     [SerializeField] private GameObject _klaxonLightTwo = null;
+    [SerializeField] private GameObject _klaxonSound = null;
 
     [SerializeField] private float _speed = 0.0f;
 
@@ -26,11 +27,20 @@ public class KlaxonPodLightSpin : MonoBehaviour
                     _orbitKlaxonCoroutine = OrbitKlaxon();
                     _klaxonLightOne.SetActive(true);
                     _klaxonLightTwo.SetActive(true);
+                    _klaxonSound.SetActive(true);
                     StartCoroutine(_orbitKlaxonCoroutine);
                 }
             }
         }
 
+    }
+
+    public void StartOrbit()
+    {
+        _klaxonLightOne.SetActive(true);
+        _klaxonLightTwo.SetActive(true);
+        _klaxonSound.SetActive(true);
+        StartCoroutine(OrbitKlaxon());
     }
 
     private IEnumerator OrbitKlaxon()

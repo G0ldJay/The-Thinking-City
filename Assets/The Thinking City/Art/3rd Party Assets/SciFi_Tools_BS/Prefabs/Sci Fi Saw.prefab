@@ -27,9 +27,10 @@ GameObject:
   - component: {fileID: 6261534719695498428}
   - component: {fileID: 4489826514467786390}
   - component: {fileID: 901798720082273671}
+  - component: {fileID: 1446342760782612695}
   m_Layer: 0
   m_Name: Sci Fi Saw
-  m_TagString: Untagged
+  m_TagString: Gen Smasher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,6 +187,19 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!65 &1446342760782612695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3292188463877000283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.1, z: 0.21}
+  m_Center: {x: 0, y: 0.13, z: 0.1}
 --- !u!64 &5416201646928379895
 MeshCollider:
   m_ObjectHideFlags: 0
