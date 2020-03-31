@@ -12,8 +12,12 @@ public class RailLightToggle : MonoBehaviour {
     [SerializeField]
     private Material onMaterial;
 
+    [HideInInspector]
+    public bool isCurrentlyOn;
+
     private void Start() {
         ToggleEmissive(StartActive);
+        isCurrentlyOn = StartActive;
     }
 
     // if true, turn emissive on, else turn off
@@ -35,6 +39,6 @@ public class RailLightToggle : MonoBehaviour {
                 
             }
         }
-
+        isCurrentlyOn = On;
     }
 }
