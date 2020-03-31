@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001E89CE914A8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001E8239638B8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,96 +15,6 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E8223F5FE8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E8223F5FE8
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E826F5DC58
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E826F5DC58
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E826F5DC58
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E826F5DC58
-[LOG] SoundI::release                          : GravityHum (000001EA9667F4A8)
-[LOG] SoundI::release                          :     GravityHum (000001EA961BFC78)
-[LOG] SoundI::release                          :     GravityHum (000001E826F5D3E8)
-[LOG] SoundI::release                          : BaseAlarm (000001E820E41D08)
-[LOG] SoundI::release                          :     BaseAlarm (000001EA961C0978)
-[LOG] SoundI::release                          :     BaseAlarm (000001E8223F75D8)
-[LOG] SoundI::release                          : Bubbling (000001E820E41498)
-[LOG] SoundI::release                          :     Bubbling (000001EA961C0B18)
-[LOG] SoundI::release                          :     Bubbling (000001E8223F6198)
-[LOG] SoundI::release                          : Bubbling (000001EA9667E068)
-[LOG] SoundI::release                          :     Bubbling (000001EA961BF2B8)
-[LOG] SoundI::release                          :     Bubbling (000001E820E42068)
-[LOG] SoundI::release                          : Bubbling (000001E820E41B58)
-[LOG] SoundI::release                          :     Bubbling (000001E825483198)
-[LOG] SoundI::release                          :     Bubbling (000001E8223F64F8)
-[LOG] SoundI::release                          : Bubbling (000001E823FBFB68)
-[LOG] SoundI::release                          :     Bubbling (000001EA961C0158)
-[LOG] SoundI::release                          :     Bubbling (000001E8223F5C88)
-[LOG] SoundI::release                          : Bubbling (000001EA9667EDE8)
-[LOG] SoundI::release                          :     Bubbling (000001EA961BF5F8)
-[LOG] SoundI::release                          :     Bubbling (000001E826F5D088)
-[LOG] SoundI::release                          : TentacleSlither (000001E8269C9818)
-[LOG] SoundI::release                          :     TentacleSlither (000001EA961BF798)
-[LOG] SoundI::release                          :     TentacleSlither (000001E8223F5AD8)
-[LOG] SoundI::release                          : TentacleSlither (000001EA9667F2F8)
-[LOG] SoundI::release                          :     TentacleSlither (000001EA961C19B8)
-[LOG] SoundI::release                          :     TentacleSlither (000001E820E417F8)
-[LOG] SoundI::release                          : TentacleSlither (000001E8269C8228)
-[LOG] SoundI::release                          :     TentacleSlither (000001EA961C1B58)
-[LOG] SoundI::release                          :     TentacleSlither (000001E826F5DE08)
-[LOG] SoundI::release                          : steamLoop (000001E820E419A8)
-[LOG] SoundI::release                          :     steamLoop (000001EA961C07D8)
-[LOG] SoundI::release                          :     steamLoop (000001E8223F5FE8)
-[LOG] SoundI::release                          : steamLoop (000001E823FBE728)
-[LOG] SoundI::release                          :     steamLoop (000001EA961C02F8)
-[LOG] SoundI::release                          :     steamLoop (000001E8223F7428)
-[LOG] SoundI::release                          : CableSparks (000001E8269C9668)
-[LOG] SoundI::release                          :     CableSparks (000001EA961BF458)
-[LOG] SoundI::release                          :     CableSparks (000001E8223F5928)
-[LOG] SoundI::release                          : CableSparks (000001E8269C8FA8)
-[LOG] SoundI::release                          :     CableSparks (000001EA961C14D8)
-[LOG] SoundI::release                          :     CableSparks (000001E8223F70C8)
-[LOG] SoundI::release                          : CableSparks (000001E820E41648)
-[LOG] SoundI::release                          :     CableSparks (000001EA961C0638)
-[LOG] SoundI::release                          :     CableSparks (000001E8223F5E38)
-[LOG] SoundI::release                          : CableSparks (000001E8269C8A98)
-[LOG] SoundI::release                          :     CableSparks (000001EA961C0CB8)
-[LOG] SoundI::release                          :     CableSparks (000001E826F5DAA8)
-[LOG] SoundI::release                          : CableSparks (000001E823FBFEC8)
-[LOG] SoundI::release                          :     CableSparks (000001EA961C0498)
-[LOG] SoundI::release                          :     CableSparks (000001E8223F7278)
-[LOG] SoundI::release                          : CableSparks (000001E8269C9D28)
-[LOG] SoundI::release                          :     CableSparks (000001EA961C2378)
-[LOG] SoundI::release                          :     CableSparks (000001E826F5D8F8)
-[LOG] SoundI::release                          : CableSparks (000001E820E41EB8)
-[LOG] SoundI::release                          :     CableSparks (000001EA961C0E58)
-[LOG] SoundI::release                          :     CableSparks (000001E8223F6348)
-[LOG] SoundI::release                          : CableSparks (000001E8269C9B78)
-[LOG] SoundI::release                          :     CableSparks (000001EA961BFFB8)
-[LOG] SoundI::release                          :     CableSparks (000001E8223F6BB8)
-[LOG] SoundI::release                          : CableSparks (000001EA9667E3C8)
-[LOG] SoundI::release                          :     CableSparks (000001EA961C1338)
-[LOG] SoundI::release                          :     CableSparks (000001E826F5D748)
-[LOG] SoundI::release                          : consoleHum (000001EA9667FB68)
-[LOG] SoundI::release                          :     consoleHum (000001EA961C21D8)
-[LOG] SoundI::release                          :     consoleHum (000001E826F5DC58)
-[LOG] SoundI::release                          : consoleHum (000001EA9667F9B8)
-[LOG] SoundI::release                          :     consoleHum (000001EA961BF938)
-[LOG] SoundI::release                          :     consoleHum (000001E826F5D598)
-[LOG] SoundI::release                          : ambience (000001E8269C94B8)
-[LOG] SoundI::release                          :     ambience (000001EA961C1CF8)
-[LOG] SoundI::release                          :     ambience (000001E826F5D238)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
@@ -116,24 +26,3 @@
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
-[LOG] SystemI::close                           : Closed.
