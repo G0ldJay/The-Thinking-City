@@ -189,7 +189,7 @@ MonoBehaviour:
   timeAppear: 0.75
   timeDisappear: 0.25
   recycling: 0
-  sortID: 9
+  sortID: 8
   animator: {fileID: 8109808580031104480}
   animClips:
   - {fileID: 7400000, guid: 1c43ad69c324ed842a02d61b08cecdbc, type: 2}
@@ -586,7 +586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.4, y: 0}
+  m_AnchoredPosition: {x: 4.1, y: 0}
   m_SizeDelta: {x: 102.4, y: 102.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2451560266925804588
@@ -660,7 +660,7 @@ MonoBehaviour:
   timeAppear: 0.33
   timeDisappear: 0.66999996
   recycling: 0
-  sortID: 6
+  sortID: 5
   animator: {fileID: 741601877443423731}
   animClips:
   - {fileID: 7400000, guid: 1c43ad69c324ed842a02d61b08cecdbc, type: 2}
@@ -949,8 +949,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.22, y: 0.1, z: 0.24}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.04, y: 0.01, z: 0.03}
+  m_Center: {x: 0, y: 0.055, z: 0}
 --- !u!114 &5978095969107395142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   timeAppear: 0.41
   timeDisappear: 0.59000003
   recycling: 0
-  sortID: 7
+  sortID: 6
   animator: {fileID: 4522743839277253651}
   animClips:
   - {fileID: 7400000, guid: 50103650ee6b62b429bc0ed6e6213886, type: 2}
@@ -1245,7 +1245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4305510662062173139}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.6, y: 2.3, z: -13}
+  m_LocalPosition: {x: 3.6, y: 2.3, z: -13}
   m_LocalScale: {x: 900, y: 900, z: -900}
   m_Children:
   - {fileID: 3336156623562519676}
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   timeAppear: 1
   timeDisappear: 0
   recycling: 0
-  sortID: 12
+  sortID: 11
   animator: {fileID: 0}
   animClips: []
   currentState: 3
@@ -1400,7 +1400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9, y: 54.3}
+  m_AnchoredPosition: {x: -5.2, y: 54.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7697786927951146347
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   timeAppear: 0.5
   timeDisappear: 0.5
   recycling: 0
-  sortID: 8
+  sortID: 7
   animator: {fileID: 2440986771382788463}
   animClips:
   - {fileID: 7400000, guid: 50103650ee6b62b429bc0ed6e6213886, type: 2}
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   timeAppear: 0
   timeDisappear: 1
   recycling: 0
-  sortID: 1
+  sortID: 12
   animator: {fileID: 5719125448084287975}
   animClips:
   - {fileID: 7400000, guid: baf288b3c6c5b544897e0acbeaa32963, type: 2}
@@ -2315,7 +2315,7 @@ MonoBehaviour:
   timeAppear: 1
   timeDisappear: 0
   recycling: 0
-  sortID: 11
+  sortID: 10
   animator: {fileID: 8905480422114301334}
   animClips:
   - {fileID: 7400000, guid: 0119420d0ff0cde4f9916081d636f3d7, type: 2}
@@ -3505,7 +3505,7 @@ MonoBehaviour:
   timeAppear: 0
   timeDisappear: 1
   recycling: 0
-  sortID: 10
+  sortID: 9
   animator: {fileID: 7036671652083355701}
   animClips:
   - {fileID: 7400000, guid: 1c43ad69c324ed842a02d61b08cecdbc, type: 2}
@@ -3643,7 +3643,6 @@ MonoBehaviour:
   - {fileID: 5399635450851814339}
   - {fileID: 301646139255343947}
   - {fileID: 7272669675153576442}
-  - {fileID: 0}
   - {fileID: 2320552152923791499}
   - {fileID: 8599429883686147822}
   - {fileID: 4979154610478357390}
@@ -3651,6 +3650,7 @@ MonoBehaviour:
   - {fileID: 2040583119108010294}
   - {fileID: 4262219070397333118}
   - {fileID: 47651544926460662}
+  - {fileID: 1240082845210642895}
   autoStart: 1
   invertDelays: 1
   cloneDelays: 0
