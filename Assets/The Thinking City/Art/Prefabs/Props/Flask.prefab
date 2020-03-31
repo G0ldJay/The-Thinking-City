@@ -116,7 +116,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!114 &7314292324073253167
@@ -194,6 +194,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9108383675896112158}
     m_Modifications:
+    - target: {fileID: -6521423089124344254, guid: 244afe71dd75e034096a8577252f7d98,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6380208100474249120, guid: 244afe71dd75e034096a8577252f7d98,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -269,6 +274,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c2d961e3c376fd241ac44738791d1310, type: 2}
+    - target: {fileID: 2155516251394427506, guid: 244afe71dd75e034096a8577252f7d98,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420793181383102838, guid: 244afe71dd75e034096a8577252f7d98,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244afe71dd75e034096a8577252f7d98, type: 3}
 --- !u!4 &2187525097145150743 stripped

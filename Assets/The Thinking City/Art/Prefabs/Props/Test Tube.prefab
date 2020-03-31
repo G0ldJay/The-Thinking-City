@@ -130,7 +130,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!114 &6640910559502312186
@@ -338,6 +338,8 @@ MonoBehaviour:
   m_FilterSizeTraced: 16
   m_SunLightConeAngle: 0.5
   m_LightShadowRadius: 0.5
+  m_SemiTransparentShadow: 0
+  m_ColorShadow: 1
   m_EvsmExponent: 15
   m_EvsmLightLeakBias: 0
   m_EvsmVarianceBias: 0.00001
@@ -393,6 +395,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7729385314045578931}
     m_Modifications:
+    - target: {fileID: -7159948834132844759, guid: 10a865356ae525a459f05158442352db,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 10a865356ae525a459f05158442352db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,11 +470,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test_Tube
       objectReference: {fileID: 0}
+    - target: {fileID: 2187449669427467095, guid: 10a865356ae525a459f05158442352db,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5452068790998213776, guid: 10a865356ae525a459f05158442352db,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 17fcf9f00633a8140b0a811288e7fbd4, type: 2}
+    - target: {fileID: 6646398204452391589, guid: 10a865356ae525a459f05158442352db,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10a865356ae525a459f05158442352db, type: 3}
 --- !u!4 &775937974695148771 stripped

@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1179461351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331922467858822793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Bubbling
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 8
 --- !u!1 &3527581304913996229
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +137,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!114 &6929319037848676918
@@ -203,6 +226,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8d898010d46173549b519965bb7d141f, type: 2}
+    - target: {fileID: -5035922379710610194, guid: 281b00cb28f73de4793f2fba93c8e326,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 281b00cb28f73de4793f2fba93c8e326,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -263,11 +291,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beaker
       objectReference: {fileID: 0}
+    - target: {fileID: 4333644306220654028, guid: 281b00cb28f73de4793f2fba93c8e326,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 281b00cb28f73de4793f2fba93c8e326, type: 3}
 --- !u!4 &6862039602086762877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 281b00cb28f73de4793f2fba93c8e326,
+    type: 3}
+  m_PrefabInstance: {fileID: 1891626638652928615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2331922467858822793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5035922379710610194, guid: 281b00cb28f73de4793f2fba93c8e326,
     type: 3}
   m_PrefabInstance: {fileID: 1891626638652928615}
   m_PrefabAsset: {fileID: 0}

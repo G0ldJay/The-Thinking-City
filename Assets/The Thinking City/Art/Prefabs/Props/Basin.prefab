@@ -128,7 +128,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!114 &792589207782232615
@@ -221,6 +221,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2092900276847456648}
     m_Modifications:
+    - target: {fileID: -7968983397789351353, guid: cc1f3f246f989464e8af0b2870244176,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5183533015524944507, guid: cc1f3f246f989464e8af0b2870244176,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -280,6 +285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1460677847107243113, guid: cc1f3f246f989464e8af0b2870244176,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: cc1f3f246f989464e8af0b2870244176,
         type: 3}
