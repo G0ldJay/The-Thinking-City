@@ -21,6 +21,7 @@ public class CorePowerUpQuest : MonoBehaviour
     [SerializeField] private BoxCollider _blueCardSlot     = null;
 
     [SerializeField] private GameObject _coreReactorEffect  = null;
+    [SerializeField] private GameObject[] _lightningEffects = null;
     [SerializeField] private GameObject _coreKlaxon         = null;
 
     [SerializeField] private BoxCollider _securityRoomShutterTrigger    = null;
@@ -109,19 +110,19 @@ public class CorePowerUpQuest : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //if(!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
-        //{
-        //    _coreOnline = true;
-        //    _coreReactorEffect.SetActive(true);
-        //}
+    //void Update()
+    //{
+    //    //if(!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
+    //    //{
+    //    //    _coreOnline = true;
+    //    //    _coreReactorEffect.SetActive(true);
+    //    //}
 
-        //if (Input.GetKeyDown(KeyCode.M))
-        //{
-        //    StartCoroutine(AnimateShutters());
-        //}
-    }
+    //    //if (Input.GetKeyDown(KeyCode.M))
+    //    //{
+    //    //    StartCoroutine(AnimateShutters());
+    //    //}
+    //}
 
     public void LeverPulled()
     {
@@ -129,6 +130,11 @@ public class CorePowerUpQuest : MonoBehaviour
         {
             _coreOnline = true;
             StartCoroutine(ActivateReactorEffect());
+
+            for(int i =0; i<_lightningEffects.Length; i++)
+            {
+                _lightningEffects[i].SetActive(true);
+            }
 
             for(int i = 0; i<_securityDoors.Length; i++)
             {
