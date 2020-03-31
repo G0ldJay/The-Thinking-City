@@ -10,6 +10,7 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private Camera _camera = null;
     [SerializeField] private float _health = 100.0f;
     [SerializeField] private GameObject _deathZone;
+    FMOD.Studio.EventInstance PlayerDamage;
 
     // Private
     private Collider _collider = null;
@@ -58,7 +59,13 @@ public class CharacterManager : MonoBehaviour
         //      {
         //          Debug.Log("Missing camera blood effect script");
         //      }
-        if(_health <= 0) {
+
+
+        PlayerDamage = FMODUnity.RuntimeManager.CreateInstance(":event:/PlayerDamage");
+        PlayerDamage.setParameterByName("PlayerHealthLeft", _health / 100);
+        PlayerDamage.start();
+
+        if (_health <= 0) {
             KillPlayer();
         }
     }
