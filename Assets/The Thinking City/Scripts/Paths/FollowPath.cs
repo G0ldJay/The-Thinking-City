@@ -51,10 +51,21 @@ public class FollowPath : MonoBehaviour {
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, _RotSpeed * Time.deltaTime);
 
         if (dist <= _ReachDistance) {
-            
             // turn on / off light on rails
-            if (_WaypointID == _EndWaypoint) {
+            RailLightContainer rlc = _Path._pathObjs[_WaypointID].GetComponent<RailLightContainer>();
+            if(rlc != null) {
+                if(direction == 1) {
+                    // turn on
+                    rlc.railLight.GetComponent<RailLightToggle>().ToggleEmissive(true);
+                }
+                else {
+                    // turn off 
+                    rlc.railLight.GetComponent<RailLightToggle>().ToggleEmissive(false);
+                }
+            }
 
+            if (_WaypointID == _EndWaypoint) {
+                // allow dropping @ end point
             }
 
             // change target waypoint

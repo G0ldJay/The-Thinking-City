@@ -6,6 +6,8 @@ public class RoboticArm : MonoBehaviour {
     public GameObject playerInterestedObj;
     public GameObject followObj;
 
+    [SerializeField]
+    private GameObject railEndChecker;
     private Collider    mainCollider;
     private Collider[]  allColliders;
     private Rigidbody[] rigRigidbodies;
@@ -43,8 +45,9 @@ public class RoboticArm : MonoBehaviour {
     }
 
     public void CrashRoboticArm() {
-        if (!crashed) {
+        if (!crashed && railEndChecker.GetComponent<RailLightToggle>().isCurrentlyOn) {
             StartCoroutine(Crash());
+            crashed = true;
         }
     }
 
@@ -59,7 +62,6 @@ public class RoboticArm : MonoBehaviour {
         StopAllMovement();
         //drop obj of interest
         playerInterestedObj.GetComponent<Rigidbody>().useGravity = true;
-        crashed = true;
     }
 
 }
