@@ -19,4 +19,13 @@ public class ShutterTrigger : MonoBehaviour
             }        
         }
     }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            _corePowerUpScript.ShutterRelease();
+        }
+    }
 }
