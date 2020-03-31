@@ -20,6 +20,7 @@ public class DoorFunctionality : MonoBehaviour
     [SerializeField] private Material                   _doorLightClosed    = null;
     [SerializeField] private Material                   _doorLightOpen      = null;
     [SerializeField] private GameObject                 _doorlight          = null;
+    [SerializeField] private bool                       _isLocked           = false;
     [SerializeField] private InterfaceAnimManager[]     holoInterfaceList;
 
     private DoorState   doorState   = DoorState.Closed;
@@ -36,6 +37,8 @@ public class DoorFunctionality : MonoBehaviour
     public AnimationCurve   JumpCurve       = new AnimationCurve();
 
     private AudioSource audio = null;
+
+    public bool isDoorLocked { get { return _isLocked; } set { _isLocked = value; } }
 
     // Start is called before the first frame update
     void Start()
@@ -87,17 +90,20 @@ public class DoorFunctionality : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer > 10)
+        if (!_isLocked)
         {
-            int rand = Random.Range(0, 101);
+            timer += Time.deltaTime;
 
-            if (rand > 45)
-                ActivateDoor();
+            if (timer > 10)
+            {
+                int rand = Random.Range(0, 101);
 
-            timer = 0;
-        }    
+                if (rand > 45)
+                    ActivateDoor();
+
+                timer = 0;
+            }
+        }
     }
 
     public void ActivateDoor() {

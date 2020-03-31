@@ -29,6 +29,8 @@ public class CorePowerUpQuest : MonoBehaviour
     [SerializeField] private float _shutterUpMoveDistance = 1.5f;
     [SerializeField] private float _shutterDuration = 2.0f;
 
+    [SerializeField] private DoorFunctionality[] _securityDoors = null;
+
     public AnimationCurve JumpCurve = new AnimationCurve();
 
     private MeshRenderer _greenPowerUnitMaterial    = null;
@@ -109,11 +111,11 @@ public class CorePowerUpQuest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
-        {
-            _coreOnline = true;
-            _coreReactorEffect.SetActive(true);
-        }
+        //if(!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
+        //{
+        //    _coreOnline = true;
+        //    _coreReactorEffect.SetActive(true);
+        //}
 
         //if (Input.GetKeyDown(KeyCode.M))
         //{
@@ -126,7 +128,12 @@ public class CorePowerUpQuest : MonoBehaviour
         if (!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
         {
             _coreOnline = true;
-            _coreReactorEffect.SetActive(true);
+            StartCoroutine(ActivateReactorEffect());
+
+            for(int i = 0; i<_securityDoors.Length; i++)
+            {
+                _securityDoors[i].isDoorLocked = false;
+            }
         }
     }
 
@@ -173,5 +180,11 @@ public class CorePowerUpQuest : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+    }
+
+    IEnumerator ActivateReactorEffect()
+    {
+        yield return new WaitForSeconds(4.0f);
+        _coreReactorEffect.SetActive(true);
     }
 }
