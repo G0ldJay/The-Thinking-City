@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerReturn" id="{c819ce25-7aea-4205-9296-aa4279bacf5d}">
+		<property name="name">
+			<value>DamageIntesity</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{625201dc-6d5c-4c8e-b5b1-dbd002b50293}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{b85e0e37-5d54-4c5f-8584-190096f8a1b0}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8ab722cc-8918-4cd2-8afb-3fdcf0a39b72}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{625201dc-6d5c-4c8e-b5b1-dbd002b50293}">
+		<relationship name="effects">
+			<destination>{98b90de7-85ea-49b9-964b-d7a963a9f794}</destination>
+			<destination>{f7e086bd-9fcc-4ecc-a6e8-293ca7afbd98}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{b85e0e37-5d54-4c5f-8584-190096f8a1b0}" />
+	<object class="PitchShifterEffect" id="{98b90de7-85ea-49b9-964b-d7a963a9f794}">
+		<property name="pitch">
+			<value>0.720000029</value>
+		</property>
+		<relationship name="automators">
+			<destination>{c43de9e0-0f93-4fc7-932c-35394dc287c5}</destination>
+		</relationship>
+		<relationship name="modulators">
+			<destination>{af2ba876-a674-448b-9e27-3f54da19998c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{f7e086bd-9fcc-4ecc-a6e8-293ca7afbd98}" />
+	<object class="Automator" id="{c43de9e0-0f93-4fc7-932c-35394dc287c5}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>pitch</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{af2ba876-a674-448b-9e27-3f54da19998c}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+	</object>
+</objects>
