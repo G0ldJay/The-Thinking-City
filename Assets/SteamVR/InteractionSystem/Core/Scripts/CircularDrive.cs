@@ -280,7 +280,7 @@ namespace Valve.VR.InteractionSystem
                 driving = false;
                 grabbedWithType = GrabTypes.None;
                 if (returnOriginalRot) {
-                    gameObject.transform.rotation = start;
+                    transform.rotation = start;
                     outAngle = 0.0f;
                     ComputeAngle( hand );
                     UpdateAll();

@@ -6,6 +6,7 @@ public class KlaxonLightSpin : MonoBehaviour
 {
     [SerializeField] private GameObject _klaxonLightOne;
     [SerializeField] private GameObject _klaxonLightTwo;
+    [SerializeField] private GameObject _klaxonSoundEffect;
 
     [SerializeField] private float _speed = 0.0f;
 
@@ -26,6 +27,7 @@ public class KlaxonLightSpin : MonoBehaviour
                     _orbitKlaxonCoroutine = OrbitKlaxon();
                     _klaxonLightOne.SetActive(true);
                     _klaxonLightTwo.SetActive(true);
+                    _klaxonSoundEffect.SetActive(true);
                     StartCoroutine(_orbitKlaxonCoroutine);
                 }    
             }
