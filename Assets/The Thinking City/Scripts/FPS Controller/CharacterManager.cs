@@ -49,7 +49,11 @@ public class CharacterManager : MonoBehaviour
 
         if(Input.GetKey(KeyCode.E)) {
             PlayDamageSoundDebug(25);
-        } 
+        }
+
+        if (Input.GetKey(KeyCode.G)) {
+            _health = 100;
+        }
     }
 
     public void TakeDamage(float amount) {
@@ -76,8 +80,11 @@ public class CharacterManager : MonoBehaviour
     }
 
     public void PlayDamageSoundDebug(float amount) {
+        if (_health <= 0) return;
         _health -= amount;
         Debug.Log(_health);
+        var attributes = FMODUnity.RuntimeUtils.To3DAttributes(transform.position);
+        PlayerDamage.set3DAttributes(attributes);
         PlayerDamage = FMODUnity.RuntimeManager.CreateInstance("event:/PlayerDamage");
         PlayerDamage.setParameterByName("PlayerHealthLeft", _health / 100);
         PlayerDamage.start();
@@ -89,6 +96,11 @@ public class CharacterManager : MonoBehaviour
 
     void KillPlayer() {
         transform.position = _deathZone.transform.position;
+        // TODOs
+        // disable player movement
+        // pause game
+        // disable pause menu
+        // activate UI
     }
 
     public void DoDamage(int hitDirection = 0) {
