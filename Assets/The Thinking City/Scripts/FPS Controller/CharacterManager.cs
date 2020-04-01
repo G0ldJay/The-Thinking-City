@@ -46,10 +46,15 @@ public class CharacterManager : MonoBehaviour
         {
             DoDamage();
         }
+
+        if(Input.GetKey(KeyCode.E)) {
+            PlayDamageSoundDebug(25);
+        } 
     }
 
     public void TakeDamage(float amount) {
         _health = Mathf.Max(_health - (amount * Time.deltaTime), 0.0f);
+
         //if (_cameraBloodEffect!=null)
         //{
         //	_cameraBloodEffect.minBloodAmount = (1.0f - _health/100.0f);
@@ -61,7 +66,19 @@ public class CharacterManager : MonoBehaviour
         //      }
 
 
-        PlayerDamage = FMODUnity.RuntimeManager.CreateInstance(":event:/PlayerDamage");
+        //PlayerDamage = FMODUnity.RuntimeManager.CreateInstance(":event:/PlayerDamage");
+        //PlayerDamage.setParameterByName("PlayerHealthLeft", _health / 100);
+        //PlayerDamage.start();
+
+        if (_health <= 0) {
+            KillPlayer();
+        }
+    }
+
+    public void PlayDamageSoundDebug(float amount) {
+        _health -= amount;
+        Debug.Log(_health);
+        PlayerDamage = FMODUnity.RuntimeManager.CreateInstance("event:/PlayerDamage");
         PlayerDamage.setParameterByName("PlayerHealthLeft", _health / 100);
         PlayerDamage.start();
 
