@@ -27,7 +27,10 @@ public class KlaxonPodLightSpin : MonoBehaviour
                     _orbitKlaxonCoroutine = OrbitKlaxon();
                     _klaxonLightOne.SetActive(true);
                     _klaxonLightTwo.SetActive(true);
-                    _klaxonSound.SetActive(true);
+
+                    if(_klaxonSound!=null)
+                        _klaxonSound.SetActive(true);
+
                     StartCoroutine(_orbitKlaxonCoroutine);
                 }
             }

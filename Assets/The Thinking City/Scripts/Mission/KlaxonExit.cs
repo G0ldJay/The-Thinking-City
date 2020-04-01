@@ -15,17 +15,14 @@ public class KlaxonExit : MonoBehaviour
 
     public CorePowerUpQuest corePowerUpScript { set { _corePowerUpScript = value; } }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void ActivateKlaxons()
     {
         _klaxonLightOne.SetActive(true);
         _klaxonLightTwo.SetActive(true);
-        _klaxonSoundEffect.SetActive(true);
+
+        if(_klaxonSoundEffect!=null)
+            _klaxonSoundEffect.SetActive(true);
+
         StartCoroutine(OrbitKlaxon());
     }
 

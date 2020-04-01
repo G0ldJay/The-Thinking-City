@@ -5,7 +5,8 @@ using UnityEngine;
 public class BulkheadControl : MonoBehaviour
 {
     [SerializeField] private Animator _bulkheadAnimator = null;
-    [SerializeField] private KlaxonPodLightSpin[] _exitKlaxons = null;
+    [SerializeField] private KlaxonExit[] _exitKlaxons = null;
+    [SerializeField] private GameObject _trishPrematureExit = null;
 
     private bool _doorsOpen = false;    
 
@@ -23,9 +24,11 @@ public class BulkheadControl : MonoBehaviour
 
             if (_exitKlaxons != null)
             {
+                _trishPrematureExit.SetActive(false);
+
                 for(int i = 0; i < _exitKlaxons.Length; i++)
                 {
-                    _exitKlaxons[i].StartOrbit();
+                    _exitKlaxons[i].ActivateKlaxons();
                 }
             }
 
