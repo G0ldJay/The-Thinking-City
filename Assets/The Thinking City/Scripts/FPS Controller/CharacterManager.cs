@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Valve.VR;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private float _health = 100.0f;
     [SerializeField] private GameObject _deathZone;
     FMOD.Studio.EventInstance PlayerDamage;
+
+    public SteamVR_Input_Sources _TargetSource;
+    public SteamVR_Action_Boolean _ClickAction;
 
     // Private
     private Collider _collider = null;
@@ -39,6 +43,8 @@ public class CharacterManager : MonoBehaviour
 
             _gameManager.RegisterPlayerInfo(_collider.GetInstanceID(), info);
         }
+
+        PlayerDamage = FMODUnity.RuntimeManager.CreateInstance("event:/PlayerDamage");
     }
 
     void Update() {
@@ -47,13 +53,20 @@ public class CharacterManager : MonoBehaviour
             DoDamage();
         }
 
-        if(Input.GetKey(KeyCode.E)) {
-            PlayDamageSoundDebug(25);
+
+
+
+        //Debug damage and death///
+        if (Input.GetKeyDown(KeyCode.G)) {
+            _health = 100;
+            Debug.Log(_health);
         }
 
-        if (Input.GetKey(KeyCode.G)) {
-            _health = 100;
+        if (_ClickAction.GetStateDown(_TargetSource)) {
+            PlayDamageSoundDebug(25);
         }
+        //////////////////////////////
+
     }
 
     public void TakeDamage(float amount) {
@@ -85,16 +98,19 @@ public class CharacterManager : MonoBehaviour
         Debug.Log(_health);
         var attributes = FMODUnity.RuntimeUtils.To3DAttributes(transform.position);
         PlayerDamage.set3DAttributes(attributes);
-        PlayerDamage = FMODUnity.RuntimeManager.CreateInstance("event:/PlayerDamage");
-        PlayerDamage.setParameterByName("PlayerHealthLeft", _health / 100);
+        
+        float healthParam = _health / 100;
+        PlayerDamage.setParameterByName("PlayerHealthLeft", healthParam);
         PlayerDamage.start();
+        PlayerDamage.release();
 
-        if (_health <= 0) {
-            KillPlayer();
-        }
+        //if (_health <= 0) {
+        //    StartCoroutine(KillPlayer());
+        //}
     }
 
     void KillPlayer() {
+        //yield return new WaitForSeconds(1.5f);
         transform.position = _deathZone.transform.position;
         // TODOs
         // disable player movement
