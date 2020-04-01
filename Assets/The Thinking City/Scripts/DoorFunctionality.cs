@@ -98,16 +98,19 @@ public class DoorFunctionality : MonoBehaviour
             {
                 int rand = Random.Range(0, 101);
 
-                if (rand > 45)
+                if (rand > 45) {
                     ActivateDoor();
-
-                timer = 0;
+                }
+                else {
+                    timer = 0;
+                }
             }
         }
     }
 
     public void ActivateDoor() {
         StartCoroutine(AnimateDoor((doorState == DoorState.Open) ? DoorState.Closed : DoorState.Open));
+        timer = 0;
     }
 
     IEnumerator AnimateDoor(DoorState currentState)
