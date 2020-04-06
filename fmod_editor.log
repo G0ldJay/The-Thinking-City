@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000243D0058068 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002440E15C678 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,16 +16,231 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002440F6963E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002440F6963E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000245AD210FE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000245AD210FE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002440F696088
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002440F696088
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000245AD211D68
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000245AD211D68
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 98528
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9760
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EDA60FF14C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD65D68630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD65D68600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD65D68700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD65D687C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002445128B758
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotTentacleStep3', format=2, channels=2, frequency=48000, lengthbytes=10976, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.059814.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 98528
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9760
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EDA60FF14C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD65D68630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD65D68600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD65D68700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD65D687C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002445128B758
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotTentacleStep4', format=2, channels=2, frequency=48000, lengthbytes=13376, lengthpcm=54720, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.238556.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 98528
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9760
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EDA60FF14C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD65D68630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD65D68600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD65D68700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD65D687C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002445128B758
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotTentacleStep1', format=2, channels=2, frequency=48000, lengthbytes=10912, lengthpcm=57120, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.160735.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4517280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EDA60FF14C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD65D68630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD65D68600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD65D68700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD65D687C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002440E2CF7F8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='door_open_01', format=2, channels=2, frequency=48000, lengthbytes=50816, lengthpcm=215636, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 98528
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9760
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EDA60FF14C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD65D68630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD65D68600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD65D68700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD65D687C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002440E2D31B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep3', format=2, channels=2, frequency=48000, lengthbytes=11168, lengthpcm=55200, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 98528
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9760
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EDA60FF14C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD65D68630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD65D68600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD65D68700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD65D687C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002440E2D31B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep2', format=2, channels=2, frequency=48000, lengthbytes=10400, lengthpcm=56160, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.861794.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 98528
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9760
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EDA60FF14C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD65D68630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD65D68600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD65D68700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD65D687C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002440E2D31B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='RobotSteelStep1', format=2, channels=2, frequency=48000, lengthbytes=12640, lengthpcm=64320, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.657966.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002440F696598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002440F696598
+[LOG] SoundI::release                          :  (0000024450897A28)
+[LOG] SoundI::release                          :     RobotSteelStep1 (00000244562023E8)
+[LOG] SoundI::release                          : BaseAlarm (00000245AD0EF918)
+[LOG] SoundI::release                          :     BaseAlarm (00000244561A4C58)
+[LOG] SoundI::release                          :     BaseAlarm (000002440CB0E028)
+[LOG] SoundI::release                          : steamLoop (00000245AD0EFAC8)
+[LOG] SoundI::release                          :     steamLoop (00000244561A4AB8)
+[LOG] SoundI::release                          :     steamLoop (000002440F696088)
+[LOG] SoundI::release                          : steamLoop (00000245AD0EF768)
+[LOG] SoundI::release                          :     steamLoop (00000244561A3738)
+[LOG] SoundI::release                          :     steamLoop (000002440F6963E8)
+[LOG] SoundI::release                          : consoleHum (00000244161165D8)
+[LOG] SoundI::release                          :     consoleHum (000002440E16BE78)
+[LOG] SoundI::release                          :     consoleHum (00000245AD210FE8)
+[LOG] SoundI::release                          : consoleHum (0000024416116C98)
+[LOG] SoundI::release                          :     consoleHum (000002440E169C58)
+[LOG] SoundI::release                          :     consoleHum (00000245AD211D68)
+[LOG] SoundI::release                          : ambience (000002440E6235C8)
+[LOG] SoundI::release                          :     ambience (00000244561A38D8)
+[LOG] SoundI::release                          :     ambience (00000245AD211BB8)
+[LOG] SoundI::release                          : GravityHum (000002440E623E38)
+[LOG] SoundI::release                          :     GravityHum (00000244561A52D8)
+[LOG] SoundI::release                          :     GravityHum (00000245AD2114F8)
+[LOG] SoundI::release                          : Bubbling (0000024416116428)
+[LOG] SoundI::release                          :     Bubbling (000002440E16B318)
+[LOG] SoundI::release                          :     Bubbling (00000245AD211348)
+[LOG] SoundI::release                          : Bubbling (000002426A45C8F8)
+[LOG] SoundI::release                          :     Bubbling (000002440E16B178)
+[LOG] SoundI::release                          :     Bubbling (00000245AD2105C8)
+[LOG] SoundI::release                          : Bubbling (000002426A45C748)
+[LOG] SoundI::release                          :     Bubbling (000002440E169918)
+[LOG] SoundI::release                          :     Bubbling (00000245AD210C88)
+[LOG] SoundI::release                          : Bubbling (000002426A45C598)
+[LOG] SoundI::release                          :     Bubbling (000002440E16BCD8)
+[LOG] SoundI::release                          :     Bubbling (00000245AD210778)
+[LOG] SoundI::release                          : Bubbling (00000245AD210AD8)
+[LOG] SoundI::release                          :     Bubbling (00000244561A40F8)
+[LOG] SoundI::release                          :     Bubbling (000002440CB0DE78)
+[LOG] SoundI::release                          : Bubbling (0000024416116E48)
+[LOG] SoundI::release                          :     Bubbling (000002440E16B4B8)
+[LOG] SoundI::release                          :     Bubbling (00000245AD2100B8)
+[LOG] SoundI::release                          : Bubbling (000002426A45D168)
+[LOG] SoundI::release                          :     Bubbling (000002440E168F58)
+[LOG] SoundI::release                          :     Bubbling (00000245AD0EFE28)
+[LOG] SoundI::release                          : Bubbling (00000245AD0EF258)
+[LOG] SoundI::release                          :     Bubbling (00000244561A3A78)
+[LOG] SoundI::release                          :     Bubbling (000002440F696E08)
+[LOG] SoundI::release                          : Bubbling (00000245AD211198)
+[LOG] SoundI::release                          :     Bubbling (00000244561A3C18)
+[LOG] SoundI::release                          :     Bubbling (000002440CB0F108)
+[LOG] SoundI::release                          : TentacleSlither (0000024416116AE8)
+[LOG] SoundI::release                          :     TentacleSlither (000002440E169AB8)
+[LOG] SoundI::release                          :     TentacleSlither (00000245AD211858)
+[LOG] SoundI::release                          : TentacleSlither (0000024416116788)
+[LOG] SoundI::release                          :     TentacleSlither (000002440E169438)
+[LOG] SoundI::release                          :     TentacleSlither (00000245AD2116A8)
+[LOG] SoundI::release                          : TentacleSlither (0000024416116938)
+[LOG] SoundI::release                          :     TentacleSlither (000002440E169298)
+[LOG] SoundI::release                          :     TentacleSlither (00000245AD210E38)
+[LOG] SoundI::release                          : CableSparks (00000245AD0EFC78)
+[LOG] SoundI::release                          :     CableSparks (00000244561A3598)
+[LOG] SoundI::release                          :     CableSparks (000002440F696598)
+[LOG] SoundI::release                          : CableSparks (00000245AD5635B8)
+[LOG] SoundI::release                          :     CableSparks (00000244561A2078)
+[LOG] SoundI::release                          :     CableSparks (000002440F696C58)
+[LOG] SoundI::release                          : CableSparks (00000245ACF36528)
+[LOG] SoundI::release                          :     CableSparks (00000244561A33F8)
+[LOG] SoundI::release                          :     CableSparks (000002440F6968F8)
+[LOG] SoundI::release                          : CableSparks (00000245AD0EF5B8)
+[LOG] SoundI::release                          :     CableSparks (00000244561A3F58)
+[LOG] SoundI::release                          :     CableSparks (000002440F696238)
+[LOG] SoundI::release                          : CableSparks (00000245ACF36888)
+[LOG] SoundI::release                          :     CableSparks (00000244561A5618)
+[LOG] SoundI::release                          :     CableSparks (00000245AD210418)
+[LOG] SoundI::release                          : CableSparks (00000245AD0EF408)
+[LOG] SoundI::release                          :     CableSparks (00000244561A5C98)
+[LOG] SoundI::release                          :     CableSparks (000002440F696748)
+[LOG] SoundI::release                          : CableSparks (000002440E623FE8)
+[LOG] SoundI::release                          :     CableSparks (00000244561A2D78)
+[LOG] SoundI::release                          :     CableSparks (00000245AD211A08)
+[LOG] SoundI::release                          : CableSparks (00000245AD210928)
+[LOG] SoundI::release                          :     CableSparks (00000244561A3DB8)
+[LOG] SoundI::release                          :     CableSparks (000002440CB0D968)
+[LOG] SoundI::release                          : CableSparks (00000245AD0EF0A8)
+[LOG] SoundI::release                          :     CableSparks (00000244561A57B8)
+[LOG] SoundI::release                          :     CableSparks (000002440F696AA8)
+[LOG] SoundI::release                          :  (0000024450897E78)
+[LOG] SoundI::release                          :     door_open_01 (0000024456201F08)
+[LOG] SoundI::release                          :  (000002440D1A6398)
+[LOG] SoundI::release                          :     ShuttersOpen (000002440E16C838)
+[LOG] SoundI::release                          :  (00000244508978B8)
+[LOG] SoundI::release                          :     RobotSteelStep2 (0000024456202A68)
+[LOG] SoundI::release                          :  (0000024450897B98)
+[LOG] SoundI::release                          :     RobotSteelStep3 (0000024456201888)
+[LOG] SoundI::release                          :  (000002440F11B928)
+[LOG] SoundI::release                          :     RobotTentacleStep4 (00000244561A3258)
+[LOG] SoundI::release                          :  (000002440F11B7B8)
+[LOG] SoundI::release                          :     RobotTentacleStep3 (00000244561A2A38)
+[LOG] SoundI::release                          :  (00000246E7CAC378)
+[LOG] SoundI::release                          :     RobotTentacleStep1 (0000024456201068)
+[LOG] SoundI::release                          :  (000002441A350D88)
+[LOG] SoundI::release                          :     TRISHPowerOn (000002440E1690F8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -35,11 +250,4 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
