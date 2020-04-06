@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 
-
-public class TrishBusHandler : MonoBehaviour
+public class TrishBusHandlerCollider : MonoBehaviour
 {
 
     FMOD.Studio.Bus TrishBus;
     public FMODUnity.StudioEventEmitter StudioEventEmitter;
 
+    // Start is called before the first frame update
     void Start()
     {
         TrishBus = FMODUnity.RuntimeManager.GetBus("Bus:/MasterGroup/Trish");
- 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if(other.tag == "Player")
         {
             if (StudioEventEmitter.TriggerOnce == false)
             {
@@ -29,4 +28,5 @@ public class TrishBusHandler : MonoBehaviour
             StudioEventEmitter.TriggerOnce = true;
         }
     }
+
 }
