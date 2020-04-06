@@ -6,19 +6,20 @@ using UnityEngine.SceneManagement;
 public class VRPauseMenu : MonoBehaviour {
 
     public SteamVR_Action_Boolean PauseToggle;
-    public SteamVR_Input_Sources handType;
+    public SteamVR_Input_Sources _handSource;
+    public SteamVR_Action_Boolean _ClickAction;
     public static bool paused = false;
     public GameObject PauseMenuUi;
     public GameObject pointer;
 
     private void Start() {
-        PauseToggle.AddOnStateDownListener(Pause, handType);
+        PauseToggle.AddOnStateDownListener(Pause, _handSource);
     }
 
     public void Resume() {
         paused = false;
         PauseMenuUi.SetActive(false);
-        pointer.SetActive(false);
+        pointer.GetComponent<Pointer>().renderLine = false;
         Time.timeScale = 1f;
     }
 
@@ -31,7 +32,7 @@ public class VRPauseMenu : MonoBehaviour {
         // otherwise, pause
         paused = true;
         PauseMenuUi.SetActive(true);
-        pointer.SetActive(true);
+        pointer.GetComponent<Pointer>().renderLine = true;
         Time.timeScale = 0f;
     }
 

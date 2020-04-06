@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class VRInputModule : BaseInputModule {
 
@@ -60,10 +61,23 @@ public class VRInputModule : BaseInputModule {
         GameObject newPointerPress = ExecuteEvents.ExecuteHierarchy(_CurrentObject, data, ExecuteEvents.pointerDownHandler);
 
         // if no down handler, try and get click handler
-        if(newPointerPress == null) {
+        if (newPointerPress == null) {
             newPointerPress = ExecuteEvents.GetEventHandler<IPointerClickHandler>(_CurrentObject);
-
         }
+
+        //// if not paused, and clicked object is throwable, bring it to current hand
+        //if (Time.timeScale != 0f && newPointerPress != null) { 
+        //    if(newPointerPress.GetComponent<Throwable>() != null) {
+        //        if (_TargetSource == SteamVR_Input_Sources.RightHand) {
+        //            // start bringing the object to right hand
+        //            RightHand.AttachObject(newPointerPress, GrabTypes.Grip);
+        //        }
+        //        else if(_TargetSource == SteamVR_Input_Sources.LeftHand) {
+        //            // start bringing object to left hand
+        //            LeftHand.AttachObject(newPointerPress, GrabTypes.Grip);
+        //        }
+        //    }
+        //}
 
         // set data
         data.pressPosition   = data.position;

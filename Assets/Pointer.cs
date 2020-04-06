@@ -8,9 +8,23 @@ public class Pointer : MonoBehaviour {
     public GameObject _dot;
     public VRInputModule _InputModule;
     public LineRenderer _LineRenderer = null;
+    public Valve.VR.InteractionSystem.Hand hand;
+    public bool renderLine = false;
+
+    private void Start() {
+        //mainRenderModel.GetBonePosition((int)fingerJointHover)
+        //transform.position = hand.mainRenderModel.GetBonePosition((int)hand.fingerJointHover);
+        transform.Rotate(44, 0, 0);
+    }
 
     private void Update() {
+        SetTransformToFinger();
         UpdateLine();
+    }
+
+    public void SetTransformToFinger() {
+        transform.position = hand.mainRenderModel.GetBonePosition((int)hand.fingerJointHover);
+        //transform.forward = hand.mainRenderModel.transform.forward; 
     }
 
     private void UpdateLine() {
@@ -29,12 +43,18 @@ public class Pointer : MonoBehaviour {
             endPos = hit.point;
         }
 
-        // set position of dot
-        _dot.transform.position = endPos;
+        if (renderLine) {
+            _dot.SetActive(true);
+            // set position of dot
+            _dot.transform.position = endPos;
 
-        // set linerenderer
-        _LineRenderer.SetPosition(0, transform.position);
-        _LineRenderer.SetPosition(1, endPos);
+            // set linerenderer
+            _LineRenderer.SetPosition(0, transform.position);
+            _LineRenderer.SetPosition(1, endPos);
+        }
+        else {
+            _dot.SetActive(false);
+        }
     }
 
     private RaycastHit CreateRaycast(float length) {
