@@ -13,8 +13,8 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private GameObject _deathZone;
     FMOD.Studio.EventInstance PlayerDamage;
 
-    public SteamVR_Input_Sources _TargetSource;
-    public SteamVR_Action_Boolean _ClickAction;
+    //public SteamVR_Input_Sources _TargetSource;
+    //public SteamVR_Action_Boolean _ClickAction;
 
     // Private
     private Collider _collider = null;
@@ -56,16 +56,16 @@ public class CharacterManager : MonoBehaviour
 
 
 
-        //Debug damage and death///
-        if (Input.GetKeyDown(KeyCode.G)) {
-            _health = 100;
-            Debug.Log(_health);
-        }
+        ////Debug damage and death///
+        //if (Input.GetKeyDown(KeyCode.G)) {
+        //    _health = 100;
+        //    Debug.Log(_health);
+        //}
 
-        if (_ClickAction.GetStateDown(_TargetSource)) {
-            PlayDamageSoundDebug(25);
-        }
-        //////////////////////////////
+        //if (_ClickAction.GetStateDown(_TargetSource)) {
+        //    PlayDamageSoundDebug(25);
+        //}
+        ////////////////////////////////
 
     }
 
