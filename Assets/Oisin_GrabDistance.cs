@@ -13,21 +13,21 @@ public class Oisin_GrabDistance : MonoBehaviour {
     public float _DistanceGrabberLength = 3;
     public SteamVR_Input_Sources _TargetSource;
     public SteamVR_Action_Boolean _ClickAction;
+    string castingpt = "";
 
     [SerializeField]
     private Hand hand;
     private int forw = 1;
     private Vector3 pos = Vector3.zero;
-    private Transform handTrans;
     private GameObject castingPoint;
 
     private void Start() {
-        string castingpt = "GrabPointerRight";
-        if (hand.handType == SteamVR_Input_Sources.LeftHand) {
-            forw = -1;
+        if (_TargetSource == SteamVR_Input_Sources.LeftHand) {
             castingpt = "GrabPointerLeft";
         }
-        handTrans = transform;
+        else if(_TargetSource == SteamVR_Input_Sources.RightHand) {
+            castingpt = "GrabPointerRight";
+        }
         StartCoroutine(SetPointerPos(2, castingpt));
     }
 
@@ -37,18 +37,19 @@ public class Oisin_GrabDistance : MonoBehaviour {
         pos = castingPoint.transform.position;
 
         RaycastHit hit;
-        Ray ray = new Ray(pos, handTrans.forward);
+        Ray ray = new Ray(pos, castingPoint.transform.forward);
         Physics.Raycast(ray, out hit, _DistanceGrabberLength);
-        Debug.DrawRay(pos, handTrans.forward, Color.green);
+        Debug.DrawRay(pos, castingPoint.transform.forward, Color.green);
 
-        //Debug.Log(hand.gameObject.name + " : " + hit.collider.gameObject);
-        _CurrentObject = hit.collider.gameObject;
+        if (hit.collider.gameObject != null) {
+            Debug.Log(hand.gameObject.name + " : " + hit.collider.gameObject);
+            _CurrentObject = hit.collider.gameObject;
 
-        if(_CurrentObject != _PrevObject && _PrevObject != null) {
-            // set prev object material to normal material
-            _PrevObject.GetComponent<Highlighter>().UnhighlightObject();
-        }
-        else {
+            //if(_PrevObject.GetComponent<Highlighter>() != null) {
+            //    // set prev object material to normal material
+            //    _PrevObject.GetComponent<Highlighter>().UnhighlightObject();
+            //}
+
             //detect if object found is grabbable - has throwable component
             if (_CurrentObject.GetComponent<Throwable>() != null) {
                 // swap object material to highlighted variant
@@ -61,6 +62,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
                 }
             }
         }
+        
         _PrevObject = _CurrentObject;
     }
 
