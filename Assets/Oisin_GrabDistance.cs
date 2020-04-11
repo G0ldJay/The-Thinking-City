@@ -41,7 +41,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
         Physics.Raycast(ray, out hit, _DistanceGrabberLength);
         Debug.DrawRay(pos, castingPoint.transform.forward, Color.green);
 
-        if (hit.collider.gameObject != null) {
+        if (hit.collider != null) {
             Debug.Log(hand.gameObject.name + " : " + hit.collider.gameObject);
             _CurrentObject = hit.collider.gameObject;
 
