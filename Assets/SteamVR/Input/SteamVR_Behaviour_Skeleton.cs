@@ -696,7 +696,7 @@ namespace Valve.VR
             }
             else if (skeletonBlend >= 1)
             {
-                for (int boneIndex = 0; boneIndex < bones.Length; boneIndex++)
+                for (int boneIndex = 0; boneIndex < bones.Length-1; boneIndex++)
                 {
                     if (bones[boneIndex] == null)
                         continue;
