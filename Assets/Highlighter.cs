@@ -9,7 +9,7 @@ public class Highlighter : MonoBehaviour {
     private Material HighlightedMaterial;
 
     private void Start() {
-        NormalMaterial = gameObject.GetComponent<MeshRenderer>().material;
+        NormalMaterial = GetComponent<MeshRenderer>().material;
     }
 
     public void HighlightObject(bool on) {

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RoboticArm : MonoBehaviour {
+    [HideInInspector]
+    public bool crashed = false;
     public GameObject playerInterestedObj;
     public GameObject followObj;
 
@@ -11,7 +13,6 @@ public class RoboticArm : MonoBehaviour {
     private Collider    mainCollider;
     private Collider[]  allColliders;
     private Rigidbody[] rigRigidbodies;
-    private bool crashed = false;
     private Vector3 originalPos;
 
     private void Awake() {

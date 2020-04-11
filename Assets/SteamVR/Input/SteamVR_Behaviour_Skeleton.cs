@@ -599,7 +599,7 @@ namespace Valve.VR
                     newBonePositions = GetBonePositions();
                     newBoneRotations = GetBoneRotations();
 
-                    for (int boneIndex = 0; boneIndex < bones.Length; boneIndex++)
+                    for (int boneIndex = 0; boneIndex < bones.Length - 1; boneIndex++)
                     {
                         if (bones[boneIndex] == null)
                             continue;
@@ -661,7 +661,7 @@ namespace Valve.VR
                 if (blendPoser != null)
                 {
                     SteamVR_Skeleton_Pose_Hand mainPose = blendPoser.skeletonMainPose.GetHand(inputSource);
-                    for (int boneIndex = 0; boneIndex < bones.Length; boneIndex++)
+                    for (int boneIndex = 0; boneIndex < bones.Length - 1; boneIndex++)
                     {
                         if (bones[boneIndex] == null)
                             continue;
@@ -683,7 +683,7 @@ namespace Valve.VR
                 }
                 else
                 {
-                    for (int boneIndex = 0; boneIndex < bones.Length; boneIndex++)
+                    for (int boneIndex = 0; boneIndex < bones.Length - 1; boneIndex++)
                     {
 
                         Quaternion poseRotation = GetBlendPoseForBone(boneIndex, boneRotations[boneIndex]);
@@ -696,7 +696,7 @@ namespace Valve.VR
             }
             else if (skeletonBlend >= 1)
             {
-                for (int boneIndex = 0; boneIndex < bones.Length-1; boneIndex++)
+                for (int boneIndex = 0; boneIndex < bones.Length - 1; boneIndex++)
                 {
                     if (bones[boneIndex] == null)
                         continue;
@@ -707,7 +707,7 @@ namespace Valve.VR
             }
             else
             {
-                for (int boneIndex = 0; boneIndex < bones.Length; boneIndex++)
+                for (int boneIndex = 0; boneIndex < bones.Length - 1; boneIndex++)
                 {
                     if (bones[boneIndex] == null)
                         continue;

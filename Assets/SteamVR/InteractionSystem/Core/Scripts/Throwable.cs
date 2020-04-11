@@ -53,6 +53,9 @@ namespace Valve.VR.InteractionSystem
         public UnityEvent onDetachFromHand;
         public HandEvent onHeldUpdate;
 
+        //added by oisin to enable / disable distance grabbing
+        public bool distanceGrabbable = true;
+
 
         protected RigidbodyInterpolation hadInterpolation = RigidbodyInterpolation.None;
 

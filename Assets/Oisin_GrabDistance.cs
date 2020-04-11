@@ -10,7 +10,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
     public GameObject _CurrentObject;
     [HideInInspector]
     public GameObject _PrevObject;
-    public float _DistanceGrabberLength = 3;
+    public float _DistanceGrabberLength = 2;
     public SteamVR_Input_Sources _TargetSource;
     public SteamVR_Action_Boolean _ClickAction;
     string castingpt = "";
@@ -42,18 +42,19 @@ public class Oisin_GrabDistance : MonoBehaviour {
         Debug.DrawRay(pos, castingPoint.transform.forward, Color.green);
 
         if (hit.collider != null) {
-            Debug.Log(hand.gameObject.name + " : " + hit.collider.gameObject);
-            _CurrentObject = hit.collider.gameObject;
+            
+            _CurrentObject = hit.collider.transform.root.gameObject;
+            //Debug.Log(hand.gameObject.name + " : " + _CurrentObject.name);
 
-            if(_PrevObject != null && _PrevObject.GetComponent<Highlighter>() != null) {
-                if(_PrevObject != _CurrentObject) {
+            if (_PrevObject != null) {
+                if(_PrevObject.name != _CurrentObject.name && _PrevObject.GetComponent<Throwable>() != null) {
                     // unhighlight object
                     HighlightObject(_PrevObject, false);
                 }
             }
 
             //detect if object found is grabbable - has throwable component
-            if (_CurrentObject.GetComponent<Throwable>() != null) {
+            if (_CurrentObject.GetComponent<Throwable>() != null && _CurrentObject.GetComponent<Throwable>().distanceGrabbable) {
                 // swap object material to highlighted variant
                 HighlightObject(_CurrentObject, true);
                 //_CurrentObject.GetComponent<Highlighter>().HighlightObject();
@@ -67,6 +68,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
         }
         else {
             _CurrentObject = null;
+            HighlightObject(_PrevObject, false);
         }
         
         _PrevObject = _CurrentObject;
@@ -81,10 +83,10 @@ public class Oisin_GrabDistance : MonoBehaviour {
         }
     }
 
-    void HighlightObject(GameObject obj, bool on) {
+    void HighlightObject(GameObject obj, bool toggle) {
         // loop through obj & children and activate / deactivate highlight
         if (obj.GetComponent<Highlighter>() != null) {
-            obj.GetComponent<Highlighter>().HighlightObject(on);
+            obj.GetComponent<Highlighter>().HighlightObject(toggle);
         }
 
         // loop through all children and toggle
@@ -92,7 +94,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
         foreach (Transform t in obj.transform) {
             tempObj = t.gameObject;
             if (tempObj.GetComponent<Highlighter>() != null) {
-                tempObj.GetComponent<Highlighter>().HighlightObject(on);
+                tempObj.GetComponent<Highlighter>().HighlightObject(toggle);
             }
 
             // if child obj itself has children, toggle those
@@ -101,7 +103,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
                 foreach (Transform child_t in tempObj.transform) {
                     child_tempObj = child_t.gameObject;
                     if (child_tempObj.GetComponent<Highlighter>() != null) {
-                        child_tempObj.GetComponent<Highlighter>().HighlightObject(on);
+                        child_tempObj.GetComponent<Highlighter>().HighlightObject(toggle);
                     }
                 }
             }
