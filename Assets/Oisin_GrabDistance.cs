@@ -45,15 +45,18 @@ public class Oisin_GrabDistance : MonoBehaviour {
             Debug.Log(hand.gameObject.name + " : " + hit.collider.gameObject);
             _CurrentObject = hit.collider.gameObject;
 
-            //if(_PrevObject.GetComponent<Highlighter>() != null) {
-            //    // set prev object material to normal material
-            //    _PrevObject.GetComponent<Highlighter>().UnhighlightObject();
-            //}
+            if(_PrevObject != null && _PrevObject.GetComponent<Highlighter>() != null) {
+                if(_PrevObject != _CurrentObject) {
+                    // unhighlight object
+                    HighlightObject(_PrevObject, false);
+                }
+            }
 
             //detect if object found is grabbable - has throwable component
             if (_CurrentObject.GetComponent<Throwable>() != null) {
                 // swap object material to highlighted variant
-                _CurrentObject.GetComponent<Highlighter>().HighlightObject();
+                HighlightObject(_CurrentObject, true);
+                //_CurrentObject.GetComponent<Highlighter>().HighlightObject();
 
                 // if player grabs, check distance from player - if over a certain distance, allow distance grab
                 if (_ClickAction.GetStateDown(_TargetSource)) {
@@ -61,6 +64,9 @@ public class Oisin_GrabDistance : MonoBehaviour {
                     hand.AttachObject(_CurrentObject, GrabTypes.Grip);
                 }
             }
+        }
+        else {
+            _CurrentObject = null;
         }
         
         _PrevObject = _CurrentObject;
@@ -72,6 +78,33 @@ public class Oisin_GrabDistance : MonoBehaviour {
         if(castingPoint == null) {
             //redo search
             StartCoroutine(SetPointerPos(1, objName));
+        }
+    }
+
+    void HighlightObject(GameObject obj, bool on) {
+        // loop through obj & children and activate / deactivate highlight
+        if (obj.GetComponent<Highlighter>() != null) {
+            obj.GetComponent<Highlighter>().HighlightObject(on);
+        }
+
+        // loop through all children and toggle
+        GameObject tempObj;
+        foreach (Transform t in obj.transform) {
+            tempObj = t.gameObject;
+            if (tempObj.GetComponent<Highlighter>() != null) {
+                tempObj.GetComponent<Highlighter>().HighlightObject(on);
+            }
+
+            // if child obj itself has children, toggle those
+            if (t.childCount > 0) {
+                GameObject child_tempObj;
+                foreach (Transform child_t in tempObj.transform) {
+                    child_tempObj = child_t.gameObject;
+                    if (child_tempObj.GetComponent<Highlighter>() != null) {
+                        child_tempObj.GetComponent<Highlighter>().HighlightObject(on);
+                    }
+                }
+            }
         }
     }
 }

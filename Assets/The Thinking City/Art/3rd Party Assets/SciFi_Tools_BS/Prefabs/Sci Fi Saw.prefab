@@ -14,6 +14,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2929721692435528942, guid: 8436df17eb3c4fb40a92175b659f90f1, type: 3}
+--- !u!114 &5704438733481804960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844481587720723851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf051324e23c444aadf293a0cf1430b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighlightedMaterial: {fileID: 2100000, guid: 51ea0888b9306b9428a79618d62ec2af, type: 2}
 --- !u!1 &3292188463877000283
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +41,7 @@ GameObject:
   - component: {fileID: 4489826514467786390}
   - component: {fileID: 901798720082273671}
   - component: {fileID: 1446342760782612695}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Sci Fi Saw
   m_TagString: Gen Smasher
   m_Icon: {fileID: 0}
@@ -214,6 +227,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6306027207531055637, guid: 8436df17eb3c4fb40a92175b659f90f1, type: 3}
+--- !u!114 &8091755388362311907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427395887631996012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf051324e23c444aadf293a0cf1430b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighlightedMaterial: {fileID: 2100000, guid: 51ea0888b9306b9428a79618d62ec2af, type: 2}
 --- !u!1001 &8198573592574553638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,16 +307,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saw_SciFi_BS
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8436df17eb3c4fb40a92175b659f90f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 29
+      objectReference: {fileID: 0}
     - target: {fileID: -396566661202807891, guid: 8436df17eb3c4fb40a92175b659f90f1,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -396566661202807891, guid: 8436df17eb3c4fb40a92175b659f90f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1645016779821251146, guid: 8436df17eb3c4fb40a92175b659f90f1,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1645016779821251146, guid: 8436df17eb3c4fb40a92175b659f90f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964498984585461193, guid: 8436df17eb3c4fb40a92175b659f90f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -165165518508493052, guid: 8436df17eb3c4fb40a92175b659f90f1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8436df17eb3c4fb40a92175b659f90f1, type: 3}
 --- !u!4 &3800365116131919164 stripped

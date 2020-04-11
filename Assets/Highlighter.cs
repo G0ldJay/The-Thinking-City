@@ -12,11 +12,12 @@ public class Highlighter : MonoBehaviour {
         NormalMaterial = gameObject.GetComponent<MeshRenderer>().material;
     }
 
-    public void HighlightObject() {
-        gameObject.GetComponent<MeshRenderer>().material = HighlightedMaterial;
-    }
-
-    public void UnhighlightObject() {
-        gameObject.GetComponent<MeshRenderer>().material = NormalMaterial;
+    public void HighlightObject(bool on) {
+        if (on) {
+            gameObject.GetComponent<MeshRenderer>().material = HighlightedMaterial;
+        }
+        else {
+            gameObject.GetComponent<MeshRenderer>().material = NormalMaterial;
+        }
     }
 }
