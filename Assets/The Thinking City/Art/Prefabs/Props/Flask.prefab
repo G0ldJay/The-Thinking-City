@@ -172,6 +172,7 @@ MonoBehaviour:
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
+  distanceGrabbable: 1
   interactable: {fileID: 0}
 --- !u!64 &7497948217827567116
 MeshCollider:
@@ -184,7 +185,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6481723065591829773, guid: 244afe71dd75e034096a8577252f7d98, type: 3}
 --- !u!1001 &6566550291172230669

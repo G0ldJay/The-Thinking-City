@@ -46,18 +46,18 @@ public class AIDamageTrigger : MonoBehaviour
         // If this is the player object and our parameter is set for damage
         if (col.gameObject.CompareTag("Player") && _animator.GetFloat(_parameterHash) > 0.9f)
         {
-            if (GameManager.instance && GameManager.instance.bloodParticles)
-            {
-                ParticleSystem system = GameManager.instance.bloodParticles;
+            //if (GameManager.instance && GameManager.instance.bloodParticles)
+            //{
+            //    ParticleSystem system = GameManager.instance.bloodParticles;
 
-                // Temporary Code
-                system.transform.position = transform.position;
-                system.transform.rotation = Camera.main.transform.rotation;
+            //    // Temporary Code
+            //    system.transform.position = transform.position;
+            //    system.transform.rotation = Camera.main.transform.rotation;
 
-                var settings = system.main;
-                settings.simulationSpace = ParticleSystemSimulationSpace.World;
-                system.Emit(_bloodParticlesBurstAmount);
-            }
+            //    var settings = system.main;
+            //    settings.simulationSpace = ParticleSystemSimulationSpace.World;
+            //    system.Emit(_bloodParticlesBurstAmount);
+            //}
 
             if (_gameManager != null)
             {

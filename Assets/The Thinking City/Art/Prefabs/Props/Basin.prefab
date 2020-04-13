@@ -11,7 +11,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6103025732925501286, guid: cc1f3f246f989464e8af0b2870244176, type: 3}
 --- !u!1 &6959322167522173209
@@ -184,6 +184,7 @@ MonoBehaviour:
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
+  distanceGrabbable: 1
   interactable: {fileID: 0}
 --- !u!114 &6570820331133617198
 MonoBehaviour:
@@ -211,7 +212,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 477525350536967170, guid: cc1f3f246f989464e8af0b2870244176, type: 3}
 --- !u!1001 &1388474694784392466
