@@ -5,7 +5,8 @@ using Unity.Mathematics;
 
 public class FollowPath : MonoBehaviour {
 
-    public EditorPathScript _Path;
+    
+public EditorPathScript _Path;
     public int    _WaypointID = 5;
     public float  _Speed;
     public float  _RotSpeed   = 5.0f;
@@ -30,6 +31,8 @@ public class FollowPath : MonoBehaviour {
     public void MoveAlongPath(float joystickMagnitude) {
         int direction = joystickMagnitude > 0 ? 1 : -1;
         Debug.Log(direction);
+
+        
 
         // store last direction -> if new direction is different, force change target waypoint.
         // ensure that out of switching when at ends of path is accounted for
