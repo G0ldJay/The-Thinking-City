@@ -11,7 +11,10 @@ public class EyeEndingEvent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _trishEyeAudio.SetActive(false);
+        if (_trishEyeAudio != null)
+        {
+            _trishEyeAudio.SetActive(false);
+        }
     }
 
     // Update is called once per frame
