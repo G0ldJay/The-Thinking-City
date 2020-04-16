@@ -5,6 +5,7 @@ using Valve.VR;
 using Valve.VR.InteractionSystem;
 
 public class JoystickController : MonoBehaviour {
+    public GameObject servoSoundObject;
     public GameObject targetObject;
     public GameObject soundSourceObject;
     public CircularDrive cd;
@@ -39,6 +40,9 @@ public class JoystickController : MonoBehaviour {
         //Debug.Log(mvmtMagnitude);
         if(mvmtMagnitude != 0 && !this.dropped) {
             if (transformAdjustment == TransformAdj.translate) {
+
+                servoSoundObject.GetComponent<ServoSoundHandler>().isMoving = true;
+
                 //targetObject.transform.Translate(objectMoveSpeed * rot * Time.deltaTime, 0, 0);
                 //if(!CheckValidMovement()) {
                 //    targetObject.transform.Translate(-objectMoveSpeed * rot * Time.deltaTime, 0, 0);
@@ -50,12 +54,22 @@ public class JoystickController : MonoBehaviour {
             }
             else if (transformAdjustment == TransformAdj.rotate) {
                 targetObject.transform.localEulerAngles += new Vector3(0, 0, objectMoveSpeed * mvmtMagnitude * Time.deltaTime);
+                servoSoundObject.GetComponent<ServoSoundHandler>().isRotating = true;
             }
             // play sound effect if moving
-            SHRA.PlayServos();
+           
         }
         else {
-            SHRA.StopServos();
+            if(transformAdjustment == TransformAdj.translate)
+            {
+                servoSoundObject.GetComponent<ServoSoundHandler>().isMoving = false;
+
+            }
+
+            else if(transformAdjustment == TransformAdj.rotate)
+            {
+                servoSoundObject.GetComponent<ServoSoundHandler>().isRotating = false;
+            }
         }
     }
 
