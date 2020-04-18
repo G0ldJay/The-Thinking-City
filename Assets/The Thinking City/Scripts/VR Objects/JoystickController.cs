@@ -38,9 +38,16 @@ public class JoystickController : MonoBehaviour {
     void Update() {
         float mvmtMagnitude = GetNormalisedRotMagnitude();
         //Debug.Log(mvmtMagnitude);
+
+        if (this.dropped)
+        {
+            servoSoundObject.GetComponent<ServoSoundHandler>().isMoving = false;
+            servoSoundObject.GetComponent<ServoSoundHandler>().isRotating = false;
+        }
+
         if(mvmtMagnitude != 0 && !this.dropped) {
             if (transformAdjustment == TransformAdj.translate) {
-
+                
                 servoSoundObject.GetComponent<ServoSoundHandler>().isMoving = true;
 
                 //targetObject.transform.Translate(objectMoveSpeed * rot * Time.deltaTime, 0, 0);
@@ -59,11 +66,11 @@ public class JoystickController : MonoBehaviour {
             // play sound effect if moving
            
         }
+
         else {
             if(transformAdjustment == TransformAdj.translate)
             {
                 servoSoundObject.GetComponent<ServoSoundHandler>().isMoving = false;
-
             }
 
             else if(transformAdjustment == TransformAdj.rotate)

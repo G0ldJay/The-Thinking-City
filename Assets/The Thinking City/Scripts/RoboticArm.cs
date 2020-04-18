@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class RoboticArm : MonoBehaviour {
     [HideInInspector]
     public bool crashed = false;
     public GameObject playerInterestedObj;
     public GameObject followObj;
+
+    public GameObject servoSoundHandler;
 
     [SerializeField]
     private GameObject railEndChecker;
@@ -47,6 +50,9 @@ public class RoboticArm : MonoBehaviour {
 
     public void CrashRoboticArm() {
         if (!crashed && railEndChecker.GetComponent<RailLightToggle>().isCurrentlyOn) {
+            servoSoundHandler.GetComponent<StudioEventEmitter>().TriggerOnce = true;
+            servoSoundHandler.GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+            
             StartCoroutine(Crash());
             crashed = true;
         }
