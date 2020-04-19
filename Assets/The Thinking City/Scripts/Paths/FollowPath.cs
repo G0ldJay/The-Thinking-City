@@ -60,6 +60,12 @@ public EditorPathScript _Path;
                 if(direction == 1) {
                     // turn on
                     rlc.railLight.GetComponent<RailLightToggle>().ToggleEmissive(true);
+                    if(rlc.railLight.GetComponent<RailLightToggle>().isEnd) {
+                        // disable movement on robotic arm
+                        foreach(JoystickController jc in FindObjectsOfType<JoystickController>()) {
+                            jc.atEnd = true;
+                        }
+                    }
                 }
                 else {
                     // turn off 
