@@ -25,6 +25,7 @@ public class JoystickController : MonoBehaviour {
     private SoundHandlerRoboticArm SHRA;
     //public Vector3 targetOriginalPosition;
     public bool dropped;
+    public bool atEnd;
 
     private void Start() {
         maxRot = cd.maxAngle;
@@ -45,7 +46,7 @@ public class JoystickController : MonoBehaviour {
             servoSoundObject.GetComponent<ServoSoundHandler>().isRotating = false;
         }
 
-        if(mvmtMagnitude != 0 && !this.dropped) {
+        if(mvmtMagnitude != 0 && !this.dropped && !this.atEnd) {
             if (transformAdjustment == TransformAdj.translate) {
                 
                 servoSoundObject.GetComponent<ServoSoundHandler>().isMoving = true;

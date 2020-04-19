@@ -14,6 +14,7 @@ public class RailLightToggle : MonoBehaviour {
 
     [HideInInspector]
     public bool isCurrentlyOn;
+    public bool isEnd;
 
     private void Start() {
         ToggleEmissive(StartActive);
