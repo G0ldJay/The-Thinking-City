@@ -17,6 +17,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
     [SerializeField] private float                  _repathAudioMinDuration     = 0.25f;
     [SerializeField] private float                  _repathAudioMaxDuration     = 5.0f;
     [SerializeField] private float                  _maxDuration                = 40.0f;
+    [SerializeField] public SoundHandler            soundHandler;
 
     //Private Fields
     private float _timer = 0.0f;
@@ -86,6 +87,7 @@ public class AIRobotState_Pursuit1 : AIRobotState
                     _stateMachine.ClearTarget();    //Clear the threat
                     //EOGHAN PLAY ROBOT SEARCHING SOUND
                     //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject);
+                    soundHandler.playVoiceLine();
                     return AIStateType.Alerted;     //Become alert and scan for targets
 
                 case AITargetType.Visual_Food:

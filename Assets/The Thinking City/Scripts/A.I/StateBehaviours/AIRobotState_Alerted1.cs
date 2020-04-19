@@ -12,6 +12,7 @@ public class AIRobotState_Alerted1 : AIRobotState
     [SerializeField] float                  _waypointAngleThreshold     = 90.0f;
     [SerializeField] float                  _threatAngleThreshold       = 10.0f;
     [SerializeField] float                  _directionChangeTime        = 1.5f;
+    [SerializeField] public SoundHandler           soundHandler;
 
     // Private Fields
     float _timer = 0.0f;
@@ -75,7 +76,7 @@ public class AIRobotState_Alerted1 : AIRobotState
         if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
         {
             //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
-            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDetected", gameObject);
+            soundHandler.playVoiceLine();
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat);
             return AIStateType.Pursuit;
         }

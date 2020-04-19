@@ -11,6 +11,7 @@ public class SoundHandler : MonoBehaviour {
     public GameObject MetalFootTransform;
     public GameObject MeatArm;
     public GameObject Head;
+    public FMODUnity.StudioEventEmitter voiceEventEmitter;
 
     //Play Meaty foot sound from foot audio source
     public void MeatFoot() {
@@ -48,8 +49,17 @@ public class SoundHandler : MonoBehaviour {
 
     public void Screech()
     {
-        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", Head);
+      
     }
+
+    public void playVoiceLine()
+    {
+        if (!voiceEventEmitter.IsPlaying())
+        {
+            voiceEventEmitter.Play();
+        }
+    }
+
 
 
 }

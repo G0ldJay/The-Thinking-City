@@ -9,6 +9,7 @@ public class AIRobotState_Idle1 : AIRobotState
 {
 	//Inspector Assigned 
 	[SerializeField] Vector2 _idleTimeRange = new Vector2(10.0f, 60.0f);
+    [SerializeField] public SoundHandler soundHandler;
 
 	//Private
 	float   _idleTime   = 0.0f;
@@ -76,8 +77,8 @@ public class AIRobotState_Idle1 : AIRobotState
             //Is the player visible
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Player)
             {
-            //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
-            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDetected", gameObject); //Play sound
+                //EOGHAN : PLAY SOUND WHEN PLAYER IS DETECTED
+                soundHandler.playVoiceLine();
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat); //Set new target
                 return AIStateType.Pursuit; //Enter new state 
             }
@@ -85,8 +86,8 @@ public class AIRobotState_Idle1 : AIRobotState
             //Is the threat a flashlight
             if (_robotStateMachine.VisualThreat.type == AITargetType.Visual_Light)
             {
-            //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
-            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
+                //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
+                soundHandler.playVoiceLine();
             _robotStateMachine.SetTarget(_robotStateMachine.VisualThreat); //Set new target 
                 return AIStateType.Alerted; //Enter new state 
             }
@@ -94,8 +95,9 @@ public class AIRobotState_Idle1 : AIRobotState
             //Is the threat an audio emitter
             if (_robotStateMachine.AudioThreat.type == AITargetType.Audio)
             {
-            //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
-            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/ScreechVoiceLine", gameObject); //Play sound
+                //EOGHAN : PLAY SOUND WHEN ROBOT IS SEARCHING HERE
+                soundHandler.playVoiceLine();
+            
             _robotStateMachine.SetTarget(_robotStateMachine.AudioThreat); //Set new target 
                 return AIStateType.Alerted; //Enter new state 
             }
