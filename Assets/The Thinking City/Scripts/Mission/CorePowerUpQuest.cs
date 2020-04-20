@@ -32,6 +32,7 @@ public class CorePowerUpQuest : MonoBehaviour
 
     [SerializeField] private BoxCollider _securityRoomShutterTrigger    = null;
     [SerializeField] private GameObject _securityRoomShutters           = null;
+    [SerializeField] private GameObject[] _securityRoomShutterSounds = null;
 
     [SerializeField] private float _shutterUpMoveDistance = 1.5f;
     [SerializeField] private float _shutterDuration = 2.0f;
@@ -188,6 +189,11 @@ public class CorePowerUpQuest : MonoBehaviour
     IEnumerator AnimateShutters()
     {
         float time = 0.0f;
+
+        foreach(GameObject g in _securityRoomShutterSounds)
+        {
+            g.SetActive(true);
+        }
 
         while (time <= _shutterDuration)
         {
