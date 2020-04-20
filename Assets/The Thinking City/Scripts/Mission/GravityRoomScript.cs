@@ -15,10 +15,7 @@ public class GravityRoomScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            gravity_on = true;
-        }
+       
     }
 
     private void OnTriggerEnter(Collider other)
