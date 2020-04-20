@@ -23,6 +23,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 8
+--- !u!114 &4187631669714568592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331922467858822793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf051324e23c444aadf293a0cf1430b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighlightedMaterial: {fileID: 2100000, guid: 9b90f048e7e40fa40876321f2fe687e8, type: 2}
 --- !u!1 &3527581304913996229
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +50,7 @@ GameObject:
   - component: {fileID: 3558985675077530503}
   - component: {fileID: 6929319037848676918}
   - component: {fileID: 2427250591442115218}
+  - component: {fileID: 2132230078}
   m_Layer: 0
   m_Name: Beaker
   m_TagString: Untagged
@@ -193,6 +207,7 @@ MonoBehaviour:
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
+  distanceGrabbable: 1
   interactable: {fileID: 0}
 --- !u!114 &2427250591442115218
 MonoBehaviour:
@@ -209,6 +224,29 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &2132230078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527581304913996229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Bubbling
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 8
 --- !u!1001 &1891626638652928615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 4333644306220654028, guid: 281b00cb28f73de4793f2fba93c8e326,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 281b00cb28f73de4793f2fba93c8e326, type: 3}

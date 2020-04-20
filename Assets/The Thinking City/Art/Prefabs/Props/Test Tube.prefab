@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &316254822744125522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5988903278000408784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf051324e23c444aadf293a0cf1430b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighlightedMaterial: {fileID: 2100000, guid: d44f881465e6fe147b2513c9fbca6cb0, type: 2}
 --- !u!1 &6601957458029615217
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +199,7 @@ MonoBehaviour:
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
+  distanceGrabbable: 1
   interactable: {fileID: 0}
 --- !u!1 &6669117221283594240
 GameObject:
@@ -213,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6669117221283594240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.156, z: 0}
+  m_LocalPosition: {x: 0, y: 0.152, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7729385314045578931}
@@ -237,7 +251,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -270,13 +284,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 119, z: 12, w: -1.6669697e+30}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0.72
   m_ShadowAngle: 0
@@ -355,14 +369,14 @@ MonoBehaviour:
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
     m_Override: 512
-    m_UseOverride: 1
+    m_UseOverride: 0
     m_Level: 0
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
   m_UseContactShadow:
     m_Override: 0
-    m_UseOverride: 1
+    m_UseOverride: 0
     m_Level: 0
   m_RayTracedContactShadow: 0
   m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
@@ -398,7 +412,7 @@ PrefabInstance:
     - target: {fileID: -7159948834132844759, guid: 10a865356ae525a459f05158442352db,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 10a865356ae525a459f05158442352db,
         type: 3}
@@ -473,7 +487,7 @@ PrefabInstance:
     - target: {fileID: 2187449669427467095, guid: 10a865356ae525a459f05158442352db,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5452068790998213776, guid: 10a865356ae525a459f05158442352db,
         type: 3}
@@ -483,13 +497,19 @@ PrefabInstance:
     - target: {fileID: 6646398204452391589, guid: 10a865356ae525a459f05158442352db,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10a865356ae525a459f05158442352db, type: 3}
 --- !u!4 &775937974695148771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 10a865356ae525a459f05158442352db,
+    type: 3}
+  m_PrefabInstance: {fileID: 5746060636977698809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5988903278000408784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7159948834132844759, guid: 10a865356ae525a459f05158442352db,
     type: 3}
   m_PrefabInstance: {fileID: 5746060636977698809}
   m_PrefabAsset: {fileID: 0}

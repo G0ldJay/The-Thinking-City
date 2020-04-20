@@ -7,7 +7,6 @@ public class VRPauseMenu : MonoBehaviour {
 
     public SteamVR_Action_Boolean PauseToggle;
     public SteamVR_Input_Sources _handSource;
-    public SteamVR_Action_Boolean _ClickAction;
     public static bool paused = false;
     public GameObject PauseMenuUi;
     public GameObject pointer;
@@ -37,7 +36,7 @@ public class VRPauseMenu : MonoBehaviour {
     }
 
     public void Restart() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit() {
