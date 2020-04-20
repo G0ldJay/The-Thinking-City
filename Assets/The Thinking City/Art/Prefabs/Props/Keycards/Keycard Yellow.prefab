@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 21
-  attachmentOffset: {fileID: 3966511634375738266}
+  attachmentFlags: 85
+  attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
@@ -178,6 +178,7 @@ MonoBehaviour:
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
+  distanceGrabbable: 1
   interactable: {fileID: 0}
 --- !u!114 &349850691
 MonoBehaviour:
@@ -195,10 +196,10 @@ MonoBehaviour:
     actionSetPath: 
   hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 1
+  hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 0
+  useHandObjectAttachmentPoint: 1
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -227,7 +228,7 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 0
+  handFollowTransform: 1
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
@@ -246,12 +247,12 @@ MonoBehaviour:
   poseEditorExpanded: 1
   blendEditorExpanded: 1
   poseNames:
-  - KeycardGrip (MAIN)
+  - KayCard (MAIN)
   overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
   overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
-  skeletonMainPose: {fileID: 11400000, guid: 60b2b4fd935266a479de6fe24a8ead4b, type: 2}
+  skeletonMainPose: {fileID: 11400000, guid: 59f420fd721202f4aa500b09661e31e6, type: 2}
   skeletonAdditionalPoses: []
   showLeftPreview: 0
   showRightPreview: 0

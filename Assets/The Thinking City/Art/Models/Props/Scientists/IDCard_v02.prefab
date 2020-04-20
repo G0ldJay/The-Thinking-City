@@ -225,12 +225,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 547754365418181815}
-  - component: {fileID: 2028890855401202134}
   - component: {fileID: 919361467648578596}
+  - component: {fileID: 2028890855401202134}
   - component: {fileID: 2242641957887066206}
   - component: {fileID: 1707684843752529335}
   - component: {fileID: 5227926167895198194}
-  - component: {fileID: 7404915201891549780}
+  - component: {fileID: 2021025645}
   m_Layer: 29
   m_Name: IDCard_v02
   m_TagString: Untagged
@@ -255,6 +255,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &919361467648578596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585246187956823716}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &2028890855401202134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,10 +287,10 @@ MonoBehaviour:
     actionSetPath: 
   hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 1
+  hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 0
+  useHandObjectAttachmentPoint: 1
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -303,26 +319,10 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 0
+  handFollowTransform: 1
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
---- !u!54 &919361467648578596
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3585246187956823716}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &2242641957887066206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,8 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 21
-  attachmentOffset: {fileID: 7287346112303662143}
+  attachmentFlags: 85
+  attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
@@ -376,6 +376,7 @@ MonoBehaviour:
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
+  distanceGrabbable: 1
   interactable: {fileID: 0}
 --- !u!114 &1707684843752529335
 MonoBehaviour:
@@ -405,7 +406,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.27, y: 0.02, z: 0.2}
   m_Center: {x: 0.03, y: 0, z: 0.01}
---- !u!114 &7404915201891549780
+--- !u!114 &2021025645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420,12 +421,12 @@ MonoBehaviour:
   poseEditorExpanded: 1
   blendEditorExpanded: 1
   poseNames:
-  - IDCardGrip (MAIN)
+  - NameTag (MAIN)
   overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
   overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
-  skeletonMainPose: {fileID: 11400000, guid: 480aac93c2f09284389b09a1d494a699, type: 2}
+  skeletonMainPose: {fileID: 11400000, guid: 6cf4f46582b6cf141b2a57f0d01698f0, type: 2}
   skeletonAdditionalPoses: []
   showLeftPreview: 0
   showRightPreview: 0
