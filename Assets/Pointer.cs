@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class Pointer : MonoBehaviour {
 
@@ -11,21 +12,42 @@ public class Pointer : MonoBehaviour {
     public Valve.VR.InteractionSystem.Hand hand;
     public bool renderLine = false;
 
+    private string castingpt;
+    private GameObject castingPoint;
+
     private void Start() {
         //mainRenderModel.GetBonePosition((int)fingerJointHover)
         //transform.position = hand.mainRenderModel.GetBonePosition((int)hand.fingerJointHover);
-        transform.Rotate(44, 0, 0);
+        //transform.Rotate(44, 0, 0);
+        castingpt = "GrabPointerRight";
+        StartCoroutine(SetPointerPos(2.5f, castingpt));
+        
     }
 
     private void Update() {
-        SetTransformToFinger();
+        //SetTransformToFinger();
+        if (castingPoint == null) return;
+        transform.position = castingPoint.transform.position;
+        transform.rotation = castingPoint.transform.rotation;
         UpdateLine();
     }
 
-    public void SetTransformToFinger() {
-        transform.position = hand.mainRenderModel.GetBonePosition((int)hand.fingerJointHover);
-        //transform.forward = hand.mainRenderModel.transform.forward; 
+    IEnumerator SetPointerPos(float time, string objName) {
+        yield return new WaitForSeconds(time);
+        castingPoint = GameObject.Find(objName);
+        if (castingPoint == null) {
+            //redo search
+            StartCoroutine(SetPointerPos(1, objName));
+        }
+        else {
+            this.gameObject.SetActive(false);
+        }
     }
+
+    //public void SetTransformToFinger() {
+    //    transform.position = hand.mainRenderModel.GetBonePosition((int)hand.fingerJointHover);
+    //    //transform.forward = hand.mainRenderModel.transform.forward; 
+    //}
 
     private void UpdateLine() {
         // use default val for length or distance
@@ -36,7 +58,7 @@ public class Pointer : MonoBehaviour {
         RaycastHit hit = CreateRaycast(targetLength);
 
         // default
-        Vector3 endPos = transform.position + (transform.forward * targetLength);
+        Vector3 endPos = transform.position + (castingPoint.transform.forward * targetLength);
 
         // or based on hit
         if(hit.collider != null) {
@@ -59,7 +81,7 @@ public class Pointer : MonoBehaviour {
 
     private RaycastHit CreateRaycast(float length) {
         RaycastHit hit;
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, castingPoint.transform.forward);
         Physics.Raycast(ray, out hit, _DefaultLength);
 
         return hit;
