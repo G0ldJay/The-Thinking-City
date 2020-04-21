@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EyeEndingEvent : MonoBehaviour
@@ -35,6 +34,17 @@ public class EyeEndingEvent : MonoBehaviour
             {
                 _eyeAnimator.SetTrigger("OpenEye");
             }
+
+            // stop player from moving
+            FindObjectOfType<Oisin_PlayerController>().canMove = false;
+
+            // start fadeout after a few secs
+            StartCoroutine(FadeToMainMenu(4));
         }
+    }
+
+    IEnumerator FadeToMainMenu(float time) {
+        yield return new WaitForSeconds(time);
+        FindObjectOfType<FaderController>().FadeToBlack();
     }
 }

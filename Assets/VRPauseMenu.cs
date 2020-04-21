@@ -15,7 +15,7 @@ public class VRPauseMenu : MonoBehaviour {
 
     private bool canPause = false;
 
-    private void Awake() {
+    private void Start() {
         PauseToggle.AddOnStateDownListener(Pause, _handSource);
         PauseMenuUi = GameObject.Find("PauseMenuOptions");
 

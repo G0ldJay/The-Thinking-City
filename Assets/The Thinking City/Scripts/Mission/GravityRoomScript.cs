@@ -54,7 +54,7 @@ public class GravityRoomScript : MonoBehaviour
     {
         if (gravity_on)
         {
-            if (!other.CompareTag("Player"))
+            if (!other.CompareTag("Player") && other.GetComponent<Rigidbody>() != null)
             {
                 if (other.GetComponent<Rigidbody>().useGravity == false)
                 {
@@ -65,10 +65,7 @@ public class GravityRoomScript : MonoBehaviour
                         script._gravity = true;
                     }
 
-                    if (other.GetComponent<Rigidbody>() != null)
-                    {
-                        other.GetComponent<Rigidbody>().useGravity = true;
-                    }
+                    other.GetComponent<Rigidbody>().useGravity = true;
                 } 
             }
                 
