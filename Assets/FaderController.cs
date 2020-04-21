@@ -21,9 +21,9 @@ public class FaderController : MonoBehaviour {
 
         // teleport player to end if player is dead
         // fade in
-        if(cm._Dead) {
+        if (cm._Dead) {
             cm.KillPlayer();
-            FadeToClear();
+            StartCoroutine(FadeClearOverTime(2));
             return;
         }
 
@@ -36,5 +36,10 @@ public class FaderController : MonoBehaviour {
         // bring to main menu if player gets to eye
         Application.Quit();
         EditorApplication.isPlaying = false;
+    }
+
+    IEnumerator FadeClearOverTime(float t) {
+        yield return new WaitForSeconds(t);
+        FadeToClear();
     }
 }
