@@ -12,6 +12,7 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private float _health = 100.0f;
     [SerializeField] private GameObject _deathZone;
     FMOD.Studio.EventInstance PlayerDamage;
+    [HideInInspector] public bool _Dead;
 
     //public SteamVR_Input_Sources _TargetSource;
     //public SteamVR_Action_Boolean _ClickAction;
@@ -72,6 +73,10 @@ public class CharacterManager : MonoBehaviour
     public void TakeDamage(float amount) {
         _health = Mathf.Max(_health - (amount * Time.deltaTime), 0.0f);
 
+        PlayDamageSoundDebug();
+        Debug.Log(_health);
+
+
         //if (_cameraBloodEffect!=null)
         //{
         //	_cameraBloodEffect.minBloodAmount = (1.0f - _health/100.0f);
@@ -83,19 +88,16 @@ public class CharacterManager : MonoBehaviour
         //      }
 
 
-        //PlayerDamage = FMODUnity.RuntimeManager.CreateInstance(":event:/PlayerDamage");
-        //PlayerDamage.setParameterByName("PlayerHealthLeft", _health / 100);
-        //PlayerDamage.start();
-
         if (_health <= 0) {
-            KillPlayer();
+            _Dead = true;
+            FindObjectOfType<FaderController>().FadeToBlack();
         }
     }
 
-    public void PlayDamageSoundDebug(float amount) {
+    public void PlayDamageSoundDebug() {
         if (_health <= 0) return;
-        _health -= amount;
-        Debug.Log(_health);
+        //_health -= amount;
+        //Debug.Log(_health);
         var attributes = FMODUnity.RuntimeUtils.To3DAttributes(transform.position);
         PlayerDamage.set3DAttributes(attributes);
         
@@ -109,14 +111,17 @@ public class CharacterManager : MonoBehaviour
         //}
     }
 
-    void KillPlayer() {
-        //yield return new WaitForSeconds(1.5f);
+    public void KillPlayer() {
         transform.position = _deathZone.transform.position;
         // TODOs
         // disable player movement
-        // pause game
+        FindObjectOfType<Oisin_PlayerController>().canMove = false;
         // disable pause menu
-        // activate UI
+        VRPauseMenu vrpm = FindObjectOfType<VRPauseMenu>();
+        vrpm.canPause = false;
+        // activate pointer
+        vrpm.ActivatePointer(true);
+
     }
 
     public void DoDamage(int hitDirection = 0) {

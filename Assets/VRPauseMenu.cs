@@ -13,9 +13,9 @@ public class VRPauseMenu : MonoBehaviour {
     public GameObject pointer;
     public SteamVR_LoadLevel levelLoader;
 
-    private bool canPause = false;
+    public bool canPause = false;
 
-    private void Awake() {
+    private void Start() {
         PauseToggle.AddOnStateDownListener(Pause, _handSource);
         PauseMenuUi = GameObject.Find("PauseMenuOptions");
 
@@ -33,8 +33,6 @@ public class VRPauseMenu : MonoBehaviour {
         PauseMenuUi.SetActive(false);
         ActivatePointer(false);
         Time.timeScale = 1f;
-        SteamVR_Fade.Start(Color.black, 0);
-        SteamVR_Fade.Start(Color.clear, 1);
     }
 
     public void Pause(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
@@ -63,7 +61,7 @@ public class VRPauseMenu : MonoBehaviour {
         EditorApplication.isPlaying = false;
     }
 
-    private void ActivatePointer(bool onOff) {
+    public void ActivatePointer(bool onOff) {
         pointer.SetActive(onOff);
         foreach (Transform t in pointer.transform) {
             t.gameObject.SetActive(onOff);

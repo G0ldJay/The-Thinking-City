@@ -21,33 +21,30 @@ public class VRInputModule : BaseInputModule {
     }
 
     public override void Process() {
-        // if game in paused mode
-        if (Time.timeScale == 0) {
+        // reset data 
+        _Data.Reset();
+        _Data.position = new Vector2(_Camera.pixelWidth / 2, _Camera.pixelHeight / 2);
 
-            // reset data 
-            _Data.Reset();
-            _Data.position = new Vector2(_Camera.pixelWidth / 2, _Camera.pixelHeight / 2);
+        // raycast
+        eventSystem.RaycastAll(_Data, m_RaycastResultCache);
+        _Data.pointerCurrentRaycast = FindFirstRaycast(m_RaycastResultCache);
+        _CurrentObject = _Data.pointerCurrentRaycast.gameObject;
 
-            // raycast
-            eventSystem.RaycastAll(_Data, m_RaycastResultCache);
-            _Data.pointerCurrentRaycast = FindFirstRaycast(m_RaycastResultCache);
-            _CurrentObject = _Data.pointerCurrentRaycast.gameObject;
+        // clear
+        m_RaycastResultCache.Clear();
 
-            // clear
-            m_RaycastResultCache.Clear();
+        // hover
+        HandlePointerExitAndEnter(_Data, _CurrentObject);
 
-            // hover
-            HandlePointerExitAndEnter(_Data, _CurrentObject);
+        // press
+        if (_ClickAction.GetStateDown(_TargetSource)) {
+            ProcessPress(_Data);
+        }
 
-            // press
-            if (_ClickAction.GetStateDown(_TargetSource)) {
-                ProcessPress(_Data);
-            }
-
-            // release
-            if (_ClickAction.GetStateUp(_TargetSource)) {
-                ProcessRelease(_Data);
-            }
+        // release
+        if (_ClickAction.GetStateUp(_TargetSource)) {
+            ProcessRelease(_Data);
+       
         }
     }
 
