@@ -71,10 +71,10 @@ public class CharacterManager : MonoBehaviour
     }
 
     public void TakeDamage(float amount) {
-        //_health = Mathf.Max(_health - (amount * Time.deltaTime), 0.0f);
+        _health = Mathf.Max(_health - (amount * Time.deltaTime), 0.0f);
 
-        _health -= 25;
         PlayDamageSoundDebug();
+        Debug.Log(_health);
 
 
         //if (_cameraBloodEffect!=null)
@@ -90,6 +90,7 @@ public class CharacterManager : MonoBehaviour
 
         if (_health <= 0) {
             _Dead = true;
+            FindObjectOfType<FaderController>().FadeToBlack();
         }
     }
 
@@ -111,13 +112,16 @@ public class CharacterManager : MonoBehaviour
     }
 
     public void KillPlayer() {
-        //yield return new WaitForSeconds(1.5f);
         transform.position = _deathZone.transform.position;
         // TODOs
         // disable player movement
-        // pause game
+        FindObjectOfType<Oisin_PlayerController>().canMove = false;
         // disable pause menu
-        // activate UI
+        VRPauseMenu vrpm = FindObjectOfType<VRPauseMenu>();
+        vrpm.canPause = false;
+        // activate pointer
+        vrpm.ActivatePointer(true);
+
     }
 
     public void DoDamage(int hitDirection = 0) {
