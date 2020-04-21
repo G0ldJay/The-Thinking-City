@@ -33,6 +33,8 @@ public class VRPauseMenu : MonoBehaviour {
         PauseMenuUi.SetActive(false);
         ActivatePointer(false);
         Time.timeScale = 1f;
+        SteamVR_Fade.Start(Color.black, 0);
+        SteamVR_Fade.Start(Color.clear, 1);
     }
 
     public void Pause(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
