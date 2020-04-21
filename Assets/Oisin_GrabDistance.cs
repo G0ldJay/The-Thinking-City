@@ -84,6 +84,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
     }
 
     void HighlightObject(GameObject obj, bool toggle) {
+        if (obj == null) return;
         // loop through obj & children and activate / deactivate highlight
         if (obj.GetComponent<Highlighter>() != null) {
             obj.GetComponent<Highlighter>().HighlightObject(toggle);
