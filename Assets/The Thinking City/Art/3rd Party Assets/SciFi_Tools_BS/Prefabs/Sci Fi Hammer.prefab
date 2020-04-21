@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 5163817494998524899}
   - component: {fileID: 5615576665186782212}
   - component: {fileID: 4742594601978725999}
+  - component: {fileID: 8296172668018244671}
+  - component: {fileID: 2702774562088556061}
   m_Layer: 0
   m_Name: Sci Fi Hammer
   m_TagString: Untagged
@@ -31,7 +33,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3785413688053922532}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.442792, y: 1.4, z: -14.576346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -265,3 +267,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighlightedMaterial: {fileID: 2100000, guid: 86b0d341588d1b24a98ad5248c7cd82b, type: 2}
+--- !u!64 &8296172668018244671
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785413688053922532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3833202401257905648, guid: 5eb4f7fe696e90f4c82030a1c1b4f629, type: 3}
+--- !u!65 &2702774562088556061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785413688053922532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.01, z: 0.01}
+  m_Center: {x: 0.0000009526985, y: 0.0000000019516322, z: 0.0654859}

@@ -6,6 +6,10 @@ public class GravityRoomScript : MonoBehaviour
 {
     public GameObject[] grav;
     public bool gravity_on = false;
+    private bool _trishAudioPlayed = false;
+
+    [SerializeField] private GameObject _trishGravityGeneratorLine = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,12 @@ public class GravityRoomScript : MonoBehaviour
             {
                 other.GetComponent<Rigidbody>().useGravity = false;
             }
+        }
+
+        if (other.CompareTag("Player") && !_trishAudioPlayed && !gravity_on)
+        {
+            _trishAudioPlayed = true;
+            _trishGravityGeneratorLine.SetActive(true);
         }
     }
 
@@ -55,7 +65,10 @@ public class GravityRoomScript : MonoBehaviour
                         script._gravity = true;
                     }
 
-                    other.GetComponent<Rigidbody>().useGravity = true;
+                    if (other.GetComponent<Rigidbody>() != null)
+                    {
+                        other.GetComponent<Rigidbody>().useGravity = true;
+                    }
                 } 
             }
                 

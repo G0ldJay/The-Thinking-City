@@ -8,7 +8,7 @@ public class ArrowLookAt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _lookAtTarget = GameManager.instance.GetCurrentObjective();
+        _lookAtTarget = UiObjectiveList.instance.GetCurrentObjective();
 
         if(_lookAtTarget!= null)
         {

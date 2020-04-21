@@ -7,6 +7,7 @@ public class BulkheadControl : MonoBehaviour
     [SerializeField] private Animator _bulkheadAnimator = null;
     [SerializeField] private KlaxonExit[] _exitKlaxons = null;
     [SerializeField] private GameObject _trishPrematureExit = null;
+    [SerializeField] private Collider _coliderBlock = null; 
 
     private bool _doorsOpen = false;    
 
@@ -32,8 +33,17 @@ public class BulkheadControl : MonoBehaviour
                 }
             }
 
-            
+            UiObjectiveList.instance.liftedLockdown = true;
             _bulkheadAnimator.SetTrigger("UnlockExit");
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            _coliderBlock.enabled = true;
+            _bulkheadAnimator.SetTrigger("LockExit");
         }
     }
 }

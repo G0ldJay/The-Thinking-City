@@ -9,6 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8972477647776489842}
+  - component: {fileID: 6913893708535319643}
+  - component: {fileID: 5231150189805596460}
+  - component: {fileID: 8758837004248241191}
+  - component: {fileID: 9073243026417068533}
+  - component: {fileID: 5779778865552184629}
   m_Layer: 0
   m_Name: Creature Grav Prototype
   m_TagString: Untagged
@@ -31,13 +36,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &7681026022398612947
+--- !u!114 &6913893708535319643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3088936042036233446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateActionSetOnAttach:
+    actionSetPath: 
+  hideHandOnAttach: 1
+  hideSkeletonOnAttach: 0
+  hideControllerOnAttach: 0
+  handAnimationOnPickup: 0
+  setRangeOfMotionOnPickup: -1
+  useHandObjectAttachmentPoint: 1
+  attachEaseIn: 0
+  snapAttachEaseInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  snapAttachEaseInTime: 0.15
+  snapAttachEaseInCompleted: 0
+  skeletonPoser: {fileID: 0}
+  handFollowTransform: 1
+  highlightOnHover: 0
+  hideHighlight: []
+  hoverPriority: 0
+--- !u!54 &5231150189805596460
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233137143310382167}
+  m_GameObject: {fileID: 3088936042036233446}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -47,13 +104,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2501258600328474553
+--- !u!114 &8758837004248241191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233137143310382167}
+  m_GameObject: {fileID: 3088936042036233446}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
@@ -102,65 +159,26 @@ MonoBehaviour:
       m_Calls: []
   distanceGrabbable: 1
   interactable: {fileID: 0}
---- !u!114 &6055707225293621209
-MonoBehaviour:
+--- !u!65 &9073243026417068533
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233137143310382167}
+  m_GameObject: {fileID: 3088936042036233446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateActionSetOnAttach:
-    actionSetPath: 
-  hideHandOnAttach: 1
-  hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 0
-  handAnimationOnPickup: 0
-  setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 1
-  attachEaseIn: 0
-  snapAttachEaseInCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  snapAttachEaseInTime: 0.15
-  snapAttachEaseInCompleted: 0
-  skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
-  highlightOnHover: 0
-  hideHighlight: []
-  hoverPriority: 0
---- !u!114 &6843952236856312837
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0.18, z: 0}
+--- !u!114 &5779778865552184629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233137143310382167}
+  m_GameObject: {fileID: 3088936042036233446}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e5d5836fed1c9e40b290032bd7ef5c4, type: 3}
@@ -169,19 +187,6 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
---- !u!65 &7455867496325377686
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233137143310382167}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 0.18, z: 0}
 --- !u!64 &1339239975908455320
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -313,17 +318,17 @@ PrefabInstance:
     - target: {fileID: -7159948834132844759, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5462638645873916048, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4391091178509084723, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
@@ -398,12 +403,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1395381610839788830, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1755429778950893586, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
@@ -413,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 2154056525445715396, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3575461615621080405, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
@@ -433,12 +438,12 @@ PrefabInstance:
     - target: {fileID: 5954579658214194375, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6538927091278185219, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8739583136354902420, guid: aeaedbcb5a685d74fb5b65403f8f70de,
         type: 3}
@@ -447,12 +452,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 386771f3997a27d47aa9f3edb1b207df, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeaedbcb5a685d74fb5b65403f8f70de, type: 3}
---- !u!1 &3233137143310382167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: aeaedbcb5a685d74fb5b65403f8f70de,
-    type: 3}
-  m_PrefabInstance: {fileID: 6917392741738327390}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1910987230809425476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: aeaedbcb5a685d74fb5b65403f8f70de,

@@ -8,6 +8,8 @@ public class CorePowerUpQuest : MonoBehaviour
     [SerializeField] private GameObject _redPowerUnit   = null;
     [SerializeField] private GameObject _bluePowerUnit  = null;
 
+    [SerializeField] private GameObject _trishOneCardDown = null;
+
     [SerializeField] private Material _greenPowerUnitOnMaterial = null;
     [SerializeField] private Material _redPowerUnitOnMaterial   = null;
     [SerializeField] private Material _bluePowerUnitOnMaterial  = null;
@@ -33,6 +35,7 @@ public class CorePowerUpQuest : MonoBehaviour
     [SerializeField] private BoxCollider _securityRoomShutterTrigger    = null;
     [SerializeField] private GameObject _securityRoomShutters           = null;
     [SerializeField] private GameObject[] _securityRoomShutterSounds = null;
+    [SerializeField] private GameObject _trishLiftLockdown = null;
 
     [SerializeField] private float _shutterUpMoveDistance = 1.5f;
     [SerializeField] private float _shutterDuration = 2.0f;
@@ -135,6 +138,7 @@ public class CorePowerUpQuest : MonoBehaviour
     {
         if (!_coreOnline && _greenCardOnline && _redCardOnline && _blueCardOnline)
         {
+            UiObjectiveList.instance.triggeredPower = true;
             _coreOnline = true;
             _powerUpSound.SetActive(true);
             StartCoroutine(ActivateReactorEffect());
@@ -148,6 +152,11 @@ public class CorePowerUpQuest : MonoBehaviour
             {
                 _securityDoors[i].isDoorLocked = false;
             }
+
+            if (!_trishLiftLockdown.activeInHierarchy)
+            {
+                _trishLiftLockdown.SetActive(true);
+            }
         }
     }
 
@@ -155,6 +164,7 @@ public class CorePowerUpQuest : MonoBehaviour
     {
         if(slot.CompareTag("Blue Card Slot") && other.CompareTag("Blue Keycard"))
         {
+            UiObjectiveList.instance.foundBlueCard = true;
             Destroy(other.gameObject);
             _staticBlueCard.SetActive(true);
             _cardInsertSoundA.SetActive(true);
@@ -164,6 +174,7 @@ public class CorePowerUpQuest : MonoBehaviour
 
         if(slot.CompareTag("Red Card Slot") && other.CompareTag("Red Keycard"))
         {
+            UiObjectiveList.instance.foundRedCard = true;
             Destroy(other.gameObject);
             _staticRedCard.SetActive(true);
             _cardInsertSoundB.SetActive(true);
@@ -173,11 +184,17 @@ public class CorePowerUpQuest : MonoBehaviour
 
         if (slot.CompareTag("Green Card Slot") && other.CompareTag("Green Keycard"))
         {
+            UiObjectiveList.instance.foundYellowCard = true;
             Destroy(other.gameObject);
             _staticGreenCard.SetActive(true);
             _cardInsertSoundC.SetActive(true);
             _greenPowerUnitMaterial.material = _greenPowerUnitOnMaterial;
             _greenCardOnline = true;
+        }
+
+        if(!_trishOneCardDown.activeInHierarchy)
+        {
+            _trishOneCardDown.SetActive(true);
         }
     }
 
