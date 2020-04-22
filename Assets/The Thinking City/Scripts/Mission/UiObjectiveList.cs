@@ -90,6 +90,7 @@ public class UiObjectiveList : MonoBehaviour
         {
             _objectiveList.SetText("Restore the power");
             _objectiveName.SetText("Power Lever");
+            _powerGeneratorHologram.SetActive(false);
             _keycardHologram.SetActive(false);
             _lever.SetActive(true);
 
@@ -99,6 +100,8 @@ public class UiObjectiveList : MonoBehaviour
         {
             _objectiveList.SetText("Lift the lockdown");
             _objectiveName.SetText("Security Lever");
+            _powerGeneratorHologram.SetActive(false);
+            _keycardHologram.SetActive(false);
             _lever.SetActive(true);
 
             return _securityRoomLever;
@@ -107,6 +110,8 @@ public class UiObjectiveList : MonoBehaviour
         {
             _objectiveList.SetText("Escape!");
             _objectiveName.SetText("Exit Doors");
+            _powerGeneratorHologram.SetActive(false);
+            _keycardHologram.SetActive(false);
             _lever.SetActive(false);
             _exitBulkheads.SetActive(true);
 

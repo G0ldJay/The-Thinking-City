@@ -35,7 +35,7 @@ public class FaderController : MonoBehaviour {
         yield return new WaitForSeconds(t);
         // bring to main menu if player gets to eye
         Application.Quit();
-        EditorApplication.isPlaying = false;
+        //EditorApplication.isPlaying = false;
     }
 
     IEnumerator FadeClearOverTime(float t) {
