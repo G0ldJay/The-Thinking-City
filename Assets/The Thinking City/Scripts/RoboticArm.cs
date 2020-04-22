@@ -67,7 +67,7 @@ public class RoboticArm : MonoBehaviour {
         TurnOnRagdoll(true);
         //stop all movement
         StopAllMovement();
-        //drop obj of interest
+        //drop obj of interestl. 
         playerInterestedObj.GetComponent<Rigidbody>().useGravity = true;
     }
 
