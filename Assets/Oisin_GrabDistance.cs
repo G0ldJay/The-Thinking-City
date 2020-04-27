@@ -34,18 +34,22 @@ public class Oisin_GrabDistance : MonoBehaviour {
     void Update() {
         //send raycast from hand finger
         if (castingPoint == null) return;
-        pos = castingPoint.transform.position;
+        pos = castingPoint.transform.position; // set position of raycast to casting point's current positon -> track it constantly
 
+        // cast a ray from the casting point
         RaycastHit hit;
         Ray ray = new Ray(pos, castingPoint.transform.forward);
         Physics.Raycast(ray, out hit, _DistanceGrabberLength);
+        // draw ray for testing
         Debug.DrawRay(pos, castingPoint.transform.forward, Color.green);
 
+        // Process object hit by ray
         if (hit.collider != null) {
-            
+            // Get root gameobject of any object hit (should be fine for grabbables - if not, take it out of any hierarchy)
             _CurrentObject = hit.collider.transform.root.gameObject;
             //Debug.Log(hand.gameObject.name + " : " + _CurrentObject.name);
 
+            // Unhighlight previous object if current object is different
             if (_PrevObject != null) {
                 if(_PrevObject.name != _CurrentObject.name && _PrevObject.GetComponent<Throwable>() != null) {
                     // unhighlight object
@@ -57,11 +61,9 @@ public class Oisin_GrabDistance : MonoBehaviour {
             if (_CurrentObject.GetComponent<Throwable>() != null && _CurrentObject.GetComponent<Throwable>().distanceGrabbable) {
                 // swap object material to highlighted variant
                 HighlightObject(_CurrentObject, true);
-                //_CurrentObject.GetComponent<Highlighter>().HighlightObject();
 
-                // if player grabs, check distance from player - if over a certain distance, allow distance grab
+                // if player is grabbing, attach obj to hand
                 if (_ClickAction.GetStateDown(_TargetSource)) {
-                    // attach object
                     hand.AttachObject(_CurrentObject, GrabTypes.Grip);
                 }
             }
@@ -70,7 +72,7 @@ public class Oisin_GrabDistance : MonoBehaviour {
             _CurrentObject = null;
             HighlightObject(_PrevObject, false);
         }
-        
+        // set previous object to this object (for unhighlighting)
         _PrevObject = _CurrentObject;
     }
 
