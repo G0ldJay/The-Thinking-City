@@ -14,6 +14,7 @@ public class RobotPodDoorTrigger : MonoBehaviour
         {
             gameObject.GetComponent<BoxCollider>().enabled = false;
             _robotPodScript.OpenRobotPodDoor();
+            
         }
     }
 }

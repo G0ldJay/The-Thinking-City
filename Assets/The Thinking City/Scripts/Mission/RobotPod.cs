@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class RobotPod : MonoBehaviour
 {
-    [SerializeField] private GameObject     _podDoorKlaxon          = null;
-    [SerializeField] private GameObject     _podDoor                = null;
-    [SerializeField] private BoxCollider    _podDoorTrigger         = null;
-    [SerializeField] private float          _podDoorMoveDistance    = 1.5f;
-    [SerializeField] private float          _podDoorDuration        = 2.0f;
+    [SerializeField] private GameObject             _podDoorKlaxon          = null;
+    [SerializeField] private GameObject             _podDoor                = null;
+    [SerializeField] private BoxCollider            _podDoorTrigger         = null;
+    [SerializeField] private float                  _podDoorMoveDistance    = 1.5f;
+    [SerializeField] private float                  _podDoorDuration        = 2.0f;
+    [SerializeField] public FMODUnity.StudioEventEmitter doorOpeningEmitter;
 
     private bool    _triggerKlaxon      = false;
     private Vector3 _podDoorStartPos    = Vector3.zero;
@@ -50,6 +51,7 @@ public class RobotPod : MonoBehaviour
     {
 
         StartCoroutine(AnimateRobotPodDoor());
+        doorOpeningEmitter.Play();
     }
 
     IEnumerator AnimateRobotPodDoor()

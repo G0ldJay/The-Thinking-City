@@ -27,7 +27,7 @@
 	<object class="MixerBusPanner" id="{eba00ad6-da0d-4475-be6d-77f96d57d9e7}" />
 	<object class="ThreeEQEffect" id="{ef04fc0e-1bd6-455b-8bc4-a8139a9307e4}">
 		<property name="lowGain">
-			<value>10</value>
+			<value>5</value>
 		</property>
 		<property name="midGain">
 			<value>0.5</value>
@@ -48,6 +48,9 @@
 		</property>
 		<property name="HFDecayRatio">
 			<value>38</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>1</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{6de683fb-3826-44f5-871a-9832a534f138}" />
